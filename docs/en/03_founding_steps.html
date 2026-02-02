@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Tech Legal Guide</title>
+    <style>
+:root {
+    --primary: #1B5E20;
+    --secondary: #4CAF50;
+    --accent: #81C784;
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #FFFFFF;
+    --bg-alt: #F5F5F5;
+    --border: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #FFF3E0;
+    border: 2px solid #FF9800;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.disclaimer h3 {
+    color: #E65100;
+    margin-bottom: 1rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.5rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+}
+
+/* Content */
+.content {
+    padding: 2rem 0;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1rem 2rem 1rem 0;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.content th {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.content tr:nth-child(even) {
+    background: var(--bg-alt);
+}
+
+.content blockquote {
+    background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--secondary);
+    border-radius: 8px 0 0 8px;
+}
+
+.content code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.content pre {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+}
+
+.lang-switch a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.lang-switch a:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--text);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Saudi Tech Legal Guide</h1>
+        <p>A practical guide to regulations for tech companies</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../ar/03_founding_steps.html">العربية</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">Introduction</a></li><li><a href="01_company_types.html">Company Types</a></li><li><a href="02_foreign_investors.html">Foreign Investors</a></li><li><a href="03_founding_steps.html" class="active">Founding Steps</a></li><li><a href="04_pdpl_basics.html">PDPL Basics</a></li><li><a href="05_consent.html">Consent</a></li><li><a href="06_cross_border.html">Cross-Border Transfer</a></li><li><a href="07_pdpl_compliance.html">PDPL Compliance</a></li><li><a href="08_pdpl_penalties.html">Penalties</a></li><li><a href="09_cybersecurity_ecosystem.html">Cybersecurity</a></li><li><a href="10_ecc_controls.html">ECC Controls</a></li><li><a href="11_government_contracts.html">Government Contracts</a></li><li><a href="12_compliance_advantage.html">Compliance Advantage</a></li><li><a href="13_ai_landscape.html">AI Regulations</a></li><li><a href="14_ai_products.html">AI Products</a></li><li><a href="appendix_a_checklists.html">Checklists</a></li><li><a href="appendix_b_templates.html">Templates</a></li><li><a href="appendix_c_resources.html">Resources</a></li><li><a href="appendix_d_glossary.html">Glossary</a></li></ul></nav>
+
+    <main class="container">
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+
+        <div class="content">
+            <h1>Chapter 3: Practical Founding Steps</h1>
+<p>Setting up a tech company in Saudi Arabia was once a journey through a labyrinth of bureaucratic paperwork and physical visits to multiple ministries. Today, under the umbrella of <strong>Vision 2030</strong>, that process has been radicalized. The Kingdom has transitioned into a "Digital-First" regulatory environment, primarily managed through the <strong>Saudi Business Center (SBC)</strong> (<em>Markaz Al-A'mal</em>).</p>
+<p>For a tech entrepreneur or a foreign investor, the founding process is no longer about "who you know," but about "what you click." This chapter provides a granular, actionable roadmap to navigating the digital and physical steps required to bring your tech entity to life.</p>
+<hr />
+<h2>1. The Digital Foundation: Required Electronic Platforms</h2>
+<p>In the Saudi ecosystem, your digital identity is your legal identity. Before you sign a lease or hire a developer, you must familiarize yourself with the "Big Five" platforms.</p>
+<h3>A. Saudi Business Center (SBC) / Business.sa</h3>
+<p>The SBC is the "One-Stop Shop." It integrates services from the Ministry of Commerce, Ministry of Investment (MISA), and the Zakat, Tax and Customs Authority (ZATCA).
+*   <strong>Purpose:</strong> Issuing the Commercial Registration (CR), reserving trade names, and amending Articles of Association.
+*   <strong>Action:</strong> This is where your journey begins. Most tech startups will use the "Start Your Business" service here.</p>
+<h3>B. Qiwa (Ministry of Human Resources and Social Development)</h3>
+<ul>
+<li><strong>Purpose:</strong> Managing all labor-related matters. This is where you issue work contracts, manage <strong>Saudization (Nitaqat)</strong> levels, and handle employee transfers.</li>
+<li><strong>Action:</strong> You must register here immediately after receiving your CR to hire your first engineer.</li>
+</ul>
+<h3>C. ZATCA (Zakat, Tax and Customs Authority)</h3>
+<ul>
+<li><strong>Purpose:</strong> Handling Zakat (for Saudis/GCC nationals), Income Tax (for foreign investors), and Value Added Tax (VAT).</li>
+<li><strong>Action:</strong> Registration is mandatory. Even if you aren't generating revenue yet, you must file "Zero" returns to avoid heavy fines.</li>
+</ul>
+<h3>D. Muqeem &amp; Absher</h3>
+<ul>
+<li><strong>Purpose:</strong> <strong>Absher</strong> is for individual identity verification (essential for the General Manager), while <strong>Muqeem</strong> is the corporate portal for managing the residencies (<em>Iqamas</em>) of foreign employees.</li>
+<li><strong>Action:</strong> Ensure the General Manager has an active, premium Absher account.</li>
+</ul>
+<h3>E. National Address (SPL - Saudi Post)</h3>
+<ul>
+<li><strong>Purpose:</strong> Every company must have a physical or validated digital address.</li>
+<li><strong>Action:</strong> You cannot finalize your CR without a registered National Address.</li>
+</ul>
+<hr />
+<h2>2. Required Documents: The Checklist</h2>
+<p>The documentation varies slightly depending on whether you are a local founder or a foreign entity. Under the <strong>New Saudi Companies Law (2023)</strong>, the requirements have been significantly streamlined.</p>
+<h3>For Local Founders (Saudi/GCC Nationals)</h3>
+<ol>
+<li><strong>National ID / Iqama:</strong> Of the founders and the appointed General Manager.</li>
+<li><strong>Proposed Trade Name:</strong> Must comply with Ministry of Commerce guidelines (cannot be misleading or use prohibited religious/political terms).</li>
+<li><strong>Articles of Association (AoA) (<em>Al-Nizam Al-Asasi</em>):</strong> Usually generated via a standard template on the SBC portal.</li>
+<li><strong>Capital Declaration:</strong> While most tech LLCs do not require a bank certificate <em>before</em> founding, you must declare the capital amount in the AoA.</li>
+</ol>
+<h3>For Foreign Investors (MISA Path)</h3>
+<p>If you are a non-GCC founder, you require additional layers:
+1.  <strong>MISA Investment License:</strong> Obtained via the Ministry of Investment.
+2.  <strong>Board Resolution:</strong> A formal document from the parent company (if applicable) stating the intent to open a subsidiary in KSA.
+3.  <strong>Parent Company Documents:</strong> Certificate of Incorporation, AoA, and Commercial Registration—all <strong>apostilled</strong> or legalized at the Saudi Embassy in the home country.
+4.  <strong>Passport Copy:</strong> Of the appointed General Manager.</p>
+<blockquote>
+<p><strong>Legal Reference:</strong> According to <strong>Article 4 of the New Companies Law</strong>, a company is considered a legal entity once it is registered in the Commercial Register. The AoA must include the company name, headquarters, purpose, and capital.</p>
+</blockquote>
+<hr />
+<h2>3. Step-by-Step Founding Workflow</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Platform</th>
+<th style="text-align: left;">Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1</strong></td>
+<td style="text-align: left;">Reserve Trade Name</td>
+<td style="text-align: left;">SBC</td>
+<td style="text-align: left;">Reserved Name (Valid for 60 days)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2</strong></td>
+<td style="text-align: left;">Draft &amp; Attest AoA</td>
+<td style="text-align: left;">SBC (E-Signature)</td>
+<td style="text-align: left;">Digitally Signed AoA</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3</strong></td>
+<td style="text-align: left;">Issue Commercial Reg.</td>
+<td style="text-align: left;">SBC</td>
+<td style="text-align: left;"><strong>CR Number (Sijil Tijari)</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4</strong></td>
+<td style="text-align: left;">Register National Address</td>
+<td style="text-align: left;">SPL Online</td>
+<td style="text-align: left;">Valid Business Address</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5</strong></td>
+<td style="text-align: left;">Chamber of Commerce</td>
+<td style="text-align: left;">Auto-linked via SBC</td>
+<td style="text-align: left;">Membership Certificate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>6</strong></td>
+<td style="text-align: left;">Open Labor File</td>
+<td style="text-align: left;">Qiwa</td>
+<td style="text-align: left;">Ability to issue Visas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>7</strong></td>
+<td style="text-align: left;">Tax Registration</td>
+<td style="text-align: left;">ZATCA</td>
+<td style="text-align: left;">Tax Identification Number (TIN)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>8</strong></td>
+<td style="text-align: left;">Open Corporate Bank A/C</td>
+<td style="text-align: left;">Physical Bank</td>
+<td style="text-align: left;">Active Account for Operations</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>4. Expected Costs (Estimated for 2024)</h2>
+<p>Founding costs are split into "One-time Government Fees" and "Operational Setup."</p>
+<h3>Government Fees (Approximate)</h3>
+<ul>
+<li><strong>Commercial Registration (CR):</strong> SAR 200–1,200 per year (depending on the number of activities).</li>
+<li><strong>Chamber of Commerce Membership:</strong> SAR 2,000–10,000 (varies by capital and grade).</li>
+<li><strong>MISA License (Foreigners):</strong> SAR 2,000 per year + SAR 10,000 for the first-year administrative fee.</li>
+<li><strong>Municipality License (<em>Baladiya</em>):</strong> Varies by office size; some "Virtual Office" setups for tech companies offer lower rates around SAR 500–1,500.</li>
+</ul>
+<h3>Practical Example: The "Lean Tech Startup"</h3>
+<p>If you are a Saudi founder starting a "Software as a Service" (SaaS) LLC with a virtual office:
+*   <strong>Total Founding Cost:</strong> Approximately <strong>SAR 5,000 – SAR 7,000</strong> (excluding capital).
+*   <strong>Time to CR:</strong> Under 30 minutes if using the standard SBC template.</p>
+<h3>Practical Example: The Foreign Fintech Branch</h3>
+<p>For a foreign company entering KSA:
+*   <strong>MISA Fees:</strong> SAR 12,000 (Initial).
+*   <strong>Legalization of Docs:</strong> SAR 5,000 – SAR 15,000 (depending on the country of origin).
+*   <strong>Total Initial Outlay:</strong> Approximately <strong>SAR 25,000 – SAR 40,000</strong>.</p>
+<hr />
+<h2>5. Realistic Timeline: What to Expect</h2>
+<p>While the government says "CR in minutes," the <em>operational</em> readiness takes longer.</p>
+<ol>
+<li><strong>Phase 1: Legal Existence (Days 1-3):</strong> Obtaining the CR and AoA. This is incredibly fast in Saudi Arabia.</li>
+<li><strong>Phase 2: Post-CR Registrations (Week 1-2):</strong> Registering with Qiwa, ZATCA, and GOSI (Social Insurance).</li>
+<li><strong>Phase 3: The "Bank Account Hurdle" (Weeks 3-8):</strong> This is the most common bottleneck. Saudi banks have strict Compliance and KYC (Know Your Customer) procedures for tech companies, especially those with foreign shareholders. Expect this to take 1 to 2 months.</li>
+<li><strong>Phase 4: Hiring and Visas (Month 2 onwards):</strong> Once the bank account is active and your Qiwa file is open, you can begin the <strong>Saudization (Nitaqat)</strong> process and hire international talent.</li>
+</ol>
+<hr />
+<h2>6. Choosing the Right ISIC Codes</h2>
+<p>A common mistake for tech companies is selecting the wrong business activity code (<strong>ISIC Codes</strong>). If your code doesn't match your actual operations, you may face issues with specialized regulators like <strong>SAMA</strong> (Central Bank) or <strong>CST</strong> (Communications, Space &amp; Technology Commission).</p>
+<p><strong>Recommended Codes for Tech:</strong>
+*   <strong>6201:</strong> Computer programming activities (Software development).
+*   <strong>6202:</strong> Computer consultancy and computer facilities management.
+*   <strong>6311:</strong> Data processing, hosting, and related activities (Cloud services).
+*   <strong>4791:</strong> Retail sale via mail order houses or via Internet (E-commerce).</p>
+<hr />
+<h2>7. Common Mistakes and How to Avoid Them</h2>
+<h3>Mistake 1: The "General Manager" Residency Trap</h3>
+<p><strong>The Error:</strong> Appointing a General Manager (GM) who is not a resident of Saudi Arabia or does not have a valid residency (<em>Iqama</em>) that allows for a GM title.
+<strong>The Solution:</strong> For foreign companies, the GM can initially be on a visit visa to set things up, but for permanent operations, they must have a residency linked to the CR. Use the <strong>"Premium Residency" (Business Owner track)</strong> if you want to bypass the need for a local sponsor or employer.</p>
+<h3>Mistake 2: Ignoring the "Nitaqat" (Saudization) Ratio</h3>
+<p><strong>The Error:</strong> Assuming you can hire 10 foreign developers immediately.
+<strong>The Solution:</strong> Saudi Arabia uses a tiered system. As a "Small A" company (1-5 employees), you are often required to hire at least one Saudi national to move into the "Green" zone, which allows you to issue visas for foreign talent.</p>
+<blockquote>
+<p><strong>Pro Tip:</strong> Use the <strong>"GOSI"</strong> portal to check your compliance status weekly.</p>
+</blockquote>
+<h3>Mistake 3: Incorrect Capital Declaration</h3>
+<p><strong>The Error:</strong> Declaring a massive capital (e.g., SAR 5 Million) in the AoA thinking it looks "prestigious."
+<strong>The Solution:</strong> Under the New Companies Law, there is no mandatory minimum capital for most LLCs (except for specific sectors like Insurance or Banking). Declare what you actually need. High declared capital can lead to higher Chamber of Commerce fees and complicates the liquidation process later.</p>
+<h3>Mistake 4: Missing the ZATCA Deadline</h3>
+<p><strong>The Error:</strong> Waiting until the end of the first year to register for taxes.
+<strong>The Solution:</strong> You must register with ZATCA within <strong>60 days</strong> of issuing the CR. Failure to do so results in a SAR 10,000 fine.</p>
+<hr />
+<h2>8. Practical Tips for Tech Founders</h2>
+<ol>
+<li><strong>Use the "Simplified Joint Stock Company" (SJC) (<em>Sharikat Musahama Mubassatah</em>):</strong> This is a new entity type introduced in 2023. It is perfect for startups because it allows for different classes of shares (Founders vs. Investors), doesn't require a Board of Directors, and has no minimum capital.</li>
+<li><strong>Digital Signature is King:</strong> Ensure all partners have their <strong>Nafath</strong> (National Single Sign-On) app ready. Physical signing of documents is almost non-existent now.</li>
+<li><strong>The "Virtual Office" Loophole:</strong> For many tech activities, the Ministry of Commerce allows a "Virtual Office" for the first year. This saves you the massive upfront cost of commercial real estate in Riyadh or Jeddah.</li>
+<li><strong>Sandbox Licensing:</strong> If your tech is disruptive (Fintech, EdTech, HealthTech), check if you qualify for a <strong>Regulatory Sandbox</strong> license from SAMA or CMA. This allows you to operate with "relaxed" regulations while you test your product.</li>
+</ol>
+<hr />
+<h2>Summary of Chapter 3 Actions</h2>
+<ul>
+<li>[ ] Verify your <strong>Nafath</strong>/Absher account is active.</li>
+<li>[ ] Choose your <strong>ISIC codes</strong> carefully (Focus on 6201 or 6202).</li>
+<li>[ ] Register on the <strong>Saudi Business Center (SBC)</strong> portal.</li>
+<li>[ ] Issue your <strong>Commercial Registration (CR)</strong>.</li>
+<li>[ ] Register your <strong>National Address</strong> via SPL.</li>
+<li>[ ] Open your <strong>ZATCA</strong> and <strong>Qiwa</strong> accounts within 30 days.</li>
+<li>[ ] Initiate the <strong>Bank Account</strong> opening immediately (it takes the longest).</li>
+</ul>
+<blockquote>
+<p>"In the new Saudi Arabia, the speed of your business is limited only by the clarity of your digital application. Precision in the founding stage prevents months of regulatory correction later."</p>
+</blockquote>
+<hr />
+<p><em>The next chapter will dive into </em><em>Chapter 4: Labor Laws and Saudization</em><em>, focusing on how to build your team while staying compliant with Nitaqat and the GOSI system.</em></p>
+        </div>
+
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

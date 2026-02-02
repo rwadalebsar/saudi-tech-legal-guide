@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Tech Legal Guide</title>
+    <style>
+:root {
+    --primary: #1B5E20;
+    --secondary: #4CAF50;
+    --accent: #81C784;
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #FFFFFF;
+    --bg-alt: #F5F5F5;
+    --border: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #FFF3E0;
+    border: 2px solid #FF9800;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.disclaimer h3 {
+    color: #E65100;
+    margin-bottom: 1rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.5rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+}
+
+/* Content */
+.content {
+    padding: 2rem 0;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1rem 2rem 1rem 0;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.content th {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.content tr:nth-child(even) {
+    background: var(--bg-alt);
+}
+
+.content blockquote {
+    background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--secondary);
+    border-radius: 8px 0 0 8px;
+}
+
+.content code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.content pre {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+}
+
+.lang-switch a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.lang-switch a:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--text);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Saudi Tech Legal Guide</h1>
+        <p>A practical guide to regulations for tech companies</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../ar/12_compliance_advantage.html">العربية</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">Introduction</a></li><li><a href="01_company_types.html">Company Types</a></li><li><a href="02_foreign_investors.html">Foreign Investors</a></li><li><a href="03_founding_steps.html">Founding Steps</a></li><li><a href="04_pdpl_basics.html">PDPL Basics</a></li><li><a href="05_consent.html">Consent</a></li><li><a href="06_cross_border.html">Cross-Border Transfer</a></li><li><a href="07_pdpl_compliance.html">PDPL Compliance</a></li><li><a href="08_pdpl_penalties.html">Penalties</a></li><li><a href="09_cybersecurity_ecosystem.html">Cybersecurity</a></li><li><a href="10_ecc_controls.html">ECC Controls</a></li><li><a href="11_government_contracts.html">Government Contracts</a></li><li><a href="12_compliance_advantage.html" class="active">Compliance Advantage</a></li><li><a href="13_ai_landscape.html">AI Regulations</a></li><li><a href="14_ai_products.html">AI Products</a></li><li><a href="appendix_a_checklists.html">Checklists</a></li><li><a href="appendix_b_templates.html">Templates</a></li><li><a href="appendix_c_resources.html">Resources</a></li><li><a href="appendix_d_glossary.html">Glossary</a></li></ul></nav>
+
+    <main class="container">
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+
+        <div class="content">
+            <h1>Chapter 12: Turning Compliance into Competitive Advantage</h1>
+<p>In the rapidly evolving landscape of the Saudi Arabian tech sector, compliance is often viewed through the lens of necessity—a hurdle to be cleared or a box to be checked to avoid penalties. However, for the strategic entrepreneur and the forward-thinking investor, the regulatory environment shaped by Vision 2030 represents something far more valuable: a market differentiator.</p>
+<p>As Saudi Arabia positions itself as a global digital hub, "Trust" has become the new currency. This chapter explores how to transition from a mindset of "defensive compliance" to "strategic compliance," using the Kingdom’s robust legal frameworks—such as the Personal Data Protection Law (PDPL) and the National Cybersecurity Authority (NCA) controls—as tools to win market share, secure government contracts, and build a premium brand.</p>
+<hr />
+<h2>1. Recognized Compliance Certifications</h2>
+<p>In the Saudi market, certifications are more than just wall decorations; they are prerequisites for entry into high-value sectors like Fintech, GovTech, and HealthTech. Being "compliant" is a claim; being "certified" is proof.</p>
+<h3>The Saudi "Big Three" Regulatory Frameworks</h3>
+<p>Depending on your tech niche, specific certifications and frameworks act as the "Gold Standard."</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Authority</th>
+<th style="text-align: left;">Framework/Certification</th>
+<th style="text-align: left;">Target Audience</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>National Cybersecurity Authority (NCA)</strong></td>
+<td style="text-align: left;">Essential Cybersecurity Controls (ECC)</td>
+<td style="text-align: left;">All entities providing services to government or critical infrastructure.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Saudi Central Bank (SAMA)</strong></td>
+<td style="text-align: left;">Cybersecurity Framework (CSF)</td>
+<td style="text-align: left;">Fintechs, Banks, and Insurance tech.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Communications, Space &amp; Technology Commission (CST)</strong></td>
+<td style="text-align: left;">Cloud Computing Regulatory Framework (CCRF)</td>
+<td style="text-align: left;">Cloud Service Providers (CSPs) and SaaS companies.</td>
+</tr>
+</tbody>
+</table>
+<h4>A. National Cybersecurity Authority (NCA) Compliance</h4>
+<p>The NCA’s <strong>Essential Cybersecurity Controls (ECC-1:2018)</strong> is the bedrock of Saudi tech security. While the NCA does not "issue" a certificate in the traditional commercial sense for all private companies, achieving a "Clean Audit Report" from an NCA-qualified auditor is the functional equivalent.
+*   <strong>Practical Tip:</strong> If you are a B2B SaaS company, having an independent third-party audit report confirming your alignment with ECC-1:2018 is the single most effective document you can present during a procurement cycle with a Saudi enterprise.</p>
+<h4>B. SAMA Cybersecurity Framework</h4>
+<p>For those in the Fintech space, the <strong>SAMA CSF</strong> is non-negotiable. It is rigorous and requires a high level of maturity.
+*   <strong>Strategic Advantage:</strong> Achieving SAMA compliance allows you to partner with traditional banks. In the Saudi market, banks are increasingly looking to "outsource" innovation to compliant Fintechs.</p>
+<h4>C. CST Cloud Service Provider (CSP) Registration</h4>
+<p>If you provide cloud-based services, you must register with the <strong>Communications, Space &amp; Technology Commission (CST)</strong>. They categorize providers (Class A, B, or C) based on the sensitivity of the data handled.
+*   <strong>Legal Reference:</strong> Under the <em>Cloud Computing Regulatory Framework (CCRF)</em>, providing cloud services to Saudi government entities without the proper CST qualification is a violation that can lead to service suspension.</p>
+<h3>International Standards in the Saudi Context</h3>
+<p>While local certifications are paramount, international standards like <strong>ISO 27001 (Information Security Management)</strong> and <strong>SOC2 Type II</strong> remain highly respected.
+*   <strong>The Saudi Twist:</strong> Don't assume ISO 27001 is enough. Many Saudi government entities will ask: <em>"How does your ISO 27001 map to our NCA ECC controls?"</em>
+*   <strong>Actionable Step:</strong> Create a "Cross-Walk" document. This is a simple table showing how your international certifications satisfy specific Saudi regulatory requirements. This saves the client's compliance team weeks of work and positions you as a local expert.</p>
+<hr />
+<h2>2. How to Market Your Compliance</h2>
+<p>Compliance shouldn't live in a drawer in the Legal Department. It should be on your homepage, in your sales decks, and part of your "elevator pitch."</p>
+<h3>A. The "Data Sovereignty" Selling Point</h3>
+<p>Saudi Arabia has strict rules regarding data residency under the <strong>Personal Data Protection Law (PDPL)</strong> and the <strong>National Data Management Authority (NDMA)</strong> policies.
+*   <strong>The Strategy:</strong> If your infrastructure is hosted within the Kingdom (e.g., using Oracle, Google Cloud, or Alibaba Cloud regions in KSA), market this aggressively.
+*   <strong>Marketing Copy Example:</strong> <em>"Your data never leaves the Kingdom. Fully compliant with PDPL Article 29 regarding cross-border transfers."</em></p>
+<h3>B. Developing a "Trust Center"</h3>
+<p>Instead of making potential clients ask for your security credentials, build a dedicated "Trust Center" or "Compliance Portal" on your website.
+*   <strong>What to include:</strong>
+    *   Summaries of your PDPL compliance roadmap.
+    *   Logos of certifications (NCA, CST, ISO).
+    *   A "Security Whitepaper" written in plain English for non-technical CEOs.
+    *   Your Data Protection Officer (DPO) contact details.</p>
+<h3>C. Transparency as a Feature, Not a Bug</h3>
+<p>Under <strong>PDPL Article 4</strong>, individuals have the right to be informed about how their data is used.
+*   <strong>The Strategy:</strong> Instead of a 50-page legalistic Privacy Policy, create a "Privacy Dashboard." Allow users to see what data you have and give them easy "Opt-out" toggles.
+*   <strong>The Benefit:</strong> In a market where digital privacy is a growing concern, being the "transparent" choice builds immense brand loyalty.</p>
+<h3>D. Practical Example: The "Saudization" (Nitaqat) Advantage</h3>
+<p>In the B2B world, your <strong>Nitaqat</strong> status (the Saudization tier of your company) is a marketing tool.
+*   <strong>Why?</strong> Large Saudi companies and government bodies are incentivized to work with partners who contribute to the local economy.
+*   <strong>Action:</strong> Include your "Platinum" or "High Green" Nitaqat status in your RFP (Request for Proposal) responses. It signals stability and alignment with Vision 2030.</p>
+<hr />
+<h2>3. Building Trust with Government Clients</h2>
+<p>The Saudi government is the largest spender in the tech sector. However, the government is also the most risk-averse client. Winning here requires more than a good product; it requires "Institutional Trust."</p>
+<h3>A. Navigating the Etimad (إعتماد) Portal</h3>
+<p>All government procurement goes through the <strong>Etimad</strong> platform.
+*   <strong>The Mistake:</strong> Many foreign companies treat Etimad as just a bidding site.
+*   <strong>The Fix:</strong> Ensure your profile is complete with all local certifications. When a government buyer searches for a service, they filter by "Local Content" (المحتوى المحلي) and compliance status.</p>
+<h3>B. Understanding Local Content (Mandoob)</h3>
+<p>The <strong>Local Content and Government Procurement Authority (LCGPA)</strong> measures how much of your spending stays within Saudi Arabia.
+*   <strong>Actionable Tip:</strong> Even if you are a foreign company, hiring Saudi developers, using local hosting, and having a local office increases your "Local Content Score." A higher score allows you to win contracts even if your price is slightly higher than a non-compliant competitor.</p>
+<h3>C. Aligning with SDAIA and NDMO</h3>
+<p>The <strong>Saudi Data and AI Authority (SDAIA)</strong> and its regulatory arm, the <strong>National Data Management Office (NDMO)</strong>, oversee how data is used in the public sector.
+*   <strong>Practical Step:</strong> If you are pitching an AI solution to a government body, proactively demonstrate how your model adheres to the <strong>SDAIA AI Ethics Principles</strong>.
+*   <strong>Warning:</strong> Avoid the "Black Box" approach. Government clients will reject AI solutions that cannot explain how data is processed or where it is stored.</p>
+<h3>D. The Power of "Pilot Projects" (Sandboxes)</h3>
+<p>If your tech is highly innovative and perhaps "ahead" of current regulations, don't give up.
+*   <strong>The Strategy:</strong> Utilize regulatory sandboxes.
+    *   <strong>SAMA Sandbox:</strong> For Fintech.
+    *   <strong>CST Sandbox:</strong> For emerging technologies like IoT or space tech.
+*   <strong>The Benefit:</strong> Operating in a sandbox gives you a "Letter of Support" from the regulator. This is the ultimate "Trust Badge" when approaching government clients.</p>
+<hr />
+<h2>4. Compliance as a Service (CaaS)</h2>
+<p>For tech companies, especially SaaS and infrastructure providers, compliance can be transformed from an internal cost center into a revenue-generating product feature.</p>
+<h3>A. Enabling Your Customers to be Compliant</h3>
+<p>If you sell software to other businesses (B2B), your customers are likely terrified of PDPL fines.
+*   <strong>The Product Shift:</strong> Don't just sell a CRM; sell a <em>"PDPL-Ready CRM."</em>
+*   <strong>Feature Examples:</strong>
+    *   Automated "Right to be Forgotten" (Data Erasure) workflows.
+    *   Built-in Data Mapping tools.
+    *   Local KSA data residency by default.
+    *   Audit logs that meet NCA requirements.</p>
+<h3>B. "Compliance-in-a-Box" for Small Businesses</h3>
+<p>Small and Medium Enterprises (SMEs) in Saudi Arabia often lack the budget for expensive legal consultants.
+*   <strong>The Opportunity:</strong> If your platform helps SMEs manage their business (like accounting or HR software), integrate compliance features.
+*   <strong>Example:</strong> An HR payroll app that automatically calculates <strong>GOSI (General Organization for Social Insurance)</strong> contributions and ensures data privacy for employee records. You aren't just selling software; you are selling "Peace of Mind."</p>
+<h3>C. API-Driven Compliance</h3>
+<p>Modern tech stacks in Saudi are becoming modular.
+*   <strong>The Strategy:</strong> Offer "Compliance APIs." For example, a specialized KYC (Know Your Customer) API that connects directly to <strong>Absher/Nafath</strong> for identity verification.
+*   <strong>The Value:</strong> You save your clients from the headache of integrating with complex government systems themselves.</p>
+<hr />
+<h2>5. Practical Tips and Common Mistakes</h2>
+<h3>Common Pitfalls to Avoid</h3>
+<ol>
+<li><strong>The "Copy-Paste" Policy:</strong> Using a GDPR-compliant privacy policy and just changing the word "Europe" to "Saudi Arabia." The PDPL has specific nuances (like the role of the "Competent Authority") that, if missed, signal to regulators and clients that you aren't taking the local market seriously.</li>
+<li><strong>Ignoring the DPO Requirement:</strong> Under the PDPL, many entities must appoint a <strong>Data Protection Officer (DPO)</strong>. Failing to name one—or naming someone without the proper authority—is a major red flag during audits.</li>
+<li><strong>Underestimating the NCA ECC:</strong> Many startups think the NCA controls are only for "big companies." If you want to sell even a small software tool to a government ministry, you <em>must</em> meet these controls.</li>
+</ol>
+<h3>Actionable Checklist for Tech Founders</h3>
+<ul>
+<li>[ ] <strong>Audit your Data Residency:</strong> Ensure all "Sensitive Personal Data" (as defined by PDPL Article 1) is stored on Saudi-based servers unless a specific exemption applies.</li>
+<li>[ ] <strong>Get on Etimad:</strong> Register your company and keep your certifications updated.</li>
+<li>[ ] <strong>Map your Local Content:</strong> Calculate your current local content score and create a plan to increase it over 12 months.</li>
+<li>[ ] <strong>Train your Sales Team:</strong> Ensure your sales staff can explain <em>why</em> your product is more compliant than international competitors. Use the term "Sovereign Tech."</li>
+<li>[ ] <strong>Monitor the "SDAIA Circulars":</strong> Regulations in Saudi move fast. Assign one person to check for new circulars (تعميم) from SDAIA and NCA every month.</li>
+</ul>
+<hr />
+<h2>6. Summary Table: Compliance as a Business Driver</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Business Goal</th>
+<th style="text-align: left;">Compliance Action</th>
+<th style="text-align: left;">Competitive Advantage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Enter the Market</strong></td>
+<td style="text-align: left;">Register with CST and MISA.</td>
+<td style="text-align: left;">Legal legitimacy and ability to open bank accounts.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Win Enterprise Clients</strong></td>
+<td style="text-align: left;">Align with NCA ECC-1:2018.</td>
+<td style="text-align: left;">Shorter sales cycles and passing security audits easily.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Win Government Tenders</strong></td>
+<td style="text-align: left;">Boost Local Content (Mandoob) and Etimad profile.</td>
+<td style="text-align: left;">Preference over foreign competitors and higher "Trust Score."</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Attract Investors</strong></td>
+<td style="text-align: left;">Full PDPL alignment and DPO appointment.</td>
+<td style="text-align: left;">Lower legal risk during Due Diligence; higher valuation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Retain Customers</strong></td>
+<td style="text-align: left;">Privacy-by-Design and Transparency Dashboards.</td>
+<td style="text-align: left;">High brand trust and lower churn rates in a privacy-conscious market.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Conclusion</h2>
+<p>In the "New Saudi Arabia," the legal compass does not just point toward "staying out of trouble"—it points toward growth. By embracing the Kingdom's regulatory frameworks, tech companies can transform what many see as a "cost of doing business" into their most potent marketing tool. </p>
+<p>Compliance is the bridge between a "foreign app" and a "trusted Saudi partner." As you scale your operations, remember that in a desert of rapid digital transformation, the most sustainable oasis is one built on the solid ground of regulatory excellence. </p>
+<blockquote>
+<p><strong>Legal Reminder:</strong> While this chapter provides strategic business advice, regulations like the PDPL and NCA controls are subject to updates. Always consult with a licensed Saudi legal professional to verify your specific compliance status under the latest Executive Regulations (اللوائح التنفيذية).</p>
+</blockquote>
+        </div>
+
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

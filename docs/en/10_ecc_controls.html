@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Tech Legal Guide</title>
+    <style>
+:root {
+    --primary: #1B5E20;
+    --secondary: #4CAF50;
+    --accent: #81C784;
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #FFFFFF;
+    --bg-alt: #F5F5F5;
+    --border: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #FFF3E0;
+    border: 2px solid #FF9800;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.disclaimer h3 {
+    color: #E65100;
+    margin-bottom: 1rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.5rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+}
+
+/* Content */
+.content {
+    padding: 2rem 0;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1rem 2rem 1rem 0;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.content th {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.content tr:nth-child(even) {
+    background: var(--bg-alt);
+}
+
+.content blockquote {
+    background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--secondary);
+    border-radius: 8px 0 0 8px;
+}
+
+.content code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.content pre {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+}
+
+.lang-switch a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.lang-switch a:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--text);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Saudi Tech Legal Guide</h1>
+        <p>A practical guide to regulations for tech companies</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../ar/10_ecc_controls.html">العربية</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">Introduction</a></li><li><a href="01_company_types.html">Company Types</a></li><li><a href="02_foreign_investors.html">Foreign Investors</a></li><li><a href="03_founding_steps.html">Founding Steps</a></li><li><a href="04_pdpl_basics.html">PDPL Basics</a></li><li><a href="05_consent.html">Consent</a></li><li><a href="06_cross_border.html">Cross-Border Transfer</a></li><li><a href="07_pdpl_compliance.html">PDPL Compliance</a></li><li><a href="08_pdpl_penalties.html">Penalties</a></li><li><a href="09_cybersecurity_ecosystem.html">Cybersecurity</a></li><li><a href="10_ecc_controls.html" class="active">ECC Controls</a></li><li><a href="11_government_contracts.html">Government Contracts</a></li><li><a href="12_compliance_advantage.html">Compliance Advantage</a></li><li><a href="13_ai_landscape.html">AI Regulations</a></li><li><a href="14_ai_products.html">AI Products</a></li><li><a href="appendix_a_checklists.html">Checklists</a></li><li><a href="appendix_b_templates.html">Templates</a></li><li><a href="appendix_c_resources.html">Resources</a></li><li><a href="appendix_d_glossary.html">Glossary</a></li></ul></nav>
+
+    <main class="container">
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+
+        <div class="content">
+            <h1>Chapter 10: Essential Controls - Practical Explanation</h1>
+<p>In the previous chapter, we explored the high-level ecosystem of Saudi Arabia’s cybersecurity landscape and the pivotal role of the National Cybersecurity Authority (NCA - <em>Al-Hay’ah al-Wataniyyah li-Amn al-Siybrani</em>). Now, we move from the "who" and "why" to the "how."</p>
+<p>For any tech entrepreneur or international company operating in the Kingdom, the <strong>Essential Cybersecurity Controls (ECC)</strong> are not merely suggestions; they are the bedrock of your operational legitimacy. In 2024, the NCA updated these controls to reflect the evolving threat landscape and the rapid digital transformation of the Saudi economy under Vision 2030.</p>
+<p>This chapter provides a practical, deep-dive explanation of the ECC 2024. We will strip away the dense regulatory language and focus on what you actually need to build, document, and maintain to ensure compliance and, more importantly, to protect your business.</p>
+<hr />
+<h2>1. Cybersecurity Governance (Al-Hukama al-Siybraniyyah)</h2>
+<p>Governance is the "brain" of your cybersecurity program. Without it, your technical tools are just expensive toys. In the Saudi market, the NCA places heavy emphasis on accountability at the board and executive levels.</p>
+<h3>The Cybersecurity Strategy and Policy (Control 1-1)</h3>
+<p>You cannot simply "do" cybersecurity; you must define it. The ECC requires a documented Cybersecurity Policy.
+*   <strong>Practical Tip:</strong> Do not download a generic template from the internet. Your policy must be tailored to your specific tech stack (e.g., if you are a SaaS company on STC Cloud, your policy should reflect cloud-native risks).
+*   <strong>Actionable Step:</strong> Ensure your policy is approved by the CEO or the Board. In Saudi audits, an unsigned policy is treated as non-existent.</p>
+<h3>Cybersecurity Roles and Responsibilities (Control 1-2)</h3>
+<p>The NCA requires a clear organizational structure. For startups, this doesn't mean you need a 50-person team, but you must designate a <strong>Cybersecurity Officer</strong> (often referred to as a CISO).
+*   <strong>The Saudi Context:</strong> If you are a larger entity or a government contractor, there may be "Saudization" (<em>Nitaqat</em>) requirements for sensitive cybersecurity roles.
+*   <strong>Warning:</strong> Avoid "Conflict of Interest." The person managing IT operations should not be the same person auditing cybersecurity. They are two different functions: one builds the house, the other checks the locks.</p>
+<h3>Cybersecurity Risk Management (Control 1-3)</h3>
+<p>Risk management is about prioritizing your budget. You must conduct a formal <strong>Cybersecurity Risk Assessment</strong> at least once a year.
+*   <strong>Example:</strong> A fintech app in Riyadh should prioritize "Data Leakage" and "Unauthorized Transaction" risks over "Physical Office Intrusion" if most of its staff works remotely.</p>
+<hr />
+<h2>2. Asset Management (Idarat al-Usul)</h2>
+<p>You cannot protect what you don't know you have. Asset management is often the weakest link for fast-growing Saudi startups that spin up cloud servers daily.</p>
+<h3>Asset Inventory (Control 2-1)</h3>
+<p>The ECC 2024 mandates a comprehensive inventory of all hardware, software, and data assets.
+*   <strong>Practical Approach:</strong> Use automated discovery tools. If you are using AWS (Riyadh Region) or Google Cloud (Dammam), use their native tagging and inventory services.
+*   <strong>Table: What to Track in Your Inventory</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Asset Type</th>
+<th style="text-align: left;">Examples</th>
+<th style="text-align: left;">Key Detail Needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Hardware</strong></td>
+<td style="text-align: left;">Laptops, Servers, Firewalls</td>
+<td style="text-align: left;">Serial Number, User, Location</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Software</strong></td>
+<td style="text-align: left;">OS, Databases, SaaS tools</td>
+<td style="text-align: left;">Version, License Expiry</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">Customer PII, Financial Records</td>
+<td style="text-align: left;">Sensitivity Level (Top Secret to Public)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>People</strong></td>
+<td style="text-align: left;">Employees, Contractors</td>
+<td style="text-align: left;">Access Level, Nationality</td>
+</tr>
+</tbody>
+</table>
+<h3>Acceptable Use of Assets (Control 2-2)</h3>
+<p>You must define an "Acceptable Use Policy" (AUP). This tells your employees that they shouldn't use their work laptops for personal crypto mining or visiting high-risk websites. 
+*   <strong>Practical Tip:</strong> Include the AUP in the onboarding package for every new hire in your Saudi office. Have them sign it digitally.</p>
+<hr />
+<h2>3. Identity and Access Management (IAM)</h2>
+<p>In the world of Saudi cybersecurity, "Identity is the new perimeter." With the rise of remote work and cloud services, controlling <em>who</em> accesses <em>what</em> is critical.</p>
+<h3>User Access Management (Control 3-1)</h3>
+<p>The core principle here is <strong>Least Privilege</strong> (<em>Mabda' al-Salahiyyat al-Duqqa</em>). Users should only have the access necessary for their job—nothing more.
+*   <strong>Common Mistake:</strong> Giving "Admin" rights to every developer. In an NCA audit, this is a major red flag.
+*   <strong>Practical Step:</strong> Implement a formal "Joiners, Movers, Leavers" process. When an employee leaves your company, their access must be revoked immediately (ideally within 4 hours).</p>
+<h3>Multi-Factor Authentication (MFA)</h3>
+<p>Under ECC 2024, MFA is no longer optional for administrative access or remote access.
+*   <strong>Saudi Context:</strong> If your application integrates with government services, you might need to interface with <strong>Nafath</strong> (the National Single Sign-On). For internal systems, using apps like Microsoft Authenticator or hardware keys (YubiKeys) is highly recommended.</p>
+<h3>Privileged Access Management (PAM)</h3>
+<p>Privileged accounts (those with power to delete databases or change security settings) require extra scrutiny.
+*   <strong>Actionable Tip:</strong> Use a "Jump Server" or a PAM solution to record what admins do. If a database is deleted at 2:00 AM on a Friday (the Saudi weekend), you need a log of exactly who did it.</p>
+<hr />
+<h2>4. Application Protection (Himayat al-Tatbiqat)</h2>
+<p>For tech companies, your code is your most valuable asset—and your biggest vulnerability.</p>
+<h3>Secure Software Development Life Cycle (S-SDLC)</h3>
+<p>The NCA requires that security be baked into the development process, not bolted on at the end.
+*   <strong>Practical Tip for Developers:</strong> Use the <strong>OWASP Top 10</strong> as your checklist.
+*   <strong>Separation of Environments:</strong> You must have separate environments for Development (<em>Tatwir</em>), Testing (<em>Ikhtibar</em>), and Production (<em>Intaj</em>). Production data should <strong>never</strong> be used in the development environment.</p>
+<h3>API Security</h3>
+<p>Since many Saudi tech companies are built on APIs (Application Programming Interfaces)—especially in the Open Banking and Logistics sectors—securing these endpoints is vital.
+*   <strong>Warning:</strong> Unprotected APIs are the leading cause of data breaches in the region. Ensure all APIs require authentication and use rate-limiting to prevent DDoS attacks.</p>
+<hr />
+<h2>5. Cryptography Management (Al-Tashfir)</h2>
+<p>Cryptography is the art of scrambling data so that even if it is stolen, it is useless to the thief.</p>
+<h3>Encryption Standards (Control 5-1)</h3>
+<p>The NCA specifies that you must use "strong and industry-recognized" encryption algorithms.
+*   <strong>Practical Tip:</strong> Avoid "rolling your own crypto." Use AES-256 for data at rest and TLS 1.2 or 1.3 for data in transit. 
+*   <strong>Key Management:</strong> How you store the "keys" to the encryption is more important than the encryption itself. Do not store encryption keys in the same database as the encrypted data. Use a Key Management Service (KMS).</p>
+<h3>Data Residency and Encryption</h3>
+<p>Under the Saudi PDPL (Personal Data Protection Law), certain sensitive data must remain within the Kingdom. When this data is stored in the cloud, it must be encrypted using keys that you—the company—control, not just the cloud provider.</p>
+<hr />
+<h2>6. Backup and Recovery (Al-Nuskh al-Ihtiyati wa al-Isti'adah)</h2>
+<p>In Saudi Arabia, ransomware attacks are a significant threat. Your backup is your last line of defense.</p>
+<h3>The 3-2-1 Rule</h3>
+<p>A practical standard to meet ECC requirements:
+1.  <strong>3 Copies of Data:</strong> The original and two backups.
+2.  <strong>2 Different Media:</strong> e.g., Cloud storage and a local NAS.
+3.  <strong>1 Offsite Copy:</strong> For a Saudi company, this means a backup in a different geographic region (e.g., if your main server is in Riyadh, keep a backup in Jeddah or a different cloud zone).</p>
+<h3>Testing the Restore (Control 6-2)</h3>
+<p>A backup that hasn't been tested is not a backup.
+*   <strong>Practical Tip:</strong> Conduct a "Restoration Drill" every six months. Document the results. An auditor will ask: "When was the last time you successfully restored your database?" You need a dated log to prove it.</p>
+<hr />
+<h2>7. Vulnerability Management (Idarat al-Thughrat)</h2>
+<p>Hackers look for the easiest way in—usually an unpatched server or an old version of a plugin.</p>
+<h3>Vulnerability Scanning</h3>
+<p>You should run automated scans on your network and applications regularly.
+*   <strong>Critical/High Vulnerabilities:</strong> The ECC expects you to patch "Critical" vulnerabilities within a very short window (often 48-72 hours after a patch is released).</p>
+<h3>Penetration Testing (Ikhtibar al-Ikhtiraq)</h3>
+<p>Once a year (or after any major update), hire a third-party cybersecurity firm to try and "hack" your systems.
+*   <strong>Practical Tip:</strong> Ensure the firm you hire is authorized to operate in Saudi Arabia. The report they provide will be a key document for your compliance file.</p>
+<hr />
+<h2>8. Incident Response (Al-Istijabah lil-Hawadith)</h2>
+<p>It is not a matter of <em>if</em> you will be attacked, but <em>when</em>. The NCA requires you to be ready.</p>
+<h3>Incident Response Plan (IRP)</h3>
+<p>You need a written plan that answers:
+*   Who is in the "War Room"?
+*   How do we isolate the infected servers?
+*   When do we notify the NCA or the SDAIA (Saudi Data and AI Authority)?</p>
+<h3>Reporting Requirements</h3>
+<p>Under Saudi regulations, major cybersecurity incidents must be reported to the NCA’s <strong>Saudi Information Technology Center (SIRC)</strong> within specific timeframes. 
+*   <strong>Warning:</strong> Failing to report a significant breach can lead to heavy fines under the PDPL and ECC frameworks.</p>
+<hr />
+<h2>9. Simplified ECC Checklist for Tech Startups</h2>
+<p>To make this actionable, use the following checklist to evaluate your current status.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Control Area</th>
+<th style="text-align: left;">Action Item</th>
+<th style="text-align: left;">Status (Done/Pending)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Governance</strong></td>
+<td style="text-align: left;">Do we have a signed Cybersecurity Policy?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Governance</strong></td>
+<td style="text-align: left;">Is there a designated Cybersecurity Officer?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Assets</strong></td>
+<td style="text-align: left;">Is our Asset Inventory updated this month?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Access</strong></td>
+<td style="text-align: left;">Is MFA enabled for all staff emails and cloud consoles?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Access</strong></td>
+<td style="text-align: left;">Have we removed access for all former employees?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>App Security</strong></td>
+<td style="text-align: left;">Are Dev, Test, and Prod environments separated?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">Is customer PII encrypted at rest?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Backup</strong></td>
+<td style="text-align: left;">Did we test a backup restoration in the last 6 months?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vulnerability</strong></td>
+<td style="text-align: left;">Are all "Critical" patches applied to our servers?</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Incident</strong></td>
+<td style="text-align: left;">Do we have the contact info for the NCA reporting portal?</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Practical Tips and Common Mistakes</h2>
+<h3>Mistake 1: "We are on the Cloud, so security is their problem."</h3>
+<p>This is a dangerous misconception. This is called the <strong>Shared Responsibility Model</strong>. The cloud provider (AWS, Google, STC Cloud) secures the "physical" data center. You are responsible for securing the data, the code, and the user access <em>inside</em> that cloud.</p>
+<h3>Mistake 2: Treating ECC as a "One-Time Project."</h3>
+<p>Cybersecurity is a continuous cycle. An auditor will look for "evidence of operation." This means they don't just want to see your policy; they want to see the logs showing you followed that policy every day for the last year.</p>
+<h3>Practical Tip: The "Evidence Folder"</h3>
+<p>Start a digital folder today. Every time you do a vulnerability scan, every time you train an employee on security, and every time you test a backup, save the report/screenshot in this folder. When the NCA or a major Saudi client (like Aramco or STC) asks for proof of security, you will be ready in minutes.</p>
+<h3>The Saudi "Trust Factor"</h3>
+<p>In the Saudi market, cybersecurity is a competitive advantage. Large Saudi enterprises and government entities are extremely risk-averse. If you can prove—through ECC compliance—that your startup is secure, you will win contracts much faster than a competitor who treats security as an afterthought.</p>
+<h2>Conclusion</h2>
+<p>The ECC 2024 is your roadmap to building a resilient tech company in the Kingdom. While the requirements may seem daunting, they are aligned with global best practices. By focusing on governance first, securing your identities, and maintaining a rigorous backup and patching schedule, you satisfy not just the regulators, but also your investors and customers.</p>
+<p>In the next chapter, we will look at the specific technical standards for <strong>Cloud Computing Compliance</strong>, which builds upon these essential controls for companies hosted in the cloud.</p>
+        </div>
+
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

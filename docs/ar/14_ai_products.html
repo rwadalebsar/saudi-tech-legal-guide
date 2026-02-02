@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" class="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل القانوني للتقنية في السعودية</title>
+    <style>
+:root {
+    --primary: #1B5E20;
+    --secondary: #4CAF50;
+    --accent: #81C784;
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #FFFFFF;
+    --bg-alt: #F5F5F5;
+    --border: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #FFF3E0;
+    border: 2px solid #FF9800;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.disclaimer h3 {
+    color: #E65100;
+    margin-bottom: 1rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.5rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+}
+
+/* Content */
+.content {
+    padding: 2rem 0;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1rem 2rem 1rem 0;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.content th {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.content tr:nth-child(even) {
+    background: var(--bg-alt);
+}
+
+.content blockquote {
+    background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--secondary);
+    border-radius: 8px 0 0 8px;
+}
+
+.content code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.content pre {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+}
+
+.lang-switch a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.lang-switch a:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--text);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>الدليل القانوني للتقنية في السعودية</h1>
+        <p>دليل عملي للأنظمة لشركات التقنية</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../en/14_ai_products.html">English</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">المقدمة</a></li><li><a href="01_company_types.html">أنواع الشركات</a></li><li><a href="02_foreign_investors.html">المستثمرون الأجانب</a></li><li><a href="03_founding_steps.html">خطوات التأسيس</a></li><li><a href="04_pdpl_basics.html">أساسيات حماية البيانات</a></li><li><a href="05_consent.html">الموافقة</a></li><li><a href="06_cross_border.html">النقل عبر الحدود</a></li><li><a href="07_pdpl_compliance.html">الامتثال</a></li><li><a href="08_pdpl_penalties.html">العقوبات</a></li><li><a href="09_cybersecurity_ecosystem.html">الأمن السيبراني</a></li><li><a href="10_ecc_controls.html">الضوابط الأساسية</a></li><li><a href="11_government_contracts.html">العقود الحكومية</a></li><li><a href="12_compliance_advantage.html">ميزة الامتثال</a></li><li><a href="13_ai_landscape.html">تنظيم الذكاء الاصطناعي</a></li><li><a href="14_ai_products.html" class="active">منتجات الذكاء الاصطناعي</a></li><li><a href="appendix_a_checklists.html">قوائم المراجعة</a></li><li><a href="appendix_b_templates.html">النماذج</a></li><li><a href="appendix_c_resources.html">المصادر</a></li><li><a href="appendix_d_glossary.html">المصطلحات</a></li></ul></nav>
+
+    <main class="container">
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-02</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+
+        <div class="content">
+            <h1>الفصل الرابع عشر: بناء منتجات AI متوافقة</h1>
+<p>في الفصل السابق، استعرضنا المشهد التنظيمي العام للذكاء الاصطناعي في المملكة العربية السعودية. الآن، ننتقل من "ماذا يقول النظام؟" إلى "كيف نطبق النظام؟". هذا الفصل هو دليلك العملي لتحويل السطور البرمجية إلى منتج ذكاء اصطناعي (AI) لا يتميز بالكفاءة التقنية فحسب، بل يمتثل بالكامل لمبادئ أخلاقيات الذكاء الاصطناعي الصادرة عن الهيئة السعودية للذكاء الاصطناعي (سدايا - SDAIA).</p>
+<p>بصفتك رائد أعمال أو مطوراً في السوق السعودي، يجب أن تدرك أن الامتثال ليس "عقبة" في طريق الابتكار، بل هو "درع" يحمي شركتك من المساءلة القانونية ويبني جسر الثقة مع المستخدم المحلي والجهات الحكومية.</p>
+<hr />
+<h2>1. التحيز الخوارزمي (Algorithmic Bias) - كيف تتجنبه؟</h2>
+<p>التحيز في الذكاء الاصطناعي ليس مجرد خطأ تقني، بل هو مخاطرة قانونية واجتماعية. في السياق السعودي، قد يظهر التحيز في نماذج التوظيف، التمويل، أو حتى في تقديم الخدمات اللوجستية بناءً على المناطق الجغرافية.</p>
+<h3>مبدأ العدالة (Fairness) في وثيقة "سدايا"</h3>
+<p>تنص مبادئ "سدايا" على ضرورة ضمان العدالة ومنع التمييز. التحيز الخوارزمي يحدث عندما تُنتج الخوارزمية نتائج غير عادلة تجاه فئة معينة بناءً على سمات محمية (مثل الجنس، العمر، المنطقة الجغرافية، أو الحالة الاجتماعية).</p>
+<h3>خطوات عملية لتجنب التحيز:</h3>
+<ol>
+<li><strong>تدقيق البيانات (Data Auditing):</strong> قبل البدء بالتدريب، اسأل نفسك: هل تمثل البيانات كافة فئات المجتمع السعودي؟ إذا كنت تبني نموذجاً لتقييم الجدارة الائتمانية، هل بياناتك تقتصر على المدن الكبرى (الرياض، جدة) وتهمل المناطق الأخرى؟</li>
+<li><strong>اختيار المتغيرات (Feature Selection):</strong> تجنب استخدام متغيرات قد تكون "وكيلة" (Proxies) للتحيز. على سبيل المثال، قد لا تستخدم "الجنس" مباشرة، لكنك تستخدم "تخصصاً جامعيًا" يغلب عليه جنس معين، مما يؤدي لنتائج متحيزة بشكل غير مباشر.</li>
+<li><strong>اختبارات ما بعد التدريب (Post-deployment Testing):</strong> استخدم أدوات مثل (Fairlearn) أو (AI Fairness 360) لقياس الفجوة في النتائج بين المجموعات المختلفة.</li>
+</ol>
+<blockquote>
+<p><strong>نصيحة عملية:</strong> قم بتعيين "مسؤول أخلاقيات" (Ethics Officer) ضمن فريق التطوير، وظيفته هي لعب دور "محامي الشيطان" واختبار النموذج بحثاً عن أي تحيزات محتملة قبل الإطلاق التجريبي.</p>
+</blockquote>
+<hr />
+<h2>2. قابلية التفسير (Explainability)</h2>
+<p>أكبر مخاوف المنظمين في السعودية هي "الصندوق الأسود" (Black Box). إذا رفض تطبيقك طلباً لقرض تمويلي، أو استبعد مرشحاً لوظيفة، فمن حق المستخدم -بموجب نظام حماية البيانات الشخصية (PDPL)- معرفة "لماذا".</p>
+<h3>الفرق بين الشفافية وقابلية التفسير</h3>
+<ul>
+<li><strong>الشفافية (Transparency):</strong> إخبار المستخدم بأنه يتعامل مع ذكاء اصطناعي.</li>
+<li><strong>قابلية التفسير (Explainability):</strong> القدرة على شرح المنطق الذي اتخذه النموذج للوصول لقرار معين بلغة يفهمها البشر.</li>
+</ul>
+<h3>كيف تجعل منتجك قابلاً للتفسير؟</h3>
+<ol>
+<li><strong>استخدام النماذج البيضاء (White-box Models):</strong> في القرارات الحساسة (مثل الرعاية الصحية أو التمويل)، يفضل استخدام أشجار القرار (Decision Trees) أو النماذج الخطية التي يسهل تتبع منطقها.</li>
+<li><strong>تقنيات التفسير البعدي (Post-hoc Explainability):</strong> إذا كنت مضطراً لاستخدام نماذج معقدة (Deep Learning)، استخدم أدوات مثل:<ul>
+<li><strong>SHAP (SHapley Additive exPlanations):</strong> لتوضيح وزن كل متغير في القرار النهائي.</li>
+<li><strong>LIME (Local Interpretable Model-agnostic Explanations):</strong> لشرح قرارات فردية محددة.</li>
+</ul>
+</li>
+<li><strong>واجهة المستخدم (UI/UX):</strong> لا تعرض للمستخدم معادلات رياضية. بدلاً من ذلك، اعرض رسماً بيانياً بسيطاً يقول: "تم رفض الطلب لأن الدخل الشهري أقل من الحد المطلوب بنسبة 10%".</li>
+</ol>
+<hr />
+<h2>3. حوكمة نماذج الـ LLM (Large Language Models)</h2>
+<p>مع انفجار ثورة النماذج اللغوية الكبيرة، أصبح لزاماً على الشركات التقنية في السعودية وضع إطار حوكمة صارم، خاصة عند استخدام نماذج مثل GPT-4 أو "علام" (Allam) السعودي.</p>
+<h3>التحديات والمخاطر في السوق السعودي:</h3>
+<ul>
+<li><strong>الهلوسة (Hallucinations):</strong> تقديم معلومات خاطئة عن الأنظمة السعودية.</li>
+<li><strong>تسرب البيانات (Data Leakage):</strong> إرسال بيانات العملاء الحساسة إلى خوادم خارجية لتدريب النماذج.</li>
+<li><strong>المحتوى غير الملائم:</strong> إنتاج محتوى لا يتوافق مع القيم الثقافية والدينية للمملكة.</li>
+</ul>
+<h3>إطار حوكمة الـ LLM المقترح:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المجال</th>
+<th style="text-align: left;">الإجراء المطلوب</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>خصوصية البيانات</strong></td>
+<td style="text-align: left;">استخدام تقنيات (RAG - Retrieval-Augmented Generation) لربط النموذج ببياناتك الخاصة دون إرسالها للتدريب الخارجي.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>هندسة الأوامر (Prompt Engineering)</strong></td>
+<td style="text-align: left;">وضع "System Prompts" صارمة تمنع النموذج من الخروج عن السياق المهني أو الإجابة في مواضيع سياسية أو دينية حساسة.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>التدقيق البشري (HITL)</strong></td>
+<td style="text-align: left;">تطبيق مبدأ "Human-in-the-Loop" للمراجعة البشرية قبل اعتماد المخرجات النهائية للنموذج في القرارات القانونية أو الطبية.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>توطين الاستضافة</strong></td>
+<td style="text-align: left;">يفضل استخدام نماذج يمكن استضافتها محلياً (On-premise) أو عبر سحابة سعودية معتمدة لضمان عدم خروج البيانات خارج المملكة.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>4. استخدام البيانات السعودية في التدريب</h2>
+<p>البيانات هي الوقود، وفي السعودية، يخضع هذا الوقود لأنظمة صارمة تحت إشراف "سدايا" ومكتب إدارة البيانات الوطنية (NDMO).</p>
+<h3>ضوابط استخدام البيانات المحلية:</h3>
+<ol>
+<li><strong>السيادة الوطنية للبيانات:</strong> بموجب نظام حماية البيانات الشخصية (PDPL)، تُصنف بعض البيانات كبيانات "حساسة". تدريب النماذج على بيانات الهوية الوطنية أو السجلات الصحية يتطلب موافقات خاصة وتشفيراً عالي المستوى.</li>
+<li><strong>الحصول على الموافقة (Consent):</strong> لا يمكنك سحب بيانات المستخدمين من تطبيقك واستخدامها لتدريب نموذج جديد دون موافقة صريحة ومحددة لهذا الغرض (المادة 7 من نظام حماية البيانات الشخصية).</li>
+<li><strong>إخفاء الهوية (Anonymization):</strong> قبل إدخال أي بيانات سعودية في دورة التدريب، يجب التأكد من إزالة كافة المعرفات الشخصية بطريقة لا يمكن عكسها.</li>
+</ol>
+<h3>نصيحة للمطورين:</h3>
+<p>عند استخدام بيانات "مفتوحة" من بوابة البيانات الوطنية (open.data.gov.sa)، تأكد من قراءة رخصة الاستخدام. ليست كل البيانات المفتوحة مسموحة للاستخدام التجاري في تدريب نماذج الذكاء الاصطناعي دون قيود.</p>
+<hr />
+<h2>5. دراسة حالة: Chatbot حكومي متوافق</h2>
+<p>تخيل أنك فزت بعقد لتطوير "مساعد ذكي" لوزارة سعودية للإجابة على استفسارات المواطنين حول الأنظمة القانونية. كيف تبنيه ليكون متوافقاً؟</p>
+<h3>المرحلة الأولى: التصميم (Privacy by Design)</h3>
+<ul>
+<li><strong>القرار:</strong> لن نقوم بتخزين أرقام الهوية في ذاكرة المحادثة.</li>
+<li><strong>التطبيق:</strong> استخدام تقنية (PII Redaction) لحذف أي بيانات شخصية تظهر في الدردشة تلقائياً.</li>
+</ul>
+<h3>المرحلة الثانية: التدريب والبيانات</h3>
+<ul>
+<li><strong>المصدر:</strong> يتم تدريب النموذج فقط على الأنظمة واللوائح المنشورة في جريدة "أم القرى" والمنصات الرسمية.</li>
+<li><strong>التوطين:</strong> يتم استضافة النموذج على سحابة (Oracle) أو (Alibaba Cloud) داخل مراكز بيانات في الرياض لضمان الامتثال لسياسة سيادة البيانات.</li>
+</ul>
+<h3>المرحلة الثالثة: الاختبار (Red Teaming)</h3>
+<ul>
+<li><strong>الاختبار:</strong> محاولة استفزاز البوت لتقديم نصيحة قانونية خاطئة أو انتقاد جهة رسمية.</li>
+<li><strong>النتيجة:</strong> وضع قيود برمجية (Guardrails) تمنع البوت من الإجابة على أي سؤال خارج نطاق اختصاصه الوزاري.</li>
+</ul>
+<h3>المرحلة الرابعة: التفسير والمسؤولية</h3>
+<ul>
+<li><strong>الواجهة:</strong> إضافة تنبيه في أسفل المحادثة: "هذا الرد آلي لغرض الاسترشاد فقط، ولا يعتبر وثيقة قانونية رسمية".</li>
+<li><strong>المسؤولية:</strong> توفير خيار "التحدث مع موظف بشري" في حال لم يكن الرد مقنعاً للمستخدم.</li>
+</ul>
+<hr />
+<h2>نصائح ذهبية لرواد الأعمال (Checklist)</h2>
+<p>قبل إطلاق منتج الـ AI الخاص بك في السوق السعودي، تأكد من استيفاء القائمة التالية:</p>
+<ul>
+<li>[ ] هل قمت بإعداد "مذكرة تقييم الأثر على حماية البيانات" (DPIA)؟</li>
+<li>[ ] هل نموذجك يلتزم بمبادئ "سدايا" السبعة (الرفاهية الإنسانية، الخصوصية، العدالة، الاعتمادية، الشفافية، المسؤولية، الأمان)؟</li>
+<li>[ ] هل توجد آلية واضحة للمستخدمين للاعتراض على القرارات الآلية؟</li>
+<li>[ ] هل بيانات التدريب خالية من التحيزات الجغرافية أو القبلية أو الجندرية؟</li>
+<li>[ ] هل قمت بتوثيق "سجل الأنشطة" لمعالجة البيانات (RoPA)؟</li>
+</ul>
+<hr />
+<h2>تحذيرات من أخطاء شائعة</h2>
+<ol>
+<li><strong>الاعتماد الكلي على API خارجي:</strong> استخدام (OpenAI API) مباشرة دون طبقة حماية (Middleware) لفلترة البيانات الحساسة قد يعرضك لمخالفة نظام حماية البيانات الشخصية.</li>
+<li><strong>إهمال الثقافة المحلية:</strong> تدريب نموذج على بيانات غربية فقط قد يجعله يقدم إجابات لا تتناسب مع العادات والتقاليد السعودية، مما يؤدي لنفور المستخدمين وفشل المنتج تجارياً.</li>
+<li><strong>ادعاء الدقة المطلقة:</strong> تجنب التسويق لمنتجك بأنه "لا يخطئ". في الأنظمة السعودية، يجب أن تكون صريحاً بشأن حدود قدرات الذكاء الاصطناعي.</li>
+</ol>
+<blockquote>
+<p><strong>خاتمة الفصل:</strong>
+إن بناء منتج ذكاء اصطناعي متوافق في المملكة العربية السعودية ليس مجرد التزام قانوني، بل هو استثمار في استدامة شركتك. الجهات التنظيمية مثل "سدايا" ترحب بالابتكار، لكنها تضع "الإنسان" دائماً في قلب المعادلة. تذكر دائماً: <strong>الخوارزمية الذكية هي الخوارزمية التي تحترم مستخدمها ونظامه.</strong></p>
+</blockquote>
+<p>في الفصل القادم، سنتناول موضوعاً لا يقل أهمية: <strong>الملكية الفكرية في العصر الرقمي - كيف تحمي كودك وعلامتك التجارية؟</strong></p>
+        </div>
+
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-02</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>
