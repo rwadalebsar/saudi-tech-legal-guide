@@ -1,0 +1,162 @@
+[
+  {
+    "chapter": "ch01",
+    "type": "comparison_table",
+    "title_en": "Company Types Comparison",
+    "title_ar": "مقارنة أنواع الشركات",
+    "description": "Comparison of LLC, SJS, and Single-person companies in Saudi Arabia regarding liability and capital.",
+    "prompt": "A clean, professional comparison table showing LLC, SJS, and Single-person companies with icons for liability, capital, and ownership, minimalist corporate style, Saudi business aesthetic."
+  },
+  {
+    "chapter": "ch01",
+    "type": "flowchart",
+    "title_en": "MISA Investment License Process",
+    "title_ar": "عملية ترخيص الاستثمار (وزارة الاستثمار)",
+    "description": "Step-by-step flow of obtaining a MISA license for foreign investors.",
+    "prompt": "A professional flowchart showing the sequence from application to license issuance by MISA, using Saudi green and white branding colors, flat vector design."
+  },
+  {
+    "chapter": "ch01",
+    "type": "infographic",
+    "title_en": "Company Registration Steps",
+    "title_ar": "خطوات تسجيل الشركة",
+    "description": "Visual guide to CR issuance, Chamber of Commerce, and tax registration.",
+    "prompt": "A vertical infographic showing 5 steps of company registration in Saudi Arabia, including CR issuance and ZATCA registration, clean icons, flat vector style."
+  },
+  {
+    "chapter": "ch02",
+    "type": "diagram",
+    "title_en": "Personal Data Types under PDPL",
+    "title_ar": "أنواع البيانات الشخصية بموجب نظام حماية البيانات الشخصية",
+    "description": "Categorization of personal, sensitive, and credit data under Saudi law.",
+    "prompt": "A circular diagram showing categories of personal data like sensitive data, credit data, and biometric data, clean UI design, professional blue and green palette."
+  },
+  {
+    "chapter": "ch02",
+    "type": "flowchart",
+    "title_en": "Consent Requirements Flowchart",
+    "title_ar": "مخطط انسيابي لمتطلبات الموافقة",
+    "description": "Decision tree for when explicit consent is required under PDPL.",
+    "prompt": "A logic flowchart for data controllers to determine if explicit or implied consent is needed, professional business diagram, clear decision nodes."
+  },
+  {
+    "chapter": "ch03",
+    "type": "infographic",
+    "title_en": "Cross-border Data Transfer Rules",
+    "title_ar": "قواعد نقل البيانات عبر الحدود",
+    "description": "Visualizing the conditions for transferring data outside KSA.",
+    "prompt": "A map-based infographic showing data flowing from Saudi Arabia to international destinations with regulatory checkmarks, professional tech style."
+  },
+  {
+    "chapter": "ch03",
+    "type": "infographic",
+    "title_en": "PDPL Compliance Checklist Visual",
+    "title_ar": "قائمة التحقق من الامتثال لنظام حماية البيانات الشخصية",
+    "description": "Visual checklist of key compliance milestones for tech companies.",
+    "prompt": "A modern checklist visual with icons for DPO appointment, Record of Processing Activities, and Privacy Impact Assessment, clean corporate layout."
+  },
+  {
+    "chapter": "ch04",
+    "type": "comparison_table",
+    "title_en": "PDPL Penalties Overview",
+    "title_ar": "نظرة عامة على عقوبات نظام حماية البيانات الشخصية",
+    "description": "Summary of fines and imprisonment for different violations.",
+    "prompt": "A table comparing administrative fines and criminal penalties for PDPL violations, clear and authoritative design, red and grey accents."
+  },
+  {
+    "chapter": "ch05",
+    "type": "diagram",
+    "title_en": "NCA Cybersecurity Framework",
+    "title_ar": "إطار الأمن السيبراني للهيئة الوطنية للأمن السيبراني",
+    "description": "The core pillars of the National Cybersecurity Authority framework.",
+    "prompt": "A pillar-style diagram showing the foundational elements of the NCA framework, corporate blue and silver color palette, architectural style."
+  },
+  {
+    "chapter": "ch05",
+    "type": "diagram",
+    "title_en": "ECC Controls Hierarchy",
+    "title_ar": "تسلسل ضوابط الأمن السيبراني الأساسية",
+    "description": "The structure of Essential Cybersecurity Controls (ECC-1:2018).",
+    "prompt": "A hierarchical pyramid showing the domains and sub-domains of the ECC controls, technical and structured look, professional infographic style."
+  },
+  {
+    "chapter": "ch06",
+    "type": "flowchart",
+    "title_en": "Etimad Government Procurement Process",
+    "title_ar": "عملية المشتريات عبر منصة اعتماد",
+    "description": "The lifecycle of a government tender on the Etimad portal.",
+    "prompt": "A linear flowchart showing the tender announcement, bidding, evaluation, and awarding process on the Etimad platform, Saudi government branding colors."
+  },
+  {
+    "chapter": "ch07",
+    "type": "infographic",
+    "title_en": "Compliance Certification Badges",
+    "title_ar": "شارات شهادات الامتثال",
+    "description": "Visual representation of ISO, NCA, and PDPL certifications.",
+    "prompt": "A set of high-quality badge icons representing various Saudi and international tech compliance standards, metallic finish, professional icons."
+  },
+  {
+    "chapter": "ch08",
+    "type": "diagram",
+    "title_en": "SDAIA AI Governance Structure",
+    "title_ar": "هيكل حوكمة الذكاء الاصطناعي (سدايا)",
+    "description": "The organizational oversight of AI by SDAIA.",
+    "prompt": "An organizational chart showing the relationship between SDAIA, the National Data Management Office, and regulated entities, clean corporate lines."
+  },
+  {
+    "chapter": "ch08",
+    "type": "infographic",
+    "title_en": "AI Ethics Principles",
+    "title_ar": "مبادئ أخلاقيات الذكاء الاصطناعي",
+    "description": "Visualizing the 7 principles of AI ethics in KSA.",
+    "prompt": "A honeycomb-style infographic showing the 7 principles of AI ethics including fairness, transparency, and accountability, modern tech aesthetic."
+  },
+  {
+    "chapter": "ch09",
+    "type": "diagram",
+    "title_en": "Data Classification Pyramid",
+    "title_ar": "هرم تصنيف البيانات",
+    "description": "The four levels of data classification (Top Secret to Public).",
+    "prompt": "A four-level pyramid showing Top Secret, Secret, Restricted, and Public data classifications according to Saudi NDMO standards, clear labeling."
+  },
+  {
+    "chapter": "ch10",
+    "type": "infographic",
+    "title_en": "Privacy Notice Components",
+    "title_ar": "مكونات إشعار الخصوصية",
+    "description": "What must be included in a Saudi-compliant privacy policy.",
+    "prompt": "An exploded view of a document showing mandatory sections like purpose of collection, data retention, and user rights, clean UI/UX style."
+  },
+  {
+    "chapter": "ch11",
+    "type": "flowchart",
+    "title_en": "Breach Notification Timeline",
+    "title_ar": "الجدول الزمني للإخطار عن الاختراق",
+    "description": "The 72-hour window and notification steps for data breaches.",
+    "prompt": "A horizontal timeline showing the 72-hour countdown for notifying SDAIA/NDMO of a data breach, urgent but professional style, vector art."
+  },
+  {
+    "chapter": "ch12",
+    "type": "flowchart",
+    "title_en": "Government Contract Lifecycle",
+    "title_ar": "دورة حياة العقود الحكومية",
+    "description": "From signing to final payment in tech projects.",
+    "prompt": "A circular flowchart showing the stages of a government tech contract: mobilization, delivery, acceptance, and payment, professional business icons."
+  },
+  {
+    "chapter": "ch13",
+    "type": "comparison_table",
+    "title_en": "Saudization (Nitaqat) Zones",
+    "title_ar": "نطاقات التوطين (نطاقات)",
+    "description": "Comparison of Platinum, Green, and Red zones for tech companies.",
+    "prompt": "A color-coded table showing the benefits and restrictions of different Nitaqat zones, using Saudi labor ministry colors, clean and readable."
+  },
+  {
+    "chapter": "ch14",
+    "type": "infographic",
+    "title_en": "Tech Company Legal Roadmap",
+    "title_ar": "خارطة الطريق القانونية لشركات التقنية",
+    "description": "A comprehensive timeline for a tech startup from launch to scale.",
+    "prompt": "A winding road map showing milestones like IP registration, licensing, PDPL compliance, and exit readiness, isometric 3D style, professional colors."
+  }
+]

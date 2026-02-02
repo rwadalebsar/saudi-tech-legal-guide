@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Tech Legal Guide</title>
+    <style>
+:root {
+    --primary: #1B5E20;
+    --secondary: #4CAF50;
+    --accent: #81C784;
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #FFFFFF;
+    --bg-alt: #F5F5F5;
+    --border: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #FFF3E0;
+    border: 2px solid #FF9800;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.disclaimer h3 {
+    color: #E65100;
+    margin-bottom: 1rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.5rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+}
+
+/* Content */
+.content {
+    padding: 2rem 0;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1rem 2rem 1rem 0;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.content th {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.content tr:nth-child(even) {
+    background: var(--bg-alt);
+}
+
+.content blockquote {
+    background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--secondary);
+    border-radius: 8px 0 0 8px;
+}
+
+.content code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.content pre {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+}
+
+.lang-switch a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.lang-switch a:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--text);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Saudi Tech Legal Guide</h1>
+        <p>A practical guide to regulations for tech companies</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../ar/appendix_a_checklists.html">العربية</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">Introduction</a></li><li><a href="01_company_types.html">Company Types</a></li><li><a href="02_foreign_investors.html">Foreign Investors</a></li><li><a href="03_founding_steps.html">Founding Steps</a></li><li><a href="04_pdpl_basics.html">PDPL Basics</a></li><li><a href="05_consent.html">Consent</a></li><li><a href="06_cross_border.html">Cross-Border Transfer</a></li><li><a href="07_pdpl_compliance.html">PDPL Compliance</a></li><li><a href="08_pdpl_penalties.html">Penalties</a></li><li><a href="09_cybersecurity_ecosystem.html">Cybersecurity</a></li><li><a href="10_ecc_controls.html">ECC Controls</a></li><li><a href="11_government_contracts.html">Government Contracts</a></li><li><a href="12_compliance_advantage.html">Compliance Advantage</a></li><li><a href="13_ai_landscape.html">AI Regulations</a></li><li><a href="14_ai_products.html">AI Products</a></li><li><a href="appendix_a_checklists.html" class="active">Checklists</a></li><li><a href="appendix_b_templates.html">Templates</a></li><li><a href="appendix_c_resources.html">Resources</a></li><li><a href="appendix_d_glossary.html">Glossary</a></li></ul></nav>
+
+    <main class="container">
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+
+        <div class="content">
+            <h1>Appendix A: Checklists</h1>
+<p>This appendix serves as a practical toolkit for founders, CEOs, and compliance officers navigating the Saudi Arabian tech ecosystem. These checklists are designed to translate the complex regulatory requirements discussed in the preceding chapters into actionable steps. </p>
+<p>By following these guides, you ensure that your venture aligns with the <strong>Vision 2030</strong> objectives, the <strong>New Companies Law (2023)</strong>, the <strong>Personal Data Protection Law (PDPL)</strong>, and the <strong>National Cybersecurity Authority (NCA)</strong> standards.</p>
+<hr />
+<h2>1. Company Formation Checklist</h2>
+<p>Starting a tech company in Saudi Arabia has been streamlined through the <strong>Saudi Business Center (SBC)</strong>. Whether you are a local entrepreneur or a foreign investor via the <strong>Ministry of Investment (MISA)</strong>, use this checklist to ensure no step is missed.</p>
+<h3>Phase 1: Pre-Incorporation Strategy</h3>
+<ul>
+<li>[ ] <strong>Select Legal Entity Type:</strong> Decide between a Limited Liability Company (LLC), a Joint Stock Company (JSC), or the new <strong>Simple Joint Stock Company (SJSC)</strong> (Sharika Musahama Mubassata). <em>Tip: The SJSC is ideal for tech startups due to its flexibility in management and share classes.</em></li>
+<li>[ ] <strong>Reserve Trade Name:</strong> Ensure the name complies with Ministry of Commerce (MoC) guidelines and does not infringe on existing trademarks.</li>
+<li>[ ] <strong>Determine Capital Structure:</strong> While there is often no high minimum capital for LLCs, certain MISA licenses for tech may require specific capital commitments.</li>
+<li>[ ] <strong>Identify Shareholders and Managers:</strong> Collect IDs for Saudis/GCC nationals or passports for foreign investors.</li>
+</ul>
+<h3>Phase 2: Licensing and Registration</h3>
+<ul>
+<li>[ ] <strong>Obtain MISA Investment License (For Foreigners):</strong> Apply via the MISA portal. Ensure your "ISIC" activity code matches "Information and Communication."</li>
+<li>[ ] <strong>Draft Articles of Association (Aqd Al-Ta’sees):</strong> Use the MoC standardized templates but customize clauses regarding "Drag-along/Tag-along" rights if you are an SJSC.</li>
+<li>[ ] <strong>Issue Commercial Registration (Sijil Tijari - CR):</strong> This is your company’s birth certificate.</li>
+<li>[ ] <strong>Register with the Chamber of Commerce (GCCI):</strong> Required within 30 days of CR issuance.</li>
+</ul>
+<h3>Phase 3: Post-CR Mandatory Registrations</h3>
+<ul>
+<li>[ ] <strong>National Address (Shorfat):</strong> Register your physical office location. Virtual offices are permitted for certain tech activities but check specific license requirements.</li>
+<li>[ ] <strong>General Organization for Social Insurance (GOSI):</strong> Essential for managing <strong>Saudization (Nitaqat)</strong> levels.</li>
+<li>[ ] <strong>Zakat, Tax and Customs Authority (ZATCA):</strong> Register for Zakat (for Saudis/GCC) or Income Tax (for foreigners) and <strong>VAT</strong> if your projected revenue exceeds SAR 375,000.</li>
+<li>[ ] <strong>Muqeem/Qiwa Portals:</strong> Essential for managing employee visas and labor contracts.</li>
+</ul>
+<blockquote>
+<p><strong>Pro-Tip:</strong> Do not delay ZATCA registration. Failure to register for VAT within the statutory timeframe can result in heavy fines, even if you haven't started operations.</p>
+</blockquote>
+<hr />
+<h2>2. PDPL Compliance Checklist</h2>
+<p>The <strong>Personal Data Protection Law (PDPL)</strong>, overseen by the <strong>Saudi Data and AI Authority (SDAIA)</strong>, is mandatory for all entities processing data in the Kingdom. Use this checklist to ensure your tech product is "Privacy by Design."</p>
+<h3>Administrative Compliance</h3>
+<ul>
+<li>[ ] <strong>Appoint a Data Protection Officer (DPO):</strong> While not mandatory for all small businesses, it is highly recommended for tech companies processing sensitive data.</li>
+<li>[ ] <strong>Create a Record of Processing Activities (RoPA):</strong> Document what data you collect, why, where it is stored, and who has access.</li>
+<li>[ ] <strong>Update Privacy Policy:</strong> Ensure it is available in Arabic and English, clearly stating the legal basis for processing (e.g., Consent, Contractual Necessity).</li>
+</ul>
+<h3>Technical and Operational Compliance</h3>
+<ul>
+<li>[ ] <strong>Implement Consent Management:</strong> If relying on consent, ensure it is "explicit, informed, and freely given." Use checkboxes that are not pre-ticked.</li>
+<li>[ ] <strong>Data Minimization Check:</strong> Verify that your app/platform only collects the minimum data necessary for the service. (Reference: PDPL Article 11).</li>
+<li>[ ] <strong>Data Localization Audit:</strong> Ensure that personal data is processed within Saudi Arabia unless you meet the specific exemption criteria for <strong>Cross-Border Data Transfer</strong>.</li>
+<li>[ ] <strong>Data Subject Rights (DSR) Workflow:</strong> Create a process to handle user requests for:<ul>
+<li>Right to Access.</li>
+<li>Right to Rectification (Correction).</li>
+<li>Right to Destruction (Deletion).</li>
+</ul>
+</li>
+<li>[ ] <strong>Breach Notification Protocol:</strong> Prepare a template to notify SDAIA within 72 hours if a data breach occurs that poses a risk to data subjects.</li>
+</ul>
+<h3>Comparison: Consent vs. Legitimate Interest</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Consent (Muwafaqah)</th>
+<th style="text-align: left;">Legitimate Interest</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Usage</strong></td>
+<td style="text-align: left;">Marketing, Sensitive Data</td>
+<td style="text-align: left;">Security, Fraud Prevention</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Revocability</strong></td>
+<td style="text-align: left;">Can be withdrawn anytime</td>
+<td style="text-align: left;">Harder to contest if proven</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Requirement</strong></td>
+<td style="text-align: left;">Explicit Action (Opt-in)</td>
+<td style="text-align: left;">Internal Assessment</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>3. ECC Checklist for Small Businesses</h2>
+<p>The <strong>Essential Cybersecurity Controls (ECC-1:2018)</strong> issued by the <strong>National Cybersecurity Authority (NCA)</strong> are the gold standard. For tech SMEs, these controls are often a prerequisite for signing contracts with government entities or large corporations like Aramco or STC.</p>
+<h3>Category 1: Cybersecurity Governance</h3>
+<ul>
+<li>[ ] <strong>Cybersecurity Policy:</strong> Draft a formal document signed by the CEO/Founder outlining the company’s commitment to security.</li>
+<li>[ ] <strong>Roles and Responsibilities:</strong> Formally assign cybersecurity oversight to a specific team member.</li>
+<li>[ ] <strong>Risk Management:</strong> Conduct an annual cybersecurity risk assessment.</li>
+</ul>
+<h3>Category 2: Cybersecurity Defense</h3>
+<ul>
+<li>[ ] <strong>Asset Management:</strong> Maintain an inventory of all hardware and software used in the company.</li>
+<li>[ ] <strong>Identity and Access Management (IAM):</strong><ul>
+<li>[ ] Implement Multi-Factor Authentication (MFA) for all remote access.</li>
+<li>[ ] Use the "Principle of Least Privilege" (employees only access what they need).</li>
+</ul>
+</li>
+<li>[ ] <strong>Data Protection:</strong> Ensure data "at rest" and "in transit" is encrypted using AES-256 or equivalent standards.</li>
+<li>[ ] <strong>Vulnerability Management:</strong> Perform regular software updates and patch management.</li>
+</ul>
+<h3>Category 3: Cybersecurity Resilience</h3>
+<ul>
+<li>[ ] <strong>Backup Management:</strong> Maintain encrypted, off-site (or cloud-based within KSA) backups.</li>
+<li>[ ] <strong>Incident Response Plan:</strong> A written guide on what to do during a DDoS attack or ransomware incident.</li>
+</ul>
+<h3>Common Pitfalls in ECC Compliance</h3>
+<ul>
+<li><strong>Shadow IT:</strong> Employees using unauthorized SaaS tools to store company data.</li>
+<li><strong>Weak Password Policies:</strong> Failing to enforce complex passwords and periodic changes.</li>
+<li><strong>Ignoring Physical Security:</strong> Leaving server rooms unlocked or laptops unencrypted in public spaces.</li>
+</ul>
+<hr />
+<h2>4. Government Tender Submission Checklist</h2>
+<p>The <strong>Government Tenders and Procurement Law</strong> and the <strong>Etimad</strong> portal have democratized access to government contracts. However, the requirements are rigid.</p>
+<h3>Phase 1: Portal Readiness</h3>
+<ul>
+<li>[ ] <strong>Etimad Registration:</strong> Ensure your company profile is active and your subscription is paid.</li>
+<li>[ ] <strong>Classification (Tasneef):</strong> For larger projects, ensure you have the required "Contractor Classification" for IT and Technology services.</li>
+<li>[ ] <strong>Local Content Certificate:</strong> Obtain a certificate from the <strong>Local Content and Government Procurement Authority (LCGPA)</strong>. This gives you a price preference in many tenders.</li>
+</ul>
+<h3>Phase 2: Technical Proposal</h3>
+<ul>
+<li>[ ] <strong>Compliance Matrix:</strong> Create a table showing how your solution meets every single technical requirement in the RFP (Request for Proposal).</li>
+<li>[ ] <strong>Saudization Certificate:</strong> A valid certificate from the Ministry of Human Resources and Social Development (MHRSD) is mandatory.</li>
+<li>[ ] <strong>Cybersecurity Compliance:</strong> Proof that your product meets NCA standards (ECC or CCC).</li>
+</ul>
+<h3>Phase 3: Financial Proposal</h3>
+<ul>
+<li>[ ] <strong>Bid Bond (Daman Banki):</strong> Usually 1% to 2% of the tender value. Ensure the bank guarantee is from a Saudi-licensed bank and is valid for the required duration (often 90-120 days).</li>
+<li>[ ] <strong>Bill of Quantities (BoQ):</strong> Fill out the pricing template exactly as requested. Do not change the format.</li>
+<li>[ ] <strong>Zakat and Tax Certificates:</strong> Ensure your certificates are valid and "Clearance" (Ikhla’ Tarf) is obtained.</li>
+</ul>
+<h3>Summary of Mandatory Documents for Tenders</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Document Name</th>
+<th style="text-align: left;">Arabic Term</th>
+<th style="text-align: left;">Why it's needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Commercial Registration</td>
+<td style="text-align: left;">Sijil Tijari</td>
+<td style="text-align: left;">Proof of legal existence</td>
+</tr>
+<tr>
+<td style="text-align: left;">GOSI Certificate</td>
+<td style="text-align: left;">Shahadat GOSI</td>
+<td style="text-align: left;">Proof of labor law compliance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Zakat Certificate</td>
+<td style="text-align: left;">Shahadat Zakat</td>
+<td style="text-align: left;">Proof of tax compliance</td>
+</tr>
+<tr>
+<td style="text-align: left;">Saudization Certificate</td>
+<td style="text-align: left;">Shahadat Nitaqat</td>
+<td style="text-align: left;">Proof of hiring locals</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chamber of Commerce</td>
+<td style="text-align: left;">Al-Ghurfa Al-Tijariya</td>
+<td style="text-align: left;">Validation of signatures</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>5. Practical Tips and Action Plan</h2>
+<h3>The "First 90 Days" Checklist for Tech Founders</h3>
+<ol>
+<li><strong>Day 1-30:</strong> Focus on Legal Incorporation. Get your CR and MISA license. Open a local bank account (this can take time, so start early).</li>
+<li><strong>Day 31-60:</strong> Focus on Talent and Infrastructure. Register on Qiwa, hire your core team, and set up your local cloud hosting (e.g., Oracle, Google Cloud, or Alibaba Cloud in KSA).</li>
+<li><strong>Day 61-90:</strong> Focus on Compliance. Conduct your first PDPL audit and ensure your ECC controls are in place before your first major B2B sales pitch.</li>
+</ol>
+<h3>Common Mistakes to Avoid</h3>
+<ul>
+<li><strong>Using Foreign Templates:</strong> Never use a US or UK Privacy Policy for a Saudi company. The PDPL has specific requirements regarding "Sensitive Data" and "Credit Data" that Western templates miss.</li>
+<li><strong>Ignoring "Local Content":</strong> Even if your tech is superior, you may lose a government tender if your Local Content score is zero. Hire Saudis, use local suppliers, and keep your spend within the Kingdom.</li>
+<li><strong>Delayed Saudization:</strong> The <strong>Nitaqat</strong> system is automated. If your ratio drops, your ability to issue or renew visas will be instantly blocked in the <strong>Qiwa</strong> portal.</li>
+</ul>
+<h3>Useful Legal References</h3>
+<ul>
+<li><strong>New Companies Law:</strong> Royal Decree No. M/132.</li>
+<li><strong>PDPL:</strong> Royal Decree No. M/19, as amended by M/148.</li>
+<li><strong>Government Procurement Law:</strong> Royal Decree No. M/128.</li>
+<li><strong>ECC-1:2018:</strong> Issued by the National Cybersecurity Authority.</li>
+</ul>
+<hr />
+<h2>Conclusion</h2>
+<p>Compliance in Saudi Arabia is no longer a "check-the-box" exercise; it is a fundamental part of the business strategy. By utilizing these checklists, tech companies can move from a state of regulatory risk to a state of competitive advantage. </p>
+<p>The Saudi market rewards those who demonstrate commitment to the local regulatory environment. Whether it is through protecting user data via the PDPL or contributing to the national economy through Local Content, your compliance is your ticket to long-term success in the Middle East's largest tech frontier.</p>
+        </div>
+
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

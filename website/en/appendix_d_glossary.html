@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Tech Legal Guide</title>
+    <style>
+:root {
+    --primary: #1B5E20;
+    --secondary: #4CAF50;
+    --accent: #81C784;
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #FFFFFF;
+    --bg-alt: #F5F5F5;
+    --border: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #FFF3E0;
+    border: 2px solid #FF9800;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.disclaimer h3 {
+    color: #E65100;
+    margin-bottom: 1rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.5rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+}
+
+/* Content */
+.content {
+    padding: 2rem 0;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1rem 2rem 1rem 0;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.content th {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.content tr:nth-child(even) {
+    background: var(--bg-alt);
+}
+
+.content blockquote {
+    background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--secondary);
+    border-radius: 8px 0 0 8px;
+}
+
+.content code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.content pre {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+}
+
+.lang-switch a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.lang-switch a:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--text);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Saudi Tech Legal Guide</h1>
+        <p>A practical guide to regulations for tech companies</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../ar/appendix_d_glossary.html">العربية</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">Introduction</a></li><li><a href="01_company_types.html">Company Types</a></li><li><a href="02_foreign_investors.html">Foreign Investors</a></li><li><a href="03_founding_steps.html">Founding Steps</a></li><li><a href="04_pdpl_basics.html">PDPL Basics</a></li><li><a href="05_consent.html">Consent</a></li><li><a href="06_cross_border.html">Cross-Border Transfer</a></li><li><a href="07_pdpl_compliance.html">PDPL Compliance</a></li><li><a href="08_pdpl_penalties.html">Penalties</a></li><li><a href="09_cybersecurity_ecosystem.html">Cybersecurity</a></li><li><a href="10_ecc_controls.html">ECC Controls</a></li><li><a href="11_government_contracts.html">Government Contracts</a></li><li><a href="12_compliance_advantage.html">Compliance Advantage</a></li><li><a href="13_ai_landscape.html">AI Regulations</a></li><li><a href="14_ai_products.html">AI Products</a></li><li><a href="appendix_a_checklists.html">Checklists</a></li><li><a href="appendix_b_templates.html">Templates</a></li><li><a href="appendix_c_resources.html">Resources</a></li><li><a href="appendix_d_glossary.html" class="active">Glossary</a></li></ul></nav>
+
+    <main class="container">
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+
+        <div class="content">
+            <h1>Appendix D: Glossary</h1>
+<p>The Saudi Arabian tech landscape is evolving at a rapid pace, driven by Vision 2030 and a complete overhaul of the legal system. For an entrepreneur or a foreign investor, the terminologies can sometimes feel like a blend of traditional civil law and cutting-edge tech jargon.</p>
+<p>This glossary is designed to be your "Rosetta Stone," bridging the gap between English technical terms and their Saudi legal equivalents. It moves beyond mere definitions to provide practical context, specific legal references, and actionable warnings to ensure your venture remains compliant and competitive.</p>
+<hr />
+<h2>1. Legal and Technical Terms Dictionary (Arabic-English)</h2>
+<h3>A. Corporate and Commercial Law</h3>
+<p>These terms are primarily governed by the <strong>New Saudi Companies Law (2023)</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term (English)</th>
+<th style="text-align: left;">Term (Arabic)</th>
+<th style="text-align: left;">Definition &amp; Practical Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Articles of Association (AoA)</strong></td>
+<td style="text-align: left;"><em>An-Nizam al-Asasi</em> (النظام الأساسي)</td>
+<td style="text-align: left;">The constitution of your company. For tech startups, this must be carefully drafted to include classes of shares and drag-along/tag-along rights.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Simplified Joint Stock Company (SJSC)</strong></td>
+<td style="text-align: left;"><em>Sharikat Musahamah Mubassatah</em> (شركة مساهمة مبسطة)</td>
+<td style="text-align: left;">A new entity type introduced in 2023. It is the "Gold Standard" for tech startups as it allows for no minimum capital and flexible management structures.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Limited Liability Company (LLC)</strong></td>
+<td style="text-align: left;"><em>Sharikat Zat Mas’ouliyyah Mahdoodah</em> (شركة ذات مسؤولية محدودة)</td>
+<td style="text-align: left;">The most common structure for SMEs. Note: Under the new law, an LLC can now be managed by one or more managers, offering more flexibility.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Commercial Registration (CR)</strong></td>
+<td style="text-align: left;"><em>Sijil Tijari</em> (سجل تجاري)</td>
+<td style="text-align: left;">Your company’s "ID Card" issued by the Ministry of Commerce. You cannot open a bank account or sign a lease without a valid CR.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Foreign Investment License</strong></td>
+<td style="text-align: left;"><em>Rukhsat Istithmar Ajnabi</em> (رخصة استثمار أجنبي)</td>
+<td style="text-align: left;">Issued by MISA. This is the mandatory first step for any non-Saudi entity wanting to own 1% to 100% of a local company.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Professional Companies</strong></td>
+<td style="text-align: left;"><em>Sharikat Mihaniyyah</em> (شركات مهنية)</td>
+<td style="text-align: left;">Often used by consulting or specialized engineering tech firms. Recent updates allow non-professionals to own shares in these entities.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Practical Tip:</strong> When drafting your <strong>Articles of Association (An-Nizam al-Asasi)</strong>, avoid using generic templates provided by the Ministry portal if you have complex investor requirements. While the portal is efficient, it may not cover specific "Venture Capital" clauses like liquidation preferences.</p>
+</blockquote>
+<hr />
+<h3>B. Data Protection and Privacy</h3>
+<p>These terms are governed by the <strong>Personal Data Protection Law (PDPL)</strong> and its Executive Regulations.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term (English)</th>
+<th style="text-align: left;">Term (Arabic)</th>
+<th style="text-align: left;">Definition &amp; Practical Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Data Subject</strong></td>
+<td style="text-align: left;"><em>Sahab al-Bayanat</em> (صاحب البيانات)</td>
+<td style="text-align: left;">The individual to whom the data relates (e.g., your app user). Under <strong>Art. 4 of PDPL</strong>, they have rights to access, correct, and destroy their data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Controller</strong></td>
+<td style="text-align: left;"><em>Jihat al-Tahatkum</em> (جهة التحكم)</td>
+<td style="text-align: left;">The entity that determines the <em>purpose</em> and <em>method</em> of processing data. If your startup decides how user data is used, you are the Controller.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Processor</strong></td>
+<td style="text-align: left;"><em>Mu’alij al-Bayanat</em> (معالج البيانات)</td>
+<td style="text-align: left;">An entity that processes data on behalf of the Controller (e.g., a cloud hosting provider like AWS or Alibaba Cloud).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Explicit Consent</strong></td>
+<td style="text-align: left;"><em>Muwafaqah Sarihah</em> (موافقة صريحة)</td>
+<td style="text-align: left;">A clear, affirmative action by the user. Required for processing "Sensitive Data" (e.g., health or biometric data).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impact Assessment (DPIA)</strong></td>
+<td style="text-align: left;"><em>Taqyim al-Athar</em> (تقييم الأثر)</td>
+<td style="text-align: left;">A mandatory report for high-risk processing activities. You must conduct this if you are deploying new AI tech that processes large-scale personal data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Sovereignity</strong></td>
+<td style="text-align: left;"><em>Siyadat al-Bayanat</em> (سيادة البيانات)</td>
+<td style="text-align: left;">The principle that data generated within KSA should remain in KSA. <strong>Art. 29 of PDPL</strong> regulates how this data can be moved abroad.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Warning:</strong> A common mistake is confusing "Consent" with "Contractual Necessity." Do not ask for consent if the data is required to perform the service (e.g., needing an address for a delivery app). Over-asking for consent can lead to "consent fatigue" and legal redundancy.</p>
+</blockquote>
+<hr />
+<h3>C. Cybersecurity and Cloud Computing</h3>
+<p>Regulated primarily by the <strong>National Cybersecurity Authority (NCA)</strong> and <strong>CST</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term (English)</th>
+<th style="text-align: left;">Term (Arabic)</th>
+<th style="text-align: left;">Definition &amp; Practical Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Essential Cybersecurity Controls (ECC)</strong></td>
+<td style="text-align: left;"><em>Al-Dawabit al-Asasiyyah lil-Amn al-Sibrani</em> (الضوابط الأساسية للأمن السيبراني)</td>
+<td style="text-align: left;">The minimum standards every government-linked tech provider must meet. ECC-1:2018 is the baseline.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cloud First Policy</strong></td>
+<td style="text-align: left;"><em>Siyasat al-Sahabah Awalan</em> (سياسة السحابة أولاً)</td>
+<td style="text-align: left;">A government mandate requiring agencies to prioritize cloud solutions over on-premise hardware. This is a massive opportunity for SaaS providers.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Critical National Infrastructure (CNI)</strong></td>
+<td style="text-align: left;"><em>Al-Bunyah al-Tahtiyyah al-Hassasah</em> (البنية التحتية الحساسة)</td>
+<td style="text-align: left;">Sectors like energy, water, and finance. If your tech serves these, you face much stricter cybersecurity audits.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>D. Labor and Saudization</h3>
+<p>Governed by the <strong>Ministry of Human Resources and Social Development (HRSD)</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term (English)</th>
+<th style="text-align: left;">Term (Arabic)</th>
+<th style="text-align: left;">Definition &amp; Practical Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Saudization (Nitaqat)</strong></td>
+<td style="text-align: left;"><em>Tawteen</em> (توطين)</td>
+<td style="text-align: left;">The policy of replacing foreign workers with Saudi nationals. Your "Nitaqat" color (Platinum, Green, Red) determines your ability to get new visas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Qiwa Platform</strong></td>
+<td style="text-align: left;"><em>Minassat Qiwa</em> (منصة قوى)</td>
+<td style="text-align: left;">The unified digital platform for all labor services. You will use this for employment contracts and managing your Nitaqat status.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>GOSI</strong></td>
+<td style="text-align: left;"><em>Al-Ta'minat al-Ijtima'iyyah</em> (التأمينات الاجتماعية)</td>
+<td style="text-align: left;">The General Organization for Social Insurance. Every employee (Saudi or expat) must be registered here, and monthly contributions are mandatory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Wage Protection System (WPS)</strong></td>
+<td style="text-align: left;"><em>Nizam Himayat al-Ujur</em> (نظام حماية الأجور)</td>
+<td style="text-align: left;">A digital system that tracks salary payments to ensure they match the contract. Failure to upload WPS files leads to immediate fines.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>2. Common Abbreviations</h2>
+<p>Navigating the Saudi bureaucracy requires knowing your "alphabet soup." Below are the most critical abbreviations for tech companies.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Abbreviation</th>
+<th style="text-align: left;">Full Name (English)</th>
+<th style="text-align: left;">Saudi Entity (Arabic)</th>
+<th style="text-align: left;">Role in Tech Ecosystem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SDAIA</strong></td>
+<td style="text-align: left;">Saudi Data and AI Authority</td>
+<td style="text-align: left;"><em>Sadaia</em> (سدايا)</td>
+<td style="text-align: left;">The regulator for data protection (PDPL) and AI strategy.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MISA</strong></td>
+<td style="text-align: left;">Ministry of Investment</td>
+<td style="text-align: left;"><em>Wizarat al-Istithmar</em> (وزارة الاستثمار)</td>
+<td style="text-align: left;">The gatekeeper for foreign companies. They issue your investment license.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CST</strong></td>
+<td style="text-align: left;">Communications, Space &amp; Tech Commission</td>
+<td style="text-align: left;"><em>Hay'at al-Ittisalat</em> (هيئة الاتصالات)</td>
+<td style="text-align: left;">Regulates telecom, cloud service providers, and domain names (.sa).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NCA</strong></td>
+<td style="text-align: left;">National Cybersecurity Authority</td>
+<td style="text-align: left;"><em>Al-Hay'ah al-Wataniyyah lil-Amn al-Sibrani</em> (الهيئة الوطنية للأمن السيبراني)</td>
+<td style="text-align: left;">Sets the security standards (ECC) for the kingdom.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ZATCA</strong></td>
+<td style="text-align: left;">Zakat, Tax and Customs Authority</td>
+<td style="text-align: left;"><em>Zatca</em> (زاتكا)</td>
+<td style="text-align: left;">Handles VAT, Corporate Tax, and E-Invoicing (Fatoora).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MCIT</strong></td>
+<td style="text-align: left;">Ministry of Comm. &amp; IT</td>
+<td style="text-align: left;"><em>Wizarat al-Ittisalat</em> (وزارة الاتصالات)</td>
+<td style="text-align: left;">Focuses on digital infrastructure and tech talent development.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SAMA</strong></td>
+<td style="text-align: left;">Saudi Central Bank</td>
+<td style="text-align: left;"><em>Al-Bank al-Markazi</em> (البنك المركزي)</td>
+<td style="text-align: left;">The regulator for Fintech, payments, and digital banking.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Monsha’at</strong></td>
+<td style="text-align: left;">SME General Authority</td>
+<td style="text-align: left;"><em>Monsha’at</em> (منشآت)</td>
+<td style="text-align: left;">Provides support, funding, and regulatory easing for startups.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>3. Practical Market Context: Terms in Action</h2>
+<p>To truly understand these terms, let's look at how they appear in the daily life of a tech founder:</p>
+<h3>Example 1: The "E-Invoicing" Requirement</h3>
+<p>If you run a B2B SaaS platform, you will encounter <strong>Fatoora</strong> (E-Invoicing). This is managed by <strong>ZATCA</strong>.
+*   <strong>Practical Context:</strong> You cannot simply send a PDF invoice. Your system must generate a QR code and, in Phase 2, integrate via API with ZATCA’s servers.
+*   <strong>Legal Reference:</strong> <em>VAT Implementing Regulations.</em></p>
+<h3>Example 2: The "Local Content" Clause</h3>
+<p>When bidding on a government project via the <strong>Etimad</strong> portal, you will see a requirement for <strong>Al-Muhtawa al-Mahalli</strong> (Local Content).
+*   <strong>Practical Context:</strong> This isn't just about hiring Saudis. It’s about how much you spend on local supply chains and local hosting. A high Local Content score can help you win a contract even if your price is 10% higher than a competitor.
+*   <strong>Legal Reference:</strong> <em>Government Tender and Procurement Law (2019).</em></p>
+<hr />
+<h2>4. Practical Tips and Common Pitfalls</h2>
+<h3>Tip 1: The "Translation Trap"</h3>
+<p>While many government portals (like MISA or Qiwa) have English versions, the <strong>Arabic text is always the legally prevailing version</strong> in Saudi courts.
+*   <strong>Action:</strong> Always have a trusted local legal counsel review the Arabic version of your Articles of Association or Employment Contracts before signing.</p>
+<h3>Tip 2: The "15-Day Rule"</h3>
+<p>Under the <strong>PDPL</strong>, certain data breaches must be reported to <strong>SDAIA</strong> within 72 hours, but many corporate changes (like changing a manager in an LLC) must be updated in the <strong>Sijil Tijari (CR)</strong> within 15 days.
+*   <strong>Action:</strong> Set calendar alerts for regulatory filings. The Saudi system is highly automated; fines are often triggered automatically by the system.</p>
+<h3>Tip 3: "Saudization" is not a Flat Percentage</h3>
+<p>Many founders think Saudization is a fixed number. In reality, it depends on your <strong>ISIC Code</strong> (your business activity on your CR).
+*   <strong>Action:</strong> Choose your activity code carefully. A "Software Development" code might have different Saudization requirements than "IT Consultancy."</p>
+<hr />
+<h2>5. Summary Table: Entity Comparison for Tech Startups</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">LLC (Limited Liability Co.)</th>
+<th style="text-align: left;">Simplified JSC (New)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Minimum Capital</strong></td>
+<td style="text-align: left;">Usually SAR 10,000-100,000</td>
+<td style="text-align: left;">No minimum</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Management</strong></td>
+<td style="text-align: left;">One or more Managers</td>
+<td style="text-align: left;">Board of Directors or President</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Share Transfer</strong></td>
+<td style="text-align: left;">Statutory right of first refusal for partners</td>
+<td style="text-align: left;">Highly flexible (customizable in AoA)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Best for...</strong></td>
+<td style="text-align: left;">Small service-based tech firms</td>
+<td style="text-align: left;">Startups seeking VC and multiple funding rounds</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Legal Basis</strong></td>
+<td style="text-align: left;">Companies Law, Art. 151</td>
+<td style="text-align: left;">Companies Law, Art. 138</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Conclusion</h2>
+<p>This glossary is a living document. As Saudi Arabia continues to release new "Implementing Regulations" (<em>Al-Lawa'ih al-Tanfiziyyah</em>), terms may be refined. For a tech company, the key to success in the Kingdom is not just knowing the law, but mastering the language of the regulators. Use these terms in your meetings with MISA, your filings with SDAIA, and your contracts with local partners to demonstrate that you are not just a "foreign" entity, but a "local" player in the Saudi digital economy.</p>
+<blockquote>
+<p><strong>Final Note:</strong> Always cross-reference these terms with the official <strong>Umm Al-Qura</strong> (The Official Gazette), where all Saudi laws are first published in Arabic.</p>
+</blockquote>
+        </div>
+
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-02</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ar" class="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل القانوني للتقنية في السعودية</title>
+    <style>
+:root {
+    --primary: #1B5E20;
+    --secondary: #4CAF50;
+    --accent: #81C784;
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #FFFFFF;
+    --bg-alt: #F5F5F5;
+    --border: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #FFF3E0;
+    border: 2px solid #FF9800;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.disclaimer h3 {
+    color: #E65100;
+    margin-bottom: 1rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.5rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+}
+
+/* Content */
+.content {
+    padding: 2rem 0;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1rem 2rem 1rem 0;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.content th {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.content tr:nth-child(even) {
+    background: var(--bg-alt);
+}
+
+.content blockquote {
+    background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--secondary);
+    border-radius: 8px 0 0 8px;
+}
+
+.content code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.content pre {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+}
+
+.lang-switch a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.lang-switch a:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--text);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>الدليل القانوني للتقنية في السعودية</h1>
+        <p>دليل عملي للأنظمة لشركات التقنية</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../en/03_founding_steps.html">English</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">المقدمة</a></li><li><a href="01_company_types.html">أنواع الشركات</a></li><li><a href="02_foreign_investors.html">المستثمرون الأجانب</a></li><li><a href="03_founding_steps.html" class="active">خطوات التأسيس</a></li><li><a href="04_pdpl_basics.html">أساسيات حماية البيانات</a></li><li><a href="05_consent.html">الموافقة</a></li><li><a href="06_cross_border.html">النقل عبر الحدود</a></li><li><a href="07_pdpl_compliance.html">الامتثال</a></li><li><a href="08_pdpl_penalties.html">العقوبات</a></li><li><a href="09_cybersecurity_ecosystem.html">الأمن السيبراني</a></li><li><a href="10_ecc_controls.html">الضوابط الأساسية</a></li><li><a href="11_government_contracts.html">العقود الحكومية</a></li><li><a href="12_compliance_advantage.html">ميزة الامتثال</a></li><li><a href="13_ai_landscape.html">تنظيم الذكاء الاصطناعي</a></li><li><a href="14_ai_products.html">منتجات الذكاء الاصطناعي</a></li><li><a href="appendix_a_checklists.html">قوائم المراجعة</a></li><li><a href="appendix_b_templates.html">النماذج</a></li><li><a href="appendix_c_resources.html">المصادر</a></li><li><a href="appendix_d_glossary.html">المصطلحات</a></li></ul></nav>
+
+    <main class="container">
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-02</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+
+        <div class="content">
+            <p>بالتأكيد، إليك الفصل الثالث من كتاب "البوصلة القانونية لشركات التقنية في السعودية"، مصممًا ليكون دليلاً عملياً وشاملاً.</p>
+<hr />
+<h1>الفصل الثالث: خطوات التأسيس العملية</h1>
+<h2>مقدمة</h2>
+<p>بعد أن استعرضنا في الفصلين السابقين المشهد العام للكيانات التجارية وخيارات دخول السوق السعودي، نصل الآن إلى قلب العملية: التنفيذ. يهدف هذا الفصل إلى أن يكون دليلك الميداني، خطوة بخطوة، لتأسيس شركتك التقنية في المملكة العربية السعودية. لقد ولّت أيام المعاملات الورقية المعقدة والطوابير الطويلة؛ فبفضل التحول الرقمي الذي تقوده رؤية 2030، أصبحت عملية التأسيس اليوم تجربة رقمية شبه كاملة، تتمحور حول منصة واحدة هي <strong>المركز السعودي للأعمال (Saudi Business Center)</strong>.</p>
+<p>سنقوم في هذا الفصل بتفكيك العملية إلى مكوناتها الأساسية: المنصات التي ستحتاجها، والمستندات التي يجب تجهيزها، والتكاليف التي يجب أن تضعها في حسبانك، والجدول الزمني الذي يمكنك توقعه. والأهم من ذلك، سنسلط الضوء على الأخطاء الشائعة التي يقع فيها الكثيرون، ونقدم لك النصائح العملية لتجنبها، مما يوفر عليك الوقت والجهد والمال.</p>
+<p>تذكر، التأسيس الصحيح هو حجر الزاوية لنجاح شركتك على المدى الطويل. إن الدقة في هذه المرحلة الأولية تمنع الكثير من التعقيدات القانونية والتشغيلية في المستقبل. لنبدأ هذه الرحلة.</p>
+<hr />
+<h2>أولاً: المنصات الإلكترونية المطلوبة - أدواتك الرقمية للتأسيس</h2>
+<p>تعتمد المملكة اليوم على بنية تحتية رقمية متكاملة لتقديم الخدمات الحكومية. فهم هذه المنصات ودور كل منها هو مفتاحك لعملية تأسيس سلسة.</p>
+<h3>1. المركز السعودي للأعمال (Saudi Business Center - SBC)</h3>
+<p><strong>الرابط:</strong> <code>sbc.gov.sa</code></p>
+<p>هذه هي بوابتك الرئيسية ونقطة الانطلاق. المركز السعودي للأعمال هو المبادرة الحكومية التي تهدف إلى توحيد أكثر من 70 خدمة حكومية متعلقة ببدء وممارسة الأعمال التجارية في منصة واحدة. بالنسبة لك كرائد أعمال، هذه هي المنصة التي ستقوم من خلالها بـ:
+- حجز الاسم التجاري.
+- إصدار عقد التأسيس وتوثيقه إلكترونياً.
+- إصدار السجل التجاري.
+- إصدار شهادة الانتساب للغرفة التجارية.
+- فتح ملف في وزارة الموارد البشرية والتنمية الاجتماعية (منصة قوى).
+- التسجيل في المؤسسة العامة للتأمينات الاجتماعية (GOSI).
+- التسجيل في هيئة الزكاة والضريبة والجمارك (ZATCA).</p>
+<blockquote>
+<p><strong>نصيحة عملية:</strong> قبل البدء بأي خطوة، قم بزيارة موقع المركز السعودي للأعمال واطلع على "دليل الخدمات". سيعطيك فكرة واضحة ومحدثة عن الإجراءات والربط بين الجهات المختلفة.</p>
+</blockquote>
+<h3>2. منصة النفاذ الوطني الموحد (Nafath)</h3>
+<p>هذه ليست منصة بقدر ما هي "بوابة الهوية الرقمية". ستحتاجها للتحقق من هويتك وتوثيق المستندات إلكترونياً. تعمل من خلال تطبيق على هاتفك الذكي وتستخدم بصمة الوجه أو الرقم السري للتحقق من هويتك عند الدخول إلى الخدمات الحكومية الحساسة أو توقيع المستندات مثل عقد التأسيس.</p>
+<p><strong>المتطلب الأساسي:</strong> يجب أن يكون لديك حساب مفعل في <strong>منصة أبشر</strong>.</p>
+<h3>3. منصة أبشر (Absher)</h3>
+<p><strong>الرابط:</strong> <code>absher.sa</code></p>
+<p>هي منصة وزارة الداخلية للخدمات الإلكترونية للمواطنين والمقيمين. امتلاك حساب مفعل في "أبشر" هو شرط أساسي لاستخدام "نفاذ" وبالتالي لإكمال عملية التأسيس. تأكد من أن جميع الشركاء السعوديين والمقيمين لديهم حسابات مفعلة.</p>
+<h3>4. وزارة الاستثمار (MISA)</h3>
+<p><strong>الرابط:</strong> <code>misa.gov.sa</code></p>
+<p>هذه المنصة ضرورية <strong>فقط إذا كان هناك شريك أجنبي</strong> (فرد غير مقيم أو شركة أجنبية) في شركتك. قبل التوجه إلى المركز السعودي للأعمال، يجب على المستثمر الأجنبي الحصول على "ترخيص استثماري" من وزارة الاستثمار. هذه الخطوة تسبق جميع الخطوات الأخرى المتعلقة بوزارة التجارة.</p>
+<h3>5. منصة قوى (Qiwa)</h3>
+<p><strong>الرابط:</strong> <code>qiwa.sa</code></p>
+<p>بمجرد إصدار السجل التجاري، ستصبح "قوى" منصتك الأساسية لإدارة كل ما يتعلق بالموظفين والعمالة. من خلالها، ستقوم بـ:
+- إصدار وتجديد رخص العمل.
+- نقل خدمات الموظفين.
+- إدارة عقود العمل الإلكترونية.
+- إصدار شهادة السعودة.
+- إدارة لوائح تنظيم العمل الداخلية.</p>
+<h3>6. منصة مدد (Mudad)</h3>
+<p><strong>الرابط:</strong> <code>mudad.com.sa</code></p>
+<p>تتكامل هذه المنصة مع "قوى" و"التأمينات الاجتماعية" وهي مخصصة لإدارة الرواتب وحماية الأجور. التسجيل فيها إلزامي لضمان التزامك بنظام حماية الأجور، حيث تقوم برفع مسيرات الرواتب الشهرية من خلالها.</p>
+<h3>7. منصة الهيئة العامة للزكاة والضريبة والجمارك (ZATCA)</h3>
+<p><strong>الرابط:</strong> <code>zatca.gov.sa</code></p>
+<p>التسجيل في هذه المنصة إلزامي لجميع الشركات فور صدور السجل التجاري. ستحتاجها لـ:
+- الحصول على الرقم الضريبي.
+- التسجيل في ضريبة القيمة المضافة (VAT) إذا تجاوزت إيراداتك السنوية 375,000 ريال سعودي.
+- تقديم الإقرارات الضريبية والزكوية السنوية.</p>
+<hr />
+<h2>ثانياً: المستندات المطلوبة - قائمة المراجعة الشاملة</h2>
+<p>التجهيز المسبق للمستندات هو نصف المعركة. استخدم قائمة المراجعة التالية لضمان أن كل شيء جاهز قبل البدء.</p>
+<h3>قائمة المراجعة: لشركة ذات مسؤولية محدودة (LLC) مملوكة لسعوديين</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المستند / المعلومة</th>
+<th style="text-align: left;">ملاحظات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. معلومات الشركاء</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">- صورة الهوية الوطنية لكل شريك</td>
+<td style="text-align: left;">سارية المفعول.</td>
+</tr>
+<tr>
+<td style="text-align: left;">- رقم جوال مسجل في أبشر لكل شريك</td>
+<td style="text-align: left;">ضروري للتحقق عبر نفاذ.</td>
+</tr>
+<tr>
+<td style="text-align: left;">- البريد الإلكتروني لكل شريك</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">- العنوان الوطني لكل شريك</td>
+<td style="text-align: left;">يمكن الحصول عليه من "سبل".</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. معلومات الشركة</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">- الاسم التجاري المقترح</td>
+<td style="text-align: left;">جهز 3-5 خيارات.</td>
+</tr>
+<tr>
+<td style="text-align: left;">- النشاط التجاري (حسب تصنيف ISIC4)</td>
+<td style="text-align: left;">كن دقيقاً. "تطوير البرمجيات" أفضل من "تقنية معلومات".</td>
+</tr>
+<tr>
+<td style="text-align: left;">- عنوان الشركة الوطني</td>
+<td style="text-align: left;">يمكن استخدام عنوان أحد الشركاء مبدئياً أو عنوان مكتب افتراضي.</td>
+</tr>
+<tr>
+<td style="text-align: left;">- رأس المال وتوزيعه</td>
+<td style="text-align: left;">تحديد المبلغ الإجمالي وحصة كل شريك (لا يوجد حد أدنى لمعظم الأنشطة التقنية).</td>
+</tr>
+<tr>
+<td style="text-align: left;">- السنة المالية للشركة</td>
+<td style="text-align: left;">عادةً من 1 يناير إلى 31 ديسمبر.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. عقد التأسيس</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">- بيانات المدير/المديرين</td>
+<td style="text-align: left;">الاسم، الهوية، الصلاحيات (كاملة أم محددة).</td>
+</tr>
+<tr>
+<td style="text-align: left;">- قرارات الشركاء</td>
+<td style="text-align: left;">كيفية اتخاذ القرارات (بالأغلبية، بالإجماع).</td>
+</tr>
+<tr>
+<td style="text-align: left;">- توزيع الأرباح والخسائر</td>
+<td style="text-align: left;">عادةً حسب نسبة الحصص، ولكن يمكن الاتفاق على خلاف ذلك.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>ملاحظة هامة:</strong> منصة المركز السعودي للأعمال توفر نموذجاً قياسياً لعقد التأسيس. يمكنك استخدامه أو إرفاق عقد مخصص تم إعداده بواسطة محامٍ.</p>
+</blockquote>
+<h3>قائمة المراجعة الإضافية: في حال وجود شريك أجنبي</h3>
+<p>إذا كان أحد الشركاء شركة أجنبية أو فرداً أجنبياً غير مقيم، فستحتاج إلى المستندات التالية <strong>أولاً</strong> للحصول على ترخيص وزارة الاستثمار (MISA)، ويجب أن تكون جميعها <strong>مصدقة من السفارة السعودية</strong> في بلد المنشأ.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المستند (للشركة الأجنبية الشريكة)</th>
+<th style="text-align: left;">ملاحظات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. نسخة من السجل التجاري للشركة الأم</strong></td>
+<td style="text-align: left;">مترجمة إلى العربية ومصدقة.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. القوائم المالية لآخر سنة مالية للشركة الأم</strong></td>
+<td style="text-align: left;">يجب أن تكون مدققة من محاسب قانوني، مترجمة، ومصدقة.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. قرار من مجلس إدارة الشركة الأم بالاستثمار في السعودية</strong></td>
+<td style="text-align: left;">يجب أن يتضمن القرار تعيين ممثل قانوني أو مدير للشركة الجديدة في السعودية، مترجم ومصدق.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. صورة جواز سفر الممثل المعين</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المستند (للفرد الأجنبي الشريك)</th>
+<th style="text-align: left;">ملاحظات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. صورة من جواز السفر</strong></td>
+<td style="text-align: left;">ساري المفعول.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. إثبات عنوان في بلد الإقامة</strong></td>
+<td style="text-align: left;">مثل فاتورة خدمات.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. سيرة ذاتية موجزة</strong></td>
+<td style="text-align: left;">أحياناً تُطلب لبعض الأنشطة.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>ثالثاً: التكاليف المتوقعة - ميزانية التأسيس</h2>
+<p>تتسم تكاليف التأسيس في السعودية بالشفافية والوضوح. يمكن تقسيمها إلى رسوم حكومية وتكاليف متغيرة.</p>
+<h3>جدول التكاليف التقديرية (قد تتغير الرسوم، تحقق دائماً من المصادر الرسمية)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">البند</th>
+<th style="text-align: left;">التكلفة التقريبية (ريال سعودي)</th>
+<th style="text-align: left;">ملاحظات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>رسوم حكومية أساسية</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">حجز الاسم التجاري</td>
+<td style="text-align: left;">مجاني حالياً (كان 100 ريال)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">إصدار السجل التجاري (سنوي)</td>
+<td style="text-align: left;">200 ريال</td>
+<td style="text-align: left;">تدفع سنوياً.</td>
+</tr>
+<tr>
+<td style="text-align: left;">نشر عقد التأسيس</td>
+<td style="text-align: left;">حوالي 800 - 1,500 ريال</td>
+<td style="text-align: left;">تعتمد على طول العقد.</td>
+</tr>
+<tr>
+<td style="text-align: left;">الاشتراك في الغرفة التجارية (سنوي)</td>
+<td style="text-align: left;">800 ريال (للمؤسسات والشركات الصغيرة)</td>
+<td style="text-align: left;">إلزامي. يزيد للشركات الأكبر.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>المجموع الأساسي (تقريبي)</strong></td>
+<td style="text-align: left;"><strong>~ 1,800 - 2,500 ريال</strong></td>
+<td style="text-align: left;">هذه هي التكلفة الأساسية لإصدار الوثائق الرسمية.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تكاليف إضافية (للمستثمر الأجنبي)</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">إصدار ترخيص وزارة الاستثمار (MISA)</td>
+<td style="text-align: left;">2,000 ريال (للسنة الأولى)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">تجديد ترخيص وزارة الاستثمار (MISA)</td>
+<td style="text-align: left;">10,000 ريال (سنوياً بعد السنة الأولى)*</td>
+<td style="text-align: left;">*هناك إعفاءات لرواد الأعمال ضمن شروط معينة.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تكاليف متغيرة واختيارية</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">رأس المال</td>
+<td style="text-align: left;">غير محدد</td>
+<td style="text-align: left;">لا يوجد حد أدنى لمعظم شركات التقنية ذات المسؤولية المحدودة. لكن يوصى بإيداع مبلغ معقول (مثلاً 25,000 - 100,000 ريال) لإظهار الجدية وتغطية التكاليف الأولية.</td>
+</tr>
+<tr>
+<td style="text-align: left;">الاستشارات القانونية (لصياغة عقد تأسيس مخصص)</td>
+<td style="text-align: left;">5,000 - 20,000 ريال</td>
+<td style="text-align: left;">تعتمد على مدى تعقيد العقد. استثمار مهم جداً إذا كان هناك عدة شركاء.</td>
+</tr>
+<tr>
+<td style="text-align: left;">تسجيل العلامة التجارية (اختياري)</td>
+<td style="text-align: left;">حوالي 7,000 - 10,000 ريال</td>
+<td style="text-align: left;">عبر الهيئة السعودية للملكية الفكرية (SAIP).</td>
+</tr>
+<tr>
+<td style="text-align: left;">العنوان الوطني / مكتب افتراضي (سنوي)</td>
+<td style="text-align: left;">1,000 - 5,000 ريال</td>
+<td style="text-align: left;">ضروري لإصدار السجل التجاري.</td>
+</tr>
+<tr>
+<td style="text-align: left;">فتح حساب بنكي</td>
+<td style="text-align: left;">مجاني</td>
+<td style="text-align: left;">لكن بعض البنوك قد تطلب حداً أدنى للإيداع.</td>
+</tr>
+</tbody>
+</table>
+<h3>مثال عملي: تكلفة تأسيس شركة تقنية (SaaS) سعودية بالكامل</h3>
+<p>لنفترض أنك وشريكك تؤسسان شركة برمجيات كخدمة (SaaS) ذات مسؤولية محدودة:
+- <strong>رسوم حكومية أساسية:</strong> 2,000 ريال
+- <strong>اشتراك مكتب افتراضي:</strong> 1,500 ريال
+- <strong>استشارة قانونية بسيطة لمراجعة عقد التأسيس:</strong> 3,000 ريال
+- <strong>رأس مال مبدئي لإيداعه في البنك:</strong> 50,000 ريال (هذا المبلغ يظل ملكاً للشركة)</p>
+<p><strong>إجمالي التكلفة النقدية الخارجة في البداية:</strong> حوالي 6,500 ريال.
+<strong>إجمالي السيولة المطلوبة (مع رأس المال):</strong> حوالي 56,500 ريال.</p>
+<hr />
+<h2>رابعاً: الجدول الزمني الواقعي - من الفكرة إلى الانطلاق</h2>
+<p>بينما تُعلن الجهات الحكومية عن إمكانية تأسيس شركة في دقائق، يعتمد الجدول الزمني الواقعي على مدى استعدادك وجاهزية مستنداتك.</p>
+<h3>الجدول الزمني لشركة سعودية 100%</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المرحلة</th>
+<th style="text-align: left;">الإجراءات</th>
+<th style="text-align: left;">المدة الزمنية الواقعية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>المرحلة 1: التحضير</strong></td>
+<td style="text-align: left;">- الاتفاق بين الشركاء على كافة التفاصيل (رأس المال، الحصص، الإدارة).<br>- تجهيز الهويات والعناوين الوطنية.<br>- التأكد من وجود حسابات أبشر مفعلة للجميع.</td>
+<td style="text-align: left;"><strong>1 - 3 أيام عمل</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>المرحلة 2: التأسيس الإلكتروني</strong></td>
+<td style="text-align: left;">- الدخول للمركز السعودي للأعمال.<br>- حجز الاسم التجاري.<br>- تعبئة بيانات الشركة وعقد التأسيس.<br>- توثيق العقد إلكترونياً عبر نفاذ من جميع الشركاء.</td>
+<td style="text-align: left;"><strong>20 دقيقة - يوم عمل واحد</strong> (يعتمد على سرعة توثيق الشركاء)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>المرحلة 3: الإصدار الفوري</strong></td>
+<td style="text-align: left;">- بعد التوثيق، يتم إصدار فاتورة موحدة (سجل تجاري + غرفة تجارية + نشر).<br>- بعد السداد، يصدر السجل التجاري والوثائق الأخرى فوراً.</td>
+<td style="text-align: left;"><strong>فوري</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>المرحلة 4: ما بعد التأسيس</strong></td>
+<td style="text-align: left;">- <strong>فتح الحساب البنكي (الأكثر استهلاكاً للوقت)</strong>.<br>- التسجيل في ZATCA (ضريبة القيمة المضافة).<br>- التسجيل في منصة "مدد".<br>- إعداد وتوثيق لائحة تنظيم العمل الداخلية عبر "قوى".</td>
+<td style="text-align: left;"><strong>5 - 15 يوم عمل</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>إجمالي الوقت المتوقع من البدء حتى تفعيل الحساب البنكي:</strong> <strong>من أسبوع إلى ثلاثة أسابيع.</strong></p>
+<h3>الجدول الزمني لشركة تتضمن شريكاً أجنبياً</h3>
+<p>تُضاف هنا خطوة الحصول على ترخيص وزارة الاستثمار (MISA) أولاً.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المرحلة</th>
+<th style="text-align: left;">الإجراءات</th>
+<th style="text-align: left;">المدة الزمنية الواقعية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>المرحلة 0: التحضير الأجنبي</strong></td>
+<td style="text-align: left;">- تجهيز مستندات الشركة الأم أو الفرد الأجنبي.<br>- <strong>ترجمة وتصديق المستندات من السفارة السعودية (هذه هي الخطوة الأطول)</strong>.</td>
+<td style="text-align: left;"><strong>2 - 6 أسابيع</strong> (تعتمد على إجراءات بلد المنشأ)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>المرحلة 1: ترخيص MISA</strong></td>
+<td style="text-align: left;">- تقديم الطلب والمستندات المصدقة عبر منصة وزارة الاستثمار.<br>- مراجعة الطلب والموافقة عليه.</td>
+<td style="text-align: left;"><strong>3 - 10 أيام عمل</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>المرحلة 2-4: التأسيس وما بعده</strong></td>
+<td style="text-align: left;">- نفس خطوات الشركة السعودية المذكورة أعلاه.</td>
+<td style="text-align: left;"><strong>1 - 3 أسابيع</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>إجمالي الوقت المتوقع لشركة بشريك أجنبي:</strong> <strong>من شهر ونصف إلى ثلاثة أشهر.</strong></p>
+<hr />
+<h2>خامساً: الأخطاء الشائعة وكيفية تجنبها - تعلم من تجارب الآخرين</h2>
+<p>هذا هو الجزء الأكثر أهمية في الفصل. تجنب هذه الأخطاء سيوفر عليك الكثير من المتاعب.</p>
+<h3>الخطأ الأول: اختيار النشاط التجاري الخاطئ أو العام جداً</h3>
+<ul>
+<li><strong>المشكلة:</strong> يختار الكثيرون نشاطاً عاماً مثل "خدمات تقنية المعلومات" أو "استيراد وتصدير". هذا قد يسبب مشاكل لاحقاً عند محاولة الحصول على عقود حكومية تتطلب نشاطاً محدداً، أو عند استقدام موظفين بمهن متخصصة (مثل "مهندس برمجيات") لا تتوافق مع النشاط العام للسجل.</li>
+<li><strong>الحل:</strong> استخدم <strong>الدليل الوطني للأنشطة الاقتصادية (ISIC4)</strong> المتاح على موقع الهيئة العامة للإحصاء. ابحث عن النشاط الأكثر دقة الذي يصف عملك. على سبيل المثال:<ul>
+<li>بدلاً من "تقنية معلومات"، اختر "6201 - برمجة الحاسب" إذا كنت تطور برمجيات.</li>
+<li>اختر "6311 - معالجة البيانات واستضافتها والأنشطة ذات الصلة" إذا كنت تقدم خدمات سحابية (Cloud Services) أو (Data Center).</li>
+</ul>
+</li>
+<li><strong>نصيحة إضافية:</strong> يمكنك إضافة أكثر من نشاط في السجل التجاري الواحد طالما أنها متقاربة.</li>
+</ul>
+<h3>الخطأ الثاني: إهمال تفاصيل عقد التأسيس والاعتماد الكلي على النموذج القياسي</h3>
+<ul>
+<li><strong>المشكلة:</strong> النموذج القياسي الذي توفره وزارة التجارة ممتاز للبدء، ولكنه لا يغطي السيناريوهات المعقدة التي تواجه الشركات التقنية، مثل:<ul>
+<li><strong>آليات التخارج (Exit Clauses):</strong> ماذا يحدث إذا أراد أحد الشركاء بيع حصته؟</li>
+<li><strong>حقوق السحب والإلزام (Tag-along &amp; Drag-along Rights):</strong> مهمة جداً في جولات الاستثمار المستقبلية.</li>
+<li><strong>فترات الاستحقاق (Vesting Schedules):</strong> لضمان بقاء الشركاء المؤسسين في الشركة لفترة معينة قبل امتلاك حصصهم بالكامل.</li>
+<li><strong>صلاحيات المدير:</strong> هل يمكن للمدير الحصول على قروض أو بيع أصول الشركة دون موافقة جميع الشركاء؟</li>
+</ul>
+</li>
+<li><strong>الحل:</strong> استثمر في استشارة قانونية لصياغة عقد تأسيس مخصص أو إضافة ملاحق للعقد القياسي. هذا الاستثمار البسيط في البداية قد ينقذ الشركة من نزاعات تكلف الملايين لاحقاً.</li>
+</ul>
+<blockquote>
+<p><strong>مادة قانونية مرجعية:</strong> المادة الثانية عشرة من نظام الشركات الجديد تمنح الشركاء مرونة واسعة في تضمين أحكام وشروط خاصة في عقد التأسيس، طالما أنها لا تتعارض مع النظام. استفد من هذه المرونة.</p>
+</blockquote>
+<h3>الخطأ الثالث: المماطلة في فتح الحساب البنكي</h3>
+<ul>
+<li><strong>المشكلة:</strong> يعتقد المؤسسون أن الحصول على السجل التجاري هو نهاية المطاف، ويتأخرون في التوجه للبنك. لكن الشركة لا يمكنها ممارسة أي نشاط مالي (استلام أموال من العملاء، دفع رواتب) بدون حساب بنكي. إجراءات البنوك تتطلب وقتاً بسبب متطلبات "اعرف عميلك" (KYC) ومكافحة غسيل الأموال (AML).</li>
+<li><strong>الحل:</strong> فور صدور السجل التجاري، ابدأ إجراءات فتح الحساب. جهز جميع المستندات المطلوبة:<ol>
+<li>السجل التجاري.</li>
+<li>عقد التأسيس.</li>
+<li>شهادة العنوان الوطني للشركة.</li>
+<li>هويات جميع الشركاء والمدير.</li>
+<li>قرار الشركاء بتفويض المدير بفتح الحساب (إذا لم يكن منصوصاً عليه صراحة في عقد التأسيس).</li>
+</ol>
+</li>
+<li><strong>نصيحة عملية:</strong> تواصل مع عدة بنوك في نفس الوقت، فمتطلبات وسرعة كل بنك تختلف عن الآخر.</li>
+</ul>
+<h3>الخطأ الرابع: تجاهل التسجيل في الجهات الحكومية الأخرى بعد التأسيس</h3>
+<ul>
+<li><strong>المشكلة:</strong> الحصول على السجل التجاري هو البداية وليس النهاية. إهمال التسجيل في هيئة الزكاة والضريبة والجمارك (ZATCA) أو التأمينات الاجتماعية (GOSI) يعرضك لغرامات مالية كبيرة.</li>
+<li><strong>الحل:</strong><ul>
+<li><strong>ZATCA:</strong> سجل شركتك خلال 30 يوماً من تاريخ إصدار السجل التجاري. هذا إلزامي حتى لو لم تصل إيراداتك إلى حد التسجيل في ضريبة القيمة المضافة.</li>
+<li><strong>GOSI:</strong> سجل المنشأة فوراً. يجب تسجيل أي موظف سعودي (بما في ذلك الشركاء العاملون في الشركة) من اليوم الأول للعمل.</li>
+<li><strong>قوى/مدد:</strong> قم بإعداد لائحة تنظيم العمل الداخلية وتفعيل ملف المنشأة والتزم بنظام حماية الأجور.</li>
+</ul>
+</li>
+</ul>
+<h3>الخطأ الخامس (خاص بالأجانب): سوء تقدير وقت ومتطلبات التصديق</h3>
+<ul>
+<li><strong>المشكلة:</strong> يبدأ المستثمر الأجنبي عملية التأسيس دون أن يدرك أن تصديق المستندات من وزارة الخارجية في بلده ثم من السفارة السعودية قد يستغرق أسابيع طويلة. أي خطأ في التصديق يعني رفض الطلب من وزارة الاستثمار والبدء من جديد.</li>
+<li><strong>الحل:</strong> ابدأ عملية التصديق بالتوازي مع المفاوضات الأولية. تواصل مع مكاتب خدمات معتمدة في بلدك ومتخصصة في هذا الأمر لتسريع العملية وضمان صحتها. تأكد من أن الترجمة إلى العربية معتمدة ودقيقة.</li>
+</ul>
+<h2>خاتمة الفصل</h2>
+<p>لقد أصبحت رحلة تأسيس شركة تقنية في المملكة العربية السعودية اليوم أكثر سلاسة وكفاءة من أي وقت مضى. المفتاح يكمن في الفهم المسبق للمنصات الرقمية، والتحضير الدقيق للمستندات، والوعي بالتكاليف والجداول الزمنية الواقعية.</p>
+<p>تذكر أن التأسيس ليس مجرد إجراء إداري، بل هو الأساس الذي ستبني عليه شركتك. كل دقيقة تقضيها الآن في فهم التفاصيل وصياغة عقد تأسيس متين وتجنب الأخطاء الشائعة هي استثمار مباشر في استقرار ونمو شركتك مستقبلاً.</p>
+<p>في الفصل التالي، سننتقل إلى المرحلة التي تلي التأسيس: "حوكمة الشركة والالتزامات المستمرة"، حيث سنناقش كيفية إدارة الشركة بشكل قانوني سليم، والتعامل مع مجالس الإدارة، والالتزامات السنوية التي يجب عليك الوفاء بها لتبقى شركتك في الجانب الآمن من النظام.</p>
+        </div>
+
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-02</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

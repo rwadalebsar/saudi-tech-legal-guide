@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:ai.google.dev)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(GEMINI_API_KEY=\"AIzaSyBXRnd0ykFidLPDqlqcwEpQLPbX7h9lY5o\" python scripts/write_book.py)",
+      "Bash(ls:*)",
+      "Bash(python -c \"\nfrom google import genai\nclient = genai.Client\\(api_key=''AIzaSyBXRnd0ykFidLPDqlqcwEpQLPbX7h9lY5o''\\)\nresponse = client.models.generate_content\\(model=''gemini-2.5-flash'', contents=[''Say hello in Arabic'']\\)\nprint\\(response.text\\)\n\")",
+      "Bash(kill:*)",
+      "Bash(pkill:*)",
+      "Bash(wc:*)",
+      "Bash(GEMINI_API_KEY=\"AIzaSyBXRnd0ykFidLPDqlqcwEpQLPbX7h9lY5o\" python:*)",
+      "Bash(python scripts/build_pdf.py:*)",
+      "Bash(file:*)",
+      "Bash(grep:*)",
+      "Bash(python scripts/build_website.py:*)",
+      "Bash(open:*)",
+      "Bash(gh auth status:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

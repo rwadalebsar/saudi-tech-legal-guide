@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" class="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل القانوني للتقنية في السعودية</title>
+    <style>
+:root {
+    --primary: #1B5E20;
+    --secondary: #4CAF50;
+    --accent: #81C784;
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #FFFFFF;
+    --bg-alt: #F5F5F5;
+    --border: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #FFF3E0;
+    border: 2px solid #FF9800;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.disclaimer h3 {
+    color: #E65100;
+    margin-bottom: 1rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.5rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+}
+
+/* Content */
+.content {
+    padding: 2rem 0;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1rem 2rem 1rem 0;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.content th {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.content tr:nth-child(even) {
+    background: var(--bg-alt);
+}
+
+.content blockquote {
+    background: linear-gradient(135deg, #E8F5E9, #F1F8E9);
+    border-left: 4px solid var(--secondary);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--secondary);
+    border-radius: 8px 0 0 8px;
+}
+
+.content code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.content pre {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-alt);
+}
+
+.lang-switch a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.lang-switch a:hover {
+    background: var(--primary);
+}
+
+/* Footer */
+footer {
+    background: var(--text);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>الدليل القانوني للتقنية في السعودية</h1>
+        <p>دليل عملي للأنظمة لشركات التقنية</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../en/appendix_b_templates.html">English</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">المقدمة</a></li><li><a href="01_company_types.html">أنواع الشركات</a></li><li><a href="02_foreign_investors.html">المستثمرون الأجانب</a></li><li><a href="03_founding_steps.html">خطوات التأسيس</a></li><li><a href="04_pdpl_basics.html">أساسيات حماية البيانات</a></li><li><a href="05_consent.html">الموافقة</a></li><li><a href="06_cross_border.html">النقل عبر الحدود</a></li><li><a href="07_pdpl_compliance.html">الامتثال</a></li><li><a href="08_pdpl_penalties.html">العقوبات</a></li><li><a href="09_cybersecurity_ecosystem.html">الأمن السيبراني</a></li><li><a href="10_ecc_controls.html">الضوابط الأساسية</a></li><li><a href="11_government_contracts.html">العقود الحكومية</a></li><li><a href="12_compliance_advantage.html">ميزة الامتثال</a></li><li><a href="13_ai_landscape.html">تنظيم الذكاء الاصطناعي</a></li><li><a href="14_ai_products.html">منتجات الذكاء الاصطناعي</a></li><li><a href="appendix_a_checklists.html">قوائم المراجعة</a></li><li><a href="appendix_b_templates.html" class="active">النماذج</a></li><li><a href="appendix_c_resources.html">المصادر</a></li><li><a href="appendix_d_glossary.html">المصطلحات</a></li></ul></nav>
+
+    <main class="container">
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-02</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+
+        <div class="content">
+            <h1>ملحق ب: النماذج الجاهزة (The Ready-to-use Templates)</h1>
+<p>مرحباً بك في الجزء التطبيقي الأكثر أهمية في كتاب "البوصلة القانونية". بعد أن استعرضنا الأنظمة واللوائح، يأتي الآن دور التنفيذ. هذا الملحق ليس مجرد نصوص قانونية، بل هو "حقيبة أدوات" مصممة خصيصاً لشركات التقنية الناشئة والمتقدمة في السوق السعودي.</p>
+<p><strong>ملاحظة هامة:</strong> هذه النماذج مصممة لتتوافق مع <strong>نظام حماية البيانات الشخصية السعودي (PDPL)</strong> ولائحته التنفيذية. تذكر دائماً أن "النسخ واللصق" دون مراجعة فنية قد يكون خطراً؛ لذا استخدم هذه النماذج كإطار عمل وقم بتخصيصها حسب طبيعة منتجك التقني.</p>
+<hr />
+<h2>1. نموذج إشعار الخصوصية (Privacy Notice) - ثنائي اللغة</h2>
+<p>هذا النموذج هو واجهتك أمام المستخدمين (B2C أو B2B). المادة (13) من نظام حماية البيانات الشخصية تفرض عليك إطلاع صاحب البيانات على سياسة الخصوصية قبل جمع بياناته.</p>
+<h3>نصيحة عملية:</h3>
+<p>لا تضع رابط سياسة الخصوصية في تذييل الموقع فقط، بل اجعلها جزءاً من عملية التسجيل (Sign-up flow) لضمان "العلم اليقيني".</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">البند</th>
+<th style="text-align: left;">الوصف (بالعربية)</th>
+<th style="text-align: left;">Description (English)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>المقدمة</strong></td>
+<td style="text-align: left;">نحن في [اسم الشركة] نلتزم بحماية بياناتك وفقاً لنظام حماية البيانات الشخصية السعودي.</td>
+<td style="text-align: left;">At [Company Name], we are committed to protecting your data in accordance with the Saudi PDPL.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>البيانات التي نجمعها</strong></td>
+<td style="text-align: left;">نجمع الاسم، البريد الإلكتروني، رقم الجوال، وبيانات الجهاز.</td>
+<td style="text-align: left;">We collect name, email, mobile number, and device data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الغرض من المعالجة</strong></td>
+<td style="text-align: left;">تقديم الخدمات، تحسين تجربة المستخدم، والامتثال للمتطلبات القانونية.</td>
+<td style="text-align: left;">Providing services, improving user experience, and legal compliance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الأساس النظامي</strong></td>
+<td style="text-align: left;">الموافقة الصريحة، أو تنفيذ اتفاقية، أو المصلحة المشروعة.</td>
+<td style="text-align: left;">Explicit consent, contract performance, or legitimate interest.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مشاركة البيانات</strong></td>
+<td style="text-align: left;">لا نشارك بياناتك مع أطراف ثالثة إلا لتنفيذ الخدمة (مثل بوابات الدفع).</td>
+<td style="text-align: left;">We do not share data with third parties except for service execution (e.g., payment gateways).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حقوقك</strong></td>
+<td style="text-align: left;">الحق في الوصول، التصحيح، الإتلاف، وسحب الموافقة.</td>
+<td style="text-align: left;">Right to access, rectify, destroy, and withdraw consent.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>التواصل</strong></td>
+<td style="text-align: left;">لممارسة حقوقك، تواصل معنا عبر: [البريد الإلكتروني].</td>
+<td style="text-align: left;">To exercise your rights, contact us at: [Email].</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>2. نموذج سياسة حماية البيانات الداخلية (Internal Data Protection Policy)</h2>
+<p>هذه الوثيقة موجهة لموظفيك ومبرمجيك. هي "الدستور الداخلي" الذي يحدد كيف يتعامل فريق العمل مع قواعد البيانات.</p>
+<h3>الهدف:</h3>
+<p>إثبات "المساءلة" (Accountability) أمام الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا) في حال حدوث تفتيش.</p>
+<p><strong>محتوى السياسة المقترح:</strong></p>
+<ol>
+<li><strong>مبدأ الحد الأدنى (Data Minimization):</strong> لا يُسمح للمطورين بالوصول إلى قاعدة بيانات الإنتاج (Production) إلا عند الضرورة القصوى وبإذن موثق.</li>
+<li><strong>التشفير:</strong> يجب تشفير جميع البيانات الشخصية "أثناء النقل" (In-transit) و"أثناء التخزين" (At-rest).</li>
+<li><strong>إدارة الصلاحيات (RBAC):</strong> تُمنح الصلاحيات بناءً على الدور الوظيفي فقط.</li>
+<li><strong>التخلص من البيانات:</strong> تُحذف بيانات الاختبار (Test Data) فور الانتهاء من دورة التطوير، ويُمنع استخدام بيانات حقيقية لعملاء في بيئة التطوير.</li>
+<li><strong>التدريب:</strong> يلتزم الموظف بحضور دورة تدريبية ربع سنوية عن مخاطر الأمن السيبراني ونظام (PDPL).</li>
+</ol>
+<blockquote>
+<p><strong>تنبيه:</strong> المادة (42) من النظام تفرض عقوبات على الإهمال. وجود سياسة داخلية موقعة من الموظفين يحمي الشركة قانونياً ويثبت اتخاذها التدابير اللازمة.</p>
+</blockquote>
+<hr />
+<h2>3. نموذج اتفاقية معالجة البيانات (Data Processing Agreement - DPA)</h2>
+<p>إذا كانت شركتك تستخدم خدمات سحابية (مثل AWS أو Google Cloud) أو أدوات تحليل بيانات، فأنت "جهة تحكم" وهم "جهة معالجة". المادة (18) تفرض عليك إبرام اتفاقية معهم.</p>
+<p><strong>البنود الجوهرية في الـ DPA السعودي:</strong></p>
+<ul>
+<li><strong>نطاق المعالجة:</strong> (مثال: تخزين بيانات العملاء لغرض استضافة التطبيق).</li>
+<li><strong>الالتزام بالتعليمات:</strong> "تتعهد جهة المعالجة بعدم معالجة البيانات إلا بناءً على تعليمات مكتوبة من شركتنا".</li>
+<li><strong>السرية:</strong> إلزام جميع موظفي جهة المعالجة باتفاقيات عدم إفصاح (NDA).</li>
+<li><strong>نقل البيانات خارج المملكة:</strong> يجب أن يقر المعالج بالتزامه بضوابط نقل البيانات الصادرة عن (سدايا) المادة (28).</li>
+<li><strong>حق التدقيق:</strong> يحق لنا (جهة التحكم) إجراء فحص دوري أو طلب تقارير امتثال (مثل SOC2) من جهة المعالجة.</li>
+</ul>
+<hr />
+<h2>4. نموذج تقييم أثر حماية البيانات (DPIA)</h2>
+<p>متى تحتاج هذا النموذج؟ عندما تطلق ميزة جديدة عالية المخاطر (مثل: تقنية التعرف على الوجه، تحليل السلوك الشرائي بالذكاء الاصطناعي، أو معالجة بيانات صحية).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">الخطوة</th>
+<th style="text-align: left;">التوصيف العملي</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>وصف المعالجة</strong></td>
+<td style="text-align: left;">شرح تدفق البيانات (Data Flow) من نقطة الجمع إلى التخزين.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تقييم الضرورة</strong></td>
+<td style="text-align: left;">هل يمكن تحقيق الهدف بدون جمع هذه البيانات؟ (مبدأ التناسب).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تحديد المخاطر</strong></td>
+<td style="text-align: left;">ما احتمال تسرب البيانات؟ ما أثر ذلك على خصوصية المستخدم؟</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تدابير التخفيف</strong></td>
+<td style="text-align: left;">استخدام تقنيات إخفاء الهوية (Anonymization) أو التشفير المتقدم.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>القرار النهائي</strong></td>
+<td style="text-align: left;">هل المخاطر المتبقية مقبولة؟ (نعم/لا).</td>
+</tr>
+</tbody>
+</table>
+<h3>مثال واقعي:</h3>
+<p>شركة "توصيل" تقنية ترغب في تتبع موقع السائق والمستخدم بدقة عالية حتى بعد إغلاق التطبيق. هنا <strong>يجب</strong> إجراء (DPIA) لأن تتبع الموقع الجغرافي المستمر يُعد معالجة عالية المخاطر.</p>
+<hr />
+<h2>5. نموذج الإبلاغ عن انتهاك بيانات (Data Breach Notification)</h2>
+<p>في حال حدوث اختراق (لا قدر الله)، النظام السعودي يلزمك بإبلاغ "سدايا" خلال <strong>72 ساعة</strong> من علمك بالواقعة إذا كان الانتهاك يشكل ضرراً على أصحاب البيانات.</p>
+<p><strong>محتويات نموذج الإبلاغ (للهيئة):</strong>
+1.  <strong>وقت وتاريخ الاكتشاف:</strong> متى وكيف عرفتم بالاختراق؟
+2.  <strong>طبيعة الانتهاك:</strong> (تسرب قاعدة بيانات، وصول غير مصرح، هجوم فدية).
+3.  <strong>فئات المتضررين:</strong> (عملاء، موظفين، موردين) وأعدادهم التقريبية.
+4.  <strong>الإجراءات المتخذة:</strong> (عزل الخوادم، تغيير كلمة المرور، إغلاق الثغرة).
+5.  <strong>بيانات مسؤول حماية البيانات (DPO):</strong> وسيلة التواصل المباشرة.</p>
+<p><strong>محتويات إشعار المستخدم المتضرر:</strong></p>
+<blockquote>
+<p>"عزيزي العميل، لاحظنا نشاطاً غير مصرح به قد أثر على [نوع البيانات]. لقد قمنا بـ [الإجراء]. ننصحك بـ [تغيير كلمة المرور/تفعيل التحقق الثنائي]. نحن نعتذر ونعمل على حمايتك."</p>
+</blockquote>
+<hr />
+<h2>نصائح ذهبية لرواد الأعمال والمطورين</h2>
+<ol>
+<li><strong>الخصوصية بالتصميم (Privacy by Design):</strong> لا تبنِ النظام ثم تفكر في القانون. اجعل حماية البيانات جزءاً من "الكود" ومن بنية قواعد البيانات منذ اليوم الأول.</li>
+<li><strong>سجل الأنشطة (ROPA):</strong> احتفظ بجدول بسيط (Excel) يوضح: ما هي البيانات التي نملكها؟ أين توجد؟ من يملك صلاحية الوصول إليها؟ متى سنحذفها؟ هذا السجل هو أول ما يطلبه المدقق القانوني.</li>
+<li><strong>تجنب "البيانات الحساسة":</strong> إذا كان تطبيقك لا يحتاج للأصل العرقي، المعتقدات الدينية، أو البيانات الأمنية والجنائية، فلا تطلبها أبداً. التعامل معها في النظام السعودي يتطلب إجراءات مشددة جداً وعقوباتها مغلظة.</li>
+<li><strong>توطين البيانات:</strong> تأكد أن خوادمك الأساسية (أو على الأقل النسخ الاحتياطية التي تحتوي بيانات حساسة) موجودة داخل المملكة، إلا في حالات الاستثناء المحددة في لوائح نقل البيانات.</li>
+</ol>
+<h2>أخطاء شائعة يقع فيها المبرمجون السعوديون:</h2>
+<ul>
+<li><strong>استخدام Firebase أو Supabase دون ضبط منطقة البيانات:</strong> تأكد من اختيار (me-central1) أو المناطق القريبة والمتوافقة مع معايير النقل.</li>
+<li><strong>إرسال بيانات المستخدمين في الـ URL (Query Parameters):</strong> هذا يعرض البيانات للتسرب عبر سجلات المتصفح (Logs).</li>
+<li><strong>عدم وجود صفحة "حذف الحساب":</strong> النظام يمنح المستخدم "حق الإتلاف". عدم توفير خيار سهل لحذف الحساب داخل التطبيق هو مخالفة صريحة.</li>
+</ul>
+<hr />
+<p><strong>خاتمة الملحق:</strong>
+الامتثال ليس "ملفاً قانونياً" يوضع في الدرج، بل هو عملية مستمرة. استخدم هذه النماذج كبداية، وقم بتحديثها كلما تطور منتجك التقني أو صدرت تحديثات من الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا).</p>
+<blockquote>
+<p><strong>تذكر:</strong> في عالم التقنية السعودي، الثقة هي العملة الأغلى، والامتثال هو الطريق الأقصر لبناء هذه الثقة مع المستخدمين والمستثمرين على حد سواء.</p>
+</blockquote>
+<hr />
+<p><em>تم إعداد هذه النماذج بناءً على نظام حماية البيانات الشخصية الصادر بالمرسوم الملكي رقم (م/19) وتاريخ 09/02/1443هـ ولائحته التنفيذية. المرجع: https://laws.boe.gov.sa</em></p>
+        </div>
+
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-02</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>
