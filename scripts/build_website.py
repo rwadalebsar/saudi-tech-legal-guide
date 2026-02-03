@@ -591,8 +591,6 @@ def create_page(chapter_id, content, lang, chapters):
     {nav}
 
     <main class="container">
-        {disclaimer}
-
         <div class="content">
             {content}
         </div>
