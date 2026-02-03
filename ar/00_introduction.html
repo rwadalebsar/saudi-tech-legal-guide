@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ar" class="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل القانوني للتقنية في السعودية</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&family=JetBrains+Mono&display=swap');
+
+:root {
+    --primary: #0F766E;
+    --primary-dark: #134E4A;
+    --primary-light: #14B8A6;
+    --secondary: #0EA5E9;
+    --accent: #F59E0B;
+    --text: #1E293B;
+    --text-light: #64748B;
+    --text-muted: #94A3B8;
+    --bg: #FFFFFF;
+    --bg-alt: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --border: #E2E8F0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg-alt);
+    -webkit-font-smoothing: antialiased;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    position: relative;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.25rem;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--bg-alt);
+    color: var(--primary);
+}
+
+nav a.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 1px solid #F59E0B;
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+.disclaimer h3 {
+    color: #B45309;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.25rem;
+    color: #92400E;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.25rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.disclaimer a:hover {
+    color: var(--primary-dark);
+}
+
+/* Content Card */
+.content {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+}
+
+.content h1 {
+    color: var(--primary-dark);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-light);
+    letter-spacing: -0.02em;
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.content h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+}
+
+.content p {
+    margin-bottom: 1.25rem;
+    color: var(--text);
+}
+
+.content ul, .content ol {
+    margin: 1.25rem 0 1.25rem 1.5rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1.25rem 1.5rem 1.25rem 0;
+}
+
+.content li {
+    margin-bottom: 0.625rem;
+    color: var(--text);
+}
+
+.content li::marker {
+    color: var(--primary);
+}
+
+/* Tables */
+.content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.content th {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.content tr:last-child td {
+    border-bottom: none;
+}
+
+.content tr:nth-child(even) td {
+    background: var(--bg-alt);
+}
+
+.content tr:hover td {
+    background: #F0FDFA;
+}
+
+/* Blockquotes */
+.content blockquote {
+    background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    color: var(--primary-dark);
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--primary);
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/* Code */
+.content code {
+    background: #F1F5F9;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary-dark);
+}
+
+.content pre {
+    background: #1E293B;
+    color: #E2E8F0;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.content a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: all 0.2s;
+}
+
+.content a:hover {
+    color: var(--primary-dark);
+    text-decoration-thickness: 2px;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.lang-switch a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    margin: 0 0.375rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.lang-switch a:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    color: #CBD5E1;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.375rem 0.625rem;
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 1.25rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .content h1 {
+        font-size: 1.75rem;
+    }
+
+    .content h2 {
+        font-size: 1.25rem;
+    }
+
+    .disclaimer {
+        padding: 1.25rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav, .lang-switch, .disclaimer {
+        display: none;
+    }
+
+    .content {
+        box-shadow: none;
+        border: none;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>الدليل القانوني للتقنية في السعودية</h1>
+        <p>دليل عملي للأنظمة لشركات التقنية</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../en/00_introduction.html">English</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html" class="active">المقدمة</a></li><li><a href="01_company_types.html">أنواع الشركات</a></li><li><a href="02_foreign_investors.html">المستثمرون الأجانب</a></li><li><a href="03_founding_steps.html">خطوات التأسيس</a></li><li><a href="04_pdpl_basics.html">أساسيات حماية البيانات</a></li><li><a href="05_consent.html">الموافقة</a></li><li><a href="06_cross_border.html">النقل عبر الحدود</a></li><li><a href="07_pdpl_compliance.html">الامتثال</a></li><li><a href="08_pdpl_penalties.html">العقوبات</a></li><li><a href="09_cybersecurity_ecosystem.html">الأمن السيبراني</a></li><li><a href="10_ecc_controls.html">الضوابط الأساسية</a></li><li><a href="11_government_contracts.html">العقود الحكومية</a></li><li><a href="12_compliance_advantage.html">ميزة الامتثال</a></li><li><a href="13_ai_landscape.html">تنظيم الذكاء الاصطناعي</a></li><li><a href="14_ai_products.html">منتجات الذكاء الاصطناعي</a></li><li><a href="appendix_a_checklists.html">قوائم المراجعة</a></li><li><a href="appendix_b_templates.html">النماذج</a></li><li><a href="appendix_c_resources.html">المصادر</a></li><li><a href="appendix_d_glossary.html">المصطلحات</a></li></ul></nav>
+
+    <main class="container">
+        <div class="content">
+            <hr />
+<h1>المقدمة: الانطلاق في المشهد التقني السعودي</h1>
+<p>أهلاً بك في عالم التقنية السعودي، أحد أسرع الأسواق نمواً وأكثرها ديناميكية في العالم. إذا كنت رائد أعمال تطمح لإطلاق شركتك الناشئة، أو مديراً في شركة عالمية تخطط للتوسع في المملكة، أو مطوراً تبني الحلول الرقمية للمستقبل، فهذا الكتاب هو بوصلتك.</p>
+<p>في خضم التسارع المذهل الذي تشهده المملكة العربية السعودية، مدفوعاً برؤية 2030 الطموحة، لم يعد النجاح في قطاع التقنية يعتمد على جودة الكود البرمجي أو عبقرية الفكرة التسويقية فحسب. لقد أصبح النجاح مرتبطاً ارتباطاً وثيقاً بالقدرة على الإبحار بذكاء وحذر في محيط الأنظمة والتشريعات المتجددة.</p>
+<p>هذا الكتاب ليس مجرد سرد للمواد القانونية الجافة، بل هو دليل عملي صُمم خصيصاً لك. يهدف إلى ترجمة اللغة القانونية المعقدة إلى خطوات واضحة، ونصائح قابلة للتطبيق، وتحذيرات من أخطاء شائعة قد تكلفك الكثير. سنأخذ بيدك خطوة بخطوة، من لحظة تأسيس شركتك، مروراً بحماية بيانات عملائك وملكيتك الفكرية، وصولاً إلى الفوز بالعقود الحكومية الضخمة.</p>
+<p>استعد للانطلاق. بوصلتك بين يديك الآن.</p>
+<hr />
+<h2>لماذا هذا الكتاب الآن؟</h2>
+<p>قد تتساءل: لماذا الآن؟ لماذا أصبحت المعرفة القانونية بهذه الأهمية الملحة لشركات التقنية في السعودية في هذا التوقيت بالذات؟ الإجابة تكمن في التقاء ثلاثة تيارات جبارة تشكل المشهد الحالي:</p>
+<p><strong>1. تسارع رؤية 2030:</strong>
+رؤية السعودية 2030 ليست مجرد خطة اقتصادية، بل هي عملية إعادة هيكلة شاملة للمجتمع والاقتصاد. وفي قلب هذه الرؤية يقع التحول الرقمي. مشاريع عملاقة مثل "نيوم" و"ذا لاين"، والتحول الشامل في الخدمات الحكومية (الحكومة الرقمية)، وبرامج تطوير القطاع المالي (FinTech)، كلها تعتمد بشكل أساسي على حلول تقنية مبتكرة. هذا يخلق فرصاً غير مسبوقة لشركات التقنية، ولكنه يعني أيضاً أن الحكومة، بصفتها المُمكّن والمُنظّم والمشتري الأكبر، تضع أطراً تنظيمية صارمة لضمان الجودة والأمان والسيادة الرقمية. الجهل بهذه الأطر لم يعد خياراً.</p>
+<p><strong>2. نضج البيئة التشريعية:</strong>
+مع نمو السوق، تنضج التشريعات. في السنوات القليلة الماضية، شهدت المملكة إصدار وتحديث مجموعة من الأنظمة الجوهرية التي تؤثر مباشرة على كل شركة تقنية. من <strong>نظام حماية البيانات الشخصية (PDPL)</strong> الذي غير قواعد التعامل مع بيانات المستخدمين، إلى <strong>أنظمة التجارة الإلكترونية ومكافحة الجرائم المعلوماتية</strong>، و<strong>ضوابط هيئة الأمن السيبراني (NCA)</strong> الصارمة. لم تعد الساحة "غرباً متوحشاً" رقمياً؛ بل أصبحت بيئة منظمة تتطلب الامتثال الدقيق. الشركات التي تبادر بفهم هذه الأنظمة وتطبيقها تبني لنفسها ميزة تنافسية هائلة، بينما تتخلف الشركات التي تتجاهلها.</p>
+<p><strong>3. عولمة السوق السعودي:</strong>
+لم يعد السوق السعودي معزولاً. مع جذب الاستثمارات الأجنبية وتشجيع الشركات العالمية على افتتاح مقرات إقليمية، ارتفع مستوى المنافسة والتوقعات. الشركات العالمية تأتي ومعها فرق قانونية متمرسة وفهم عميق لأهمية الامتثال. لكي تتمكن الشركات المحلية من المنافسة والفوز بالعقود الكبرى، يجب عليها أن ترتقي بممارساتها التشغيلية والقانونية إلى هذا المستوى العالمي.</p>
+<blockquote>
+<p><strong>نصيحة عملية:</strong> لا تنظر إلى الأنظمة والتشريعات كعائق، بل انظر إليها كقواعد للعبة. من يفهم القواعد جيداً، يلعب بشكل أفضل ويفوز. هذا الكتاب هو دليلك لقواعد اللعبة في قطاع التقنية السعودي.</p>
+</blockquote>
+<p>باختصار، نحن في لحظة مفصلية. الفرص أكبر من أي وقت مضى، والمخاطر التنظيمية كذلك. هذا الكتاب وُجد لردم الفجوة بين الطموح التقني والواقع التنظيمي، ليكون مرشدك في هذه المرحلة الحاسمة من تاريخ المملكة الرقمي.</p>
+<hr />
+<h2>كيف تقرأ هذا الكتاب</h2>
+<p>صُمم هذا الكتاب ليكون مرجعاً عملياً يمكنك العودة إليه مراراً وتكراراً في مختلف مراحل نمو شركتك. لتحقيق أقصى استفادة منه، نقترح عليك اتباع النهج التالي:</p>
+<p><strong>1. اقرأه حسب دورك في الشركة:</strong></p>
+<ul>
+<li><strong>لرواد الأعمال والمؤسسين:</strong> يُنصح بقراءة الكتاب كاملاً في البداية للحصول على نظرة شاملة. ركز بشكل خاص على فصول "تأسيس الكيان القانوني"، "الملكية الفكرية"، و"جولات التمويل والاستثمار". هذه الفصول ستساعدك على بناء أساس قانوني متين لشركتك منذ اليوم الأول.</li>
+<li><strong>لمديري المشاريع والمنتجات:</strong> فصول "حماية البيانات الشخصية"، "التجارة الإلكترونية"، و"متطلبات الأمن السيبراني" هي الأهم بالنسبة لك. ستساعدك على تصميم منتجات وخدمات متوافقة مع الأنظمة (Compliance by Design)، مما يوفر عليك الكثير من الوقت والتكلفة لاحقاً.</li>
+<li><strong>للمطورين والمهندسين التقنيين:</strong> قد تعتقد أن القانون بعيد عن عملك، ولكن هذا غير صحيح. فهم أساسيات "الملكية الفكرية" سيساعدك على حماية الكود الذي تكتبه. الاطلاع على "ضوابط الحوسبة السحابية" و"متطلبات توطين البيانات" سيؤثر بشكل مباشر على القرارات المتعلقة بالبنية التحتية (Infrastructure) التي تتخذها.</li>
+<li><strong>للمستثمرين والشركات الأجنبية:</strong> هذا الكتاب هو بوابتك لفهم البيئة التنظيمية في السعودية. ابدأ بـ "خريطة الأنظمة" في هذا الفصل، ثم تعمق في فصول "الاستثمار الأجنبي" و"قوانين العمل والعمال" لفهم التزاماتك وفرصك في السوق.</li>
+</ul>
+<p><strong>2. استخدمه كدليل مرجعي:</strong>
+ليس عليك حفظ كل مادة قانونية. استخدم الفهرس للقفز مباشرة إلى الموضوع الذي تحتاج إليه في اللحظة المناسبة. هل تستعد لإطلاق تطبيق جديد؟ ارجع إلى فصل حماية البيانات. هل تفاوض على عقد مع جهة حكومية؟ راجع فصل المنافسات والمشتريات الحكومية.</p>
+<p><strong>3. انتبه للرموز والعناصر البصرية:</strong>
+ستجد في الكتاب عناصر متكررة لمساعدتك على استيعاب المحتوى بسرعة:</p>
+<ul>
+<li><strong>نصيحة عملية:</strong> فقرات قصيرة تقدم توصيات قابلة للتطبيق مباشرة.</li>
+<li><strong>تحذير من خطأ شائع:</strong> تنبيهات حول أخطاء وقعت فيها شركات أخرى لتتجنبها.</li>
+<li><strong>دراسة حالة:</strong> أمثلة واقعية (مع تغيير الأسماء) لتوضيح تأثير الأنظمة على الشركات.</li>
+<li><code>مصطلح تقني/قانوني</code>: تعريفات مبسطة للمصطلحات الهامة.</li>
+<li>
+<blockquote>
+<p>"اقتباس من النظام": نصوص قانونية مهمة مقتبسة مباشرة من مصدرها الرسمي لتوضيح نقطة معينة.</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>إخلاء مسؤولية هام:</strong>
+هذا الكتاب يقدم إرشادات وتوجيهات عامة مبنية على فهمنا للأنظمة السعودية حتى تاريخ نشره. إنه يهدف إلى زيادة وعيك القانوني وتمكينك من اتخاذ قرارات أفضل. ومع ذلك، <strong>هذا الكتاب ليس بديلاً عن الاستشارة القانونية المتخصصة</strong>. كل حالة عمل فريدة من نوعها، والأنظمة تتغير وتتطور. عند اتخاذ قرارات مصيرية أو مواجهة موقف قانوني معقد، يجب عليك دائماً استشارة محامٍ مرخص ومتخصص في مجالك.</p>
+<hr />
+<h2>خريطة الأنظمة السعودية المتعلقة بالتقنية</h2>
+<p>قد يبدو المشهد التنظيمي السعودي معقداً ومترامياً، لكن يمكننا تبسيطه بتصنيفه إلى محاور رئيسية. هذه الخريطة ستمنحك نظرة عليا على أهم الأنظمة والهيئات التي ستتعامل معها كشركة تقنية.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المحور</th>
+<th style="text-align: left;">النظام/التشريع الأساسي</th>
+<th style="text-align: left;">الجهة المسؤولة</th>
+<th style="text-align: left;">لماذا يهم شركتك التقنية؟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. التأسيس والتشغيل</strong></td>
+<td style="text-align: left;">نظام الشركات الجديد</td>
+<td style="text-align: left;">وزارة التجارة (MC)</td>
+<td style="text-align: left;">يحدد أنواع الشركات (ذ.م.م، مساهمة مبسطة، إلخ)، إجراءات التأسيس، التزامات الشركاء، وحوكمة الشركة.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">نظام السجل التجاري</td>
+<td style="text-align: left;">وزارة التجارة (MC)</td>
+<td style="text-align: left;">هوية شركتك الرسمية. بدونه لا يمكنك فتح حساب بنكي، توظيف موظفين، أو توقيع عقود.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. البيانات والخصوصية</strong></td>
+<td style="text-align: left;">نظام حماية البيانات الشخصية (PDPL)</td>
+<td style="text-align: left;">الهيئة السعودية للبيانات والذكاء الاصطناعي (SDAIA)</td>
+<td style="text-align: left;">يفرض التزامات صارمة على كيفية جمع، معالجة، تخزين، ومشاركة بيانات المستخدمين الشخصية. عدم الامتثال يعرضك لغرامات ضخمة.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">سياسات حوكمة البيانات الوطنية</td>
+<td style="text-align: left;">الهيئة السعودية للبيانات والذكاء الاصطناعي (SDAIA)</td>
+<td style="text-align: left;">تحدد متطلبات تصنيف البيانات، سيادة البيانات (Data Sovereignty)، ومتطلبات توطين بعض البيانات الحساسة داخل المملكة.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. الأمن السيبراني</strong></td>
+<td style="text-align: left;">الضوابط الأساسية للأمن السيبراني (ECC)</td>
+<td style="text-align: left;">الهيئة الوطنية للأمن السيبراني (NCA)</td>
+<td style="text-align: left;">مجموعة ضوابط إلزامية للجهات الحكومية والخاصة التي تمتلك بنى تحتية وطنية حساسة. حتى لو لم تكن ملزماً بها مباشرة، فهي تمثل أفضل الممارسات في السوق.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">نظام مكافحة جرائم المعلوماتية</td>
+<td style="text-align: left;">هيئة الاتصالات والفضاء والتقنية (CST) ووزارة الداخلية</td>
+<td style="text-align: left;">يجرّم أفعالاً مثل الاختراق، الاحتيال الرقمي، التشهير عبر الإنترنت. يؤثر على كيفية تأمين أنظمتك ومسؤوليتك عن المحتوى الذي يُنشر عبر منصتك.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. المعاملات الرقمية</strong></td>
+<td style="text-align: left;">نظام التجارة الإلكترونية</td>
+<td style="text-align: left;">وزارة التجارة (MC)</td>
+<td style="text-align: left;">ينظم العلاقة بين المتاجر الإلكترونية والمستهلكين، ويفرض متطلبات الإفصاح عن البيانات، سياسات الإرجاع، وحماية المستهلك.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">نظام التعاملات الإلكترونية</td>
+<td style="text-align: left;">هيئة الاتصالات والفضاء والتقنية (CST)</td>
+<td style="text-align: left;">يعطي التوقيع الإلكتروني والعقود الإلكترونية نفس الحجية القانونية للمستندات الورقية، مما يسهل أعمالك الرقمية.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5. الملكية الفكرية</strong></td>
+<td style="text-align: left;">نظام حماية حقوق المؤلف</td>
+<td style="text-align: left;">الهيئة السعودية للملكية الفكرية (SAIP)</td>
+<td style="text-align: left;">يحمي الكود البرمجي، تصميمات الواجهات (UI/UX)، والمحتوى الذي تنتجه. أساسي لحماية أصول شركتك غير الملموسة.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">نظام براءات الاختراع والعلامات التجارية</td>
+<td style="text-align: left;">الهيئة السعودية للملكية الفكرية (SAIP)</td>
+<td style="text-align: left;">لحماية اختراعاتك التقنية الفريدة (إن وجدت) وحماية اسم شركتك وشعارها (علامتك التجارية) من التقليد.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>6. العقود الحكومية</strong></td>
+<td style="text-align: left;">نظام المنافسات والمشتريات الحكومية</td>
+<td style="text-align: left;">وزارة المالية (مركز تحقيق كفاءة الإنفاق)</td>
+<td style="text-align: left;">البوابة الرئيسية للعمل مع القطاع الحكومي. يحدد إجراءات طرح المناقصات، معايير التقييم، ومتطلبات المحتوى المحلي وتوطين البيانات.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>7. التشريعات القطاعية</strong></td>
+<td style="text-align: left;">تعليمات البنك المركزي السعودي (SAMA) وهيئة السوق المالية (CMA)</td>
+<td style="text-align: left;">SAMA / CMA</td>
+<td style="text-align: left;">إذا كنت تعمل في قطاع التقنية المالية (FinTech)، فهذه التشريعات هي عالمك. تنظم المدفوعات، التمويل الجماعي، والخدمات المصرفية المفتوحة (Open Banking).</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">تشريعات وزارة الصحة</td>
+<td style="text-align: left;">وزارة الصحة</td>
+<td style="text-align: left;">ضرورية لشركات التقنية الصحية (HealthTech)، وتغطي جوانب مثل التعامل مع السجلات الطبية الإلكترونية والتطبيب عن بعد (Telemedicine).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>تحذير من خطأ شائع:</strong> تعتقد الكثير من الشركات الناشئة أن هذه الأنظمة تنطبق فقط على الشركات الكبيرة. هذا غير صحيح. نظام حماية البيانات الشخصية، على سبيل المثال، ينطبق على أي كيان يعالج بيانات شخصية لأفراد في المملكة، بغض النظر عن حجمه. ابدأ بالامتثال منذ اليوم الأول.</p>
+</blockquote>
+<p>هذه الخريطة هي نقطة البداية. في فصول هذا الكتاب، سنتعمق في كل محور من هذه المحاور، ونشرح التزاماتك وكيفية تحويل الامتثال من عبء إلى ميزة تنافسية.</p>
+<hr />
+<h2>قصة واقعية: شركة خسرت عقداً حكومياً بسبب جهلها بالأنظمة</h2>
+<p>لتوضيح التأثير المباشر لهذه الأنظمة على أرض الواقع، دعونا نروي قصة "حلول الغد"، وهو اسم مستعار لشركة برمجيات سعودية ناشئة وموهوبة.</p>
+<p><strong>الأبطال:</strong>
+"حلول الغد" شركة متخصصة في تطوير أنظمة إدارة علاقات العملاء (CRM) المستندة إلى السحابة (Cloud-based). فريقهم مكون من مهندسين سعوديين لامعين، وقد طوروا منتجاً يتميز بالسرعة وسهولة الاستخدام، متفوقاً تقنياً على العديد من المنافسين العالميين.</p>
+<p><strong>الفرصة الذهبية:</strong>
+أعلنت إحدى الهيئات الحكومية الكبرى عن منافسة لتوريد وتركيب نظام CRM جديد لإدارة تفاعلاتها مع المستفيدين. كان العقد يمثل نقلة نوعية لشركة "حلول الغد"؛ سيمنحهم سيولة مالية ضخمة، وسمعة قوية في السوق الحكومي، ودراسة حالة لا تقدر بثمن.</p>
+<p><strong>التركيز على المنتج:</strong>
+صب فريق "حلول الغد" كل تركيزه على الجانب التقني. عملوا ليلاً ونهاراً لتخصيص منتجهم ليلبي كافة المتطلبات الوظيفية المذكورة في كراسة الشروط. أعدوا عرضاً تقديمياً مبهراً يوضح تفوقهم التقني، وقدموا سعراً تنافسياً للغاية. كانوا واثقين من الفوز.</p>
+<p><strong>الجدار التنظيمي:</strong>
+بعد تقديم العروض، تم استبعاد عرض "حلول الغد" من المنافسة في مرحلة الفحص الأولي، حتى قبل تقييم الجانب الفني. الصدمة كانت كبيرة. ما الذي حدث؟</p>
+<p>عندما طلبوا توضيحاً رسمياً، جاء الرد كالتالي: "تم استبعاد العرض لعدم مطابقته لمتطلبات إلزامية في كراسة الشروط، وتحديداً:"</p>
+<ol>
+<li><strong>متطلبات سيادة البيانات:</strong> نصت الكراسة بوضوح على أن "جميع بيانات المستفيدين يجب أن تتم استضافتها (Hosted) داخل المملكة العربية السعودية في مركز بيانات مصنف من قبل هيئة الاتصالات والفضاء والتقنية". شركة "حلول الغد"، بهدف تقليل التكاليف، كانت تستخدم خوادم سحابية عالمية (AWS/Azure) تقع في أوروبا. لم يكن لديهم بنية تحتية محلية جاهزة.</li>
+<li><strong>ضوابط الأمن السيبراني:</strong> اشترطت الكراسة الامتثال لعدد من الضوابط الأساسية للأمن السيبراني الصادرة عن الهيئة الوطنية للأمن السيبراني (NCA)، بما في ذلك متطلبات محددة لتشفير البيانات وإدارة صلاحيات الوصول. لم يتمكنوا من تقديم ما يثبت امتثالهم لهذه الضوابط بشكل موثق.</li>
+<li><strong>متطلبات المحتوى المحلي:</strong> تضمن نظام المنافسات والمشتريات الحكومية آلية لتفضيل المحتوى المحلي. لم تقم "حلول الغد" بتسجيل منتجها لدى هيئة المحتوى المحلي والمشتريات الحكومية، مما أضعف موقفها التنافسي مقارنة بشركات أخرى التزمت بذلك.</li>
+</ol>
+<p><strong>الدرس القاسي:</strong>
+خسرت "حلول الغد" العقد ليس لأن منتجها كان سيئاً، بل لأنهم تجاهلوا الإطار التنظيمي الذي تعمل ضمنه الجهة الحكومية. لقد فازت بالعقد شركة أخرى، ربما كان منتجها أقل ابتكاراً من الناحية التقنية، لكنها كانت مستعدة قانونياً وتنظيمياً. لقد قامت "بواجبها المنزلي" وفهمت أن البيع للقطاع الحكومي يتطلب الامتثال أولاً، والابتكار ثانياً.</p>
+<p>هذه القصة ليست استثناءً، بل هي سيناريو يتكرر بأشكال مختلفة. إنها تبلور الهدف الأساسي من هذا الكتاب: تزويدك بالمعرفة اللازمة لتجنب مثل هذه الأخطاء القاتلة، وللتأكد من أن تميزك التقني يُترجم إلى نجاح تجاري حقيقي على أرض الواقع.</p>
+<p>الآن، وبعد أن أدركنا أهمية هذه الرحلة، دعونا نبدأ بالغوص في تفاصيلها في الفصول القادمة.</p>
+        </div>
+
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-03</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

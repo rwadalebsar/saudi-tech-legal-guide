@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Tech Legal Guide</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&family=JetBrains+Mono&display=swap');
+
+:root {
+    --primary: #0F766E;
+    --primary-dark: #134E4A;
+    --primary-light: #14B8A6;
+    --secondary: #0EA5E9;
+    --accent: #F59E0B;
+    --text: #1E293B;
+    --text-light: #64748B;
+    --text-muted: #94A3B8;
+    --bg: #FFFFFF;
+    --bg-alt: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --border: #E2E8F0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg-alt);
+    -webkit-font-smoothing: antialiased;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    position: relative;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.25rem;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--bg-alt);
+    color: var(--primary);
+}
+
+nav a.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 1px solid #F59E0B;
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+.disclaimer h3 {
+    color: #B45309;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.25rem;
+    color: #92400E;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.25rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.disclaimer a:hover {
+    color: var(--primary-dark);
+}
+
+/* Content Card */
+.content {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+}
+
+.content h1 {
+    color: var(--primary-dark);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-light);
+    letter-spacing: -0.02em;
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.content h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+}
+
+.content p {
+    margin-bottom: 1.25rem;
+    color: var(--text);
+}
+
+.content ul, .content ol {
+    margin: 1.25rem 0 1.25rem 1.5rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1.25rem 1.5rem 1.25rem 0;
+}
+
+.content li {
+    margin-bottom: 0.625rem;
+    color: var(--text);
+}
+
+.content li::marker {
+    color: var(--primary);
+}
+
+/* Tables */
+.content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.content th {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.content tr:last-child td {
+    border-bottom: none;
+}
+
+.content tr:nth-child(even) td {
+    background: var(--bg-alt);
+}
+
+.content tr:hover td {
+    background: #F0FDFA;
+}
+
+/* Blockquotes */
+.content blockquote {
+    background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    color: var(--primary-dark);
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--primary);
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/* Code */
+.content code {
+    background: #F1F5F9;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary-dark);
+}
+
+.content pre {
+    background: #1E293B;
+    color: #E2E8F0;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.content a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: all 0.2s;
+}
+
+.content a:hover {
+    color: var(--primary-dark);
+    text-decoration-thickness: 2px;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.lang-switch a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    margin: 0 0.375rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.lang-switch a:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    color: #CBD5E1;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.375rem 0.625rem;
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 1.25rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .content h1 {
+        font-size: 1.75rem;
+    }
+
+    .content h2 {
+        font-size: 1.25rem;
+    }
+
+    .disclaimer {
+        padding: 1.25rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav, .lang-switch, .disclaimer {
+        display: none;
+    }
+
+    .content {
+        box-shadow: none;
+        border: none;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Saudi Tech Legal Guide</h1>
+        <p>A practical guide to regulations for tech companies</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../ar/01_company_types.html">العربية</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">Introduction</a></li><li><a href="01_company_types.html" class="active">Company Types</a></li><li><a href="02_foreign_investors.html">Foreign Investors</a></li><li><a href="03_founding_steps.html">Founding Steps</a></li><li><a href="04_pdpl_basics.html">PDPL Basics</a></li><li><a href="05_consent.html">Consent</a></li><li><a href="06_cross_border.html">Cross-Border Transfer</a></li><li><a href="07_pdpl_compliance.html">PDPL Compliance</a></li><li><a href="08_pdpl_penalties.html">Penalties</a></li><li><a href="09_cybersecurity_ecosystem.html">Cybersecurity</a></li><li><a href="10_ecc_controls.html">ECC Controls</a></li><li><a href="11_government_contracts.html">Government Contracts</a></li><li><a href="12_compliance_advantage.html">Compliance Advantage</a></li><li><a href="13_ai_landscape.html">AI Regulations</a></li><li><a href="14_ai_products.html">AI Products</a></li><li><a href="appendix_a_checklists.html">Checklists</a></li><li><a href="appendix_b_templates.html">Templates</a></li><li><a href="appendix_c_resources.html">Resources</a></li><li><a href="appendix_d_glossary.html">Glossary</a></li></ul></nav>
+
+    <main class="container">
+        <div class="content">
+            <h1>Chapter 1: Company Types - Which Suits You?</h1>
+<h2>Introduction</h2>
+<p>Saudi Arabia has rapidly transformed into one of the world’s most exciting tech frontiers. Driven by <strong>Vision 2030</strong>, the Kingdom is no longer just an oil-dependent economy; it is a digital-first nation. For a tech entrepreneur or an international investor, the "New Saudi" offers a sophisticated regulatory environment designed to compete with hubs like Delaware, London, or Singapore.</p>
+<p>The cornerstone of this transformation is the <strong>New Saudi Companies Law (2023)</strong> (<em>نظام الشركات الجديد</em>). This law represents a paradigm shift, moving away from rigid, traditional structures toward a flexible, modern framework that understands the unique needs of startups, venture capital, and rapid scaling.</p>
+<p>Choosing the right legal structure is the most critical decision you will make in your first 90 days. It dictates your ability to raise capital, your personal liability, your tax obligations (Zakat and Income Tax), and your exit strategy. This chapter breaks down the three most relevant company types for the tech sector: the <strong>Limited Liability Company (LLC)</strong>, the <strong>Simplified Joint Stock Company (SJS)</strong>, and the <strong>Single-Person Company (SPC)</strong>.</p>
+<hr />
+<h2>1. The Limited Liability Company (LLC)</h2>
+<h3><em>Sharikat Zat Mas’ooliyah Mahdoodah (شركة ذات مسؤولية محدودة)</em></h3>
+<p>The LLC has historically been the "default" choice for businesses in Saudi Arabia. It is robust, well-understood by local banks and government entities, and offers a strong shield for personal assets.</p>
+<h4>Key Features under the 2023 Law</h4>
+<p>According to <strong>Article 156</strong>, an LLC is a company whose partners do not exceed fifty (50). The company is liable for the debts and obligations resulting from its activities, and the partner is liable only to the extent of their share in the capital.</p>
+<ul>
+<li><strong>Capital Requirements:</strong> The law does not specify a mandatory minimum capital (except for certain regulated activities like Fintech under SAMA). However, the capital must be sufficient to achieve the company’s purpose. In practice, for a foreign-owned tech company under a <strong>MISA (Ministry of Investment)</strong> license, the capital is often set at SAR 100,000 or more to demonstrate financial viability.</li>
+<li><strong>Management:</strong> It can be managed by one or more managers (<em>Mudeer</em>). You are no longer strictly required to have a Board of Directors unless the number of partners exceeds twenty.</li>
+<li><strong>Statutory Reserve:</strong> In a major win for liquidity, the new law has <strong>abolished</strong> the mandatory requirement to set aside 10% of net profits as a statutory reserve. This allows tech startups to reinvest their cash flow immediately into growth.</li>
+</ul>
+<h4>Why Tech Companies Choose the LLC</h4>
+<ol>
+<li><strong>Ease of Setup:</strong> The process via the <strong>Saudi Business Center (SBC)</strong> is streamlined and mostly digital.</li>
+<li><strong>Asset Protection:</strong> If your SaaS platform faces a massive lawsuit, your personal villas, cars, or savings remain protected.</li>
+<li><strong>Credibility:</strong> Local vendors and government procurement offices are highly familiar with LLC structures.</li>
+</ol>
+<h4>Practical Example: The "SaaS Scale-up"</h4>
+<p>Imagine "CloudKSA," a local startup providing AI-driven logistics. They have three founders and ten employees. They choose an LLC because they want a simple management structure where the CEO (a founder) has the power to sign contracts without needing a complex board resolution for every minor decision.</p>
+<blockquote>
+<p><strong>⚠️ Practical Warning:</strong> While the LLC is great for operations, it is less "VC-friendly" than the SJS. Transferring shares in an LLC often requires amending the <strong>Articles of Association (Aqad al-Ta’sees)</strong> and can involve a "Right of First Refusal" for other partners by default, which can slow down investment rounds.</p>
+</blockquote>
+<hr />
+<h2>2. The Simplified Joint Stock Company (SJS)</h2>
+<h3><em>Sharikat Masaahamah Mubassatah (شركة مساهمة مبسطة)</em></h3>
+<p>This is the "Golden Child" of the 2023 Law. Specifically designed for the tech ecosystem and startups, the SJS (Articles 138–155) bridges the gap between the simplicity of an LLC and the prestige of a Joint Stock Company.</p>
+<h4>The "Startup" Advantage</h4>
+<p>Before 2023, startups wanting to issue different classes of shares (like Preferred Shares for investors) had to become a full Joint Stock Company (JSC), which required a minimum capital of SAR 500,000 and a complex Board of Directors. The SJS changes everything.</p>
+<ul>
+<li><strong>No Minimum Capital:</strong> You can start an SJS with SAR 1. This is a game-changer for early-stage developers.</li>
+<li><strong>Flexible Management:</strong> Under <strong>Article 144</strong>, the company can be managed by a President, one or more managers, or a Board of Directors. The bylaws (<em>Al-Nizam al-Asasi</em>) define the powers.</li>
+<li><strong>Share Classes:</strong> This is the most critical feature. An SJS can issue <strong>Preferred Shares</strong>, <strong>Non-voting Shares</strong>, and <strong>Redeemable Shares</strong>. This allows founders to retain control while giving investors the financial preferences they demand.</li>
+<li><strong>No Board Requirement:</strong> Unlike a standard JSC, you don't need a formal board. One person can be the "President" with full authority.</li>
+</ul>
+<h4>Practical Example: The "VC-Backed Fintech"</h4>
+<p>"PayZad" is a fintech startup raising a Seed Round from a Riyadh-based VC. The VC wants "Liquidation Preference" (they get paid first if the company is sold). In a traditional LLC, this is legally complex to enforce. By incorporating as an <strong>SJS</strong>, PayZad can easily issue "Class B Preferred Shares" to the VC, satisfying the investors' legal requirements while keeping the founders in the driver's seat.</p>
+<h4>Practical Tip: The "Delaware of the Middle East"</h4>
+<p>If you are planning to raise multiple rounds of funding (Seed, Series A, B), the <strong>SJS</strong> is your best bet. It allows for "Drag-along" and "Tag-along" rights to be written directly into the bylaws, making future exits much smoother.</p>
+<hr />
+<h2>3. The Single-Person Company (SPC)</h2>
+<h3><em>Sharikat al-Shakhs al-Wahid (شركة الشخص الواحد)</em></h3>
+<p>Under the previous law, the Single-Person Company was treated as a distinct, somewhat restricted entity. The 2023 Law (specifically <strong>Article 10</strong>) treats it as a <em>form</em> that an LLC or a JSC/SJS can take.</p>
+<h4>Key Features</h4>
+<ul>
+<li><strong>100% Ownership:</strong> A single natural person or legal entity can own the entire company.</li>
+<li><strong>Limited Liability:</strong> Even with one owner, the "corporate veil" exists. The owner is not personally liable for the company's debts unless they mix personal and company funds (commingling).</li>
+<li><strong>Simplified Governance:</strong> The owner exercises all the powers of the General Assembly. Decisions are made by the owner in writing and recorded in the company’s minutes book.</li>
+</ul>
+<h4>Why Tech Founders Choose the SPC</h4>
+<ol>
+<li><strong>Solo Founders:</strong> For the "Solopreneur" developer building a micro-SaaS or a consultancy.</li>
+<li><strong>Subsidiaries:</strong> For an international tech giant (like Google or a regional player like Careem) wanting to open a 100% owned branch in Saudi Arabia.</li>
+</ol>
+<blockquote>
+<p><strong>💡 Practical Tip:</strong> If you are a solo founder, start as a <strong>Single-Person LLC</strong>. If you later bring on a co-founder or an investor, the law allows for a seamless transition to a multi-partner LLC or an SJS.</p>
+</blockquote>
+<hr />
+<h2>4. Comprehensive Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Limited Liability Company (LLC)</th>
+<th style="text-align: left;">Simplified Joint Stock (SJS)</th>
+<th style="text-align: left;">Single-Person Company (SPC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Minimum Capital</strong></td>
+<td style="text-align: left;">No statutory minimum (Sufficient)</td>
+<td style="text-align: left;">No statutory minimum (SAR 1)</td>
+<td style="text-align: left;">Depends on if it's an LLC or SJS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Max Partners</strong></td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">Unlimited</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Management</strong></td>
+<td style="text-align: left;">Manager(s) or Board</td>
+<td style="text-align: left;">President, Manager, or Board</td>
+<td style="text-align: left;">The Owner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Share Classes</strong></td>
+<td style="text-align: left;">Generally one class</td>
+<td style="text-align: left;">Multiple (Preferred, Ordinary, etc.)</td>
+<td style="text-align: left;">Usually one (unless SJS form)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ease of Investment</strong></td>
+<td style="text-align: left;">Moderate (Requires AOA amendment)</td>
+<td style="text-align: left;">High (Designed for VCs)</td>
+<td style="text-align: left;">Low (Must convert to add partners)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Statutory Reserve</strong></td>
+<td style="text-align: left;">Optional</td>
+<td style="text-align: left;">Optional</td>
+<td style="text-align: left;">Optional</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Transfer of Shares</strong></td>
+<td style="text-align: left;">Partners have statutory pre-emption</td>
+<td style="text-align: left;">Highly flexible via Bylaws</td>
+<td style="text-align: left;">N/A (Owner sells the whole entity)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Best For</strong></td>
+<td style="text-align: left;">SMEs, traditional tech services</td>
+<td style="text-align: left;">Startups, VC-backed firms</td>
+<td style="text-align: left;">Solo founders, Subsidiaries</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>5. Decision Framework: Which Suits You?</h2>
+<p>To decide which structure to choose, ask yourself these four questions:</p>
+<h3>Q1: Do you plan to raise Venture Capital?</h3>
+<ul>
+<li><strong>Yes:</strong> Choose <strong>Simplified Joint Stock (SJS)</strong>. It is built for term sheets, cap tables, and investor protections.</li>
+<li><strong>No:</strong> An <strong>LLC</strong> is likely sufficient and slightly cheaper to maintain.</li>
+</ul>
+<h3>Q2: Are you a solo founder?</h3>
+<ul>
+<li><strong>Yes:</strong> Start as a <strong>Single-Person LLC</strong>. It gives you the "Company" status (better for B2B contracts) while keeping things simple.</li>
+<li><strong>No:</strong> Go with a standard <strong>LLC</strong> or <strong>SJS</strong> depending on your growth plans.</li>
+</ul>
+<h3>Q3: How many partners do you have?</h3>
+<ul>
+<li><strong>More than 50:</strong> You <em>must</em> go with a <strong>Joint Stock Company (JSC)</strong> or <strong>SJS</strong>.</li>
+<li><strong>Less than 50:</strong> Any of the three will work.</li>
+</ul>
+<h3>Q4: Is this a "Lifestyle" business or a "Moonshot"?</h3>
+<ul>
+<li><strong>Lifestyle (Consultancy, Agency):</strong> The <strong>LLC</strong> is your workhorse. It’s stable and easy.</li>
+<li><strong>Moonshot (High-growth Tech, Platform):</strong> The <strong>SJS</strong> provides the agility you need to pivot and scale.</li>
+</ul>
+<hr />
+<h2>6. Practical Tips &amp; Common Pitfalls</h2>
+<h3>The "Nitaqat" Factor</h3>
+<p>Regardless of the company type, you must be aware of <strong>Saudization (Nitaqat)</strong>. As soon as you hire your first employee, your company will be categorized. Tech companies often get favorable ratios, but you must plan for the cost of hiring Saudi talent.</p>
+<h3>The MISA License (For Foreigners)</h3>
+<p>If you are not a GCC national, you cannot simply open a company via the Ministry of Commerce. You must first obtain an investment license from <strong>MISA (Ministry of Investment)</strong>.
+*   <strong>Tech Entrepreneur License:</strong> MISA offers a specific license for tech startups (often requiring an endorsement from a Saudi incubator or VC). This allows for 100% foreign ownership with very low capital requirements.</p>
+<h3>Common Mistake: Using a "Nominee" (Tasattur)</h3>
+<p>In the past, some foreigners opened companies in the name of a Saudi national to avoid MISA fees. This is called <strong>Anti-Fronting (Tasattur)</strong> and is strictly illegal. The penalties are severe, including jail time and deportation. With the new 100% ownership laws and the SJS structure, there is <strong>zero reason</strong> to take this risk.</p>
+<h3>Article 28: The "Losses" Warning</h3>
+<p>Under <strong>Article 28</strong>, if a company’s losses reach half (50%) of its paid-up capital, the management must call a meeting within 60 days to decide whether to continue the company or dissolve it. For tech startups that burn cash in the early years, this means you must carefully manage your accounting or perform a "Capital Increase" to stay compliant.</p>
+<hr />
+<h2>7. Actionable Checklist for Founders</h2>
+<ol>
+<li><strong>Draft your "Bylaws" (Al-Nizam al-Asasi):</strong> Don't just use the standard template if you are forming an SJS. Tailor it to include your vesting schedules and board seats.</li>
+<li><strong>Verify your Capital:</strong> Even if the law says "SAR 1," ensure your bank account has enough to cover your first 6 months of "General and Administrative" (G&amp;A) expenses.</li>
+<li><strong>Appoint an Auditor:</strong> All companies (except very small ones that meet specific exemption criteria) must appoint a certified Saudi auditor.</li>
+<li><strong>Register on Qiwa and Muqeem:</strong> These are the digital platforms for labor and residency management. You cannot operate without them.</li>
+<li><strong>National Address:</strong> You must have a physical office or a registered "National Address" (<em>Al-Unwan al-Watani</em>) to complete your registration.</li>
+</ol>
+<hr />
+<h2>Conclusion</h2>
+<p>The 2023 Saudi Companies Law has effectively removed the "legal friction" that once hindered the tech sector. If you are building the next big platform in Riyadh or Jeddah, the <strong>Simplified Joint Stock Company (SJS)</strong> is likely your best vehicle for growth. If you are seeking a stable, traditional presence, the <strong>LLC</strong> remains a reliable choice.</p>
+<p>By selecting the right structure today, you are not just complying with the law—you are building a foundation that will support your first hire, your first million in revenue, and your eventual exit in the thriving Saudi market.</p>
+        </div>
+
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-03</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

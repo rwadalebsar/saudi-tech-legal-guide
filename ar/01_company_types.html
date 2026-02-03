@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ar" class="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل القانوني للتقنية في السعودية</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&family=JetBrains+Mono&display=swap');
+
+:root {
+    --primary: #0F766E;
+    --primary-dark: #134E4A;
+    --primary-light: #14B8A6;
+    --secondary: #0EA5E9;
+    --accent: #F59E0B;
+    --text: #1E293B;
+    --text-light: #64748B;
+    --text-muted: #94A3B8;
+    --bg: #FFFFFF;
+    --bg-alt: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --border: #E2E8F0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg-alt);
+    -webkit-font-smoothing: antialiased;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    position: relative;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.25rem;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--bg-alt);
+    color: var(--primary);
+}
+
+nav a.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 1px solid #F59E0B;
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+.disclaimer h3 {
+    color: #B45309;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.25rem;
+    color: #92400E;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.25rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.disclaimer a:hover {
+    color: var(--primary-dark);
+}
+
+/* Content Card */
+.content {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+}
+
+.content h1 {
+    color: var(--primary-dark);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-light);
+    letter-spacing: -0.02em;
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.content h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+}
+
+.content p {
+    margin-bottom: 1.25rem;
+    color: var(--text);
+}
+
+.content ul, .content ol {
+    margin: 1.25rem 0 1.25rem 1.5rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1.25rem 1.5rem 1.25rem 0;
+}
+
+.content li {
+    margin-bottom: 0.625rem;
+    color: var(--text);
+}
+
+.content li::marker {
+    color: var(--primary);
+}
+
+/* Tables */
+.content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.content th {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.content tr:last-child td {
+    border-bottom: none;
+}
+
+.content tr:nth-child(even) td {
+    background: var(--bg-alt);
+}
+
+.content tr:hover td {
+    background: #F0FDFA;
+}
+
+/* Blockquotes */
+.content blockquote {
+    background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    color: var(--primary-dark);
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--primary);
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/* Code */
+.content code {
+    background: #F1F5F9;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary-dark);
+}
+
+.content pre {
+    background: #1E293B;
+    color: #E2E8F0;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.content a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: all 0.2s;
+}
+
+.content a:hover {
+    color: var(--primary-dark);
+    text-decoration-thickness: 2px;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.lang-switch a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    margin: 0 0.375rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.lang-switch a:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    color: #CBD5E1;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.375rem 0.625rem;
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 1.25rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .content h1 {
+        font-size: 1.75rem;
+    }
+
+    .content h2 {
+        font-size: 1.25rem;
+    }
+
+    .disclaimer {
+        padding: 1.25rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav, .lang-switch, .disclaimer {
+        display: none;
+    }
+
+    .content {
+        box-shadow: none;
+        border: none;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>الدليل القانوني للتقنية في السعودية</h1>
+        <p>دليل عملي للأنظمة لشركات التقنية</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../en/01_company_types.html">English</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">المقدمة</a></li><li><a href="01_company_types.html" class="active">أنواع الشركات</a></li><li><a href="02_foreign_investors.html">المستثمرون الأجانب</a></li><li><a href="03_founding_steps.html">خطوات التأسيس</a></li><li><a href="04_pdpl_basics.html">أساسيات حماية البيانات</a></li><li><a href="05_consent.html">الموافقة</a></li><li><a href="06_cross_border.html">النقل عبر الحدود</a></li><li><a href="07_pdpl_compliance.html">الامتثال</a></li><li><a href="08_pdpl_penalties.html">العقوبات</a></li><li><a href="09_cybersecurity_ecosystem.html">الأمن السيبراني</a></li><li><a href="10_ecc_controls.html">الضوابط الأساسية</a></li><li><a href="11_government_contracts.html">العقود الحكومية</a></li><li><a href="12_compliance_advantage.html">ميزة الامتثال</a></li><li><a href="13_ai_landscape.html">تنظيم الذكاء الاصطناعي</a></li><li><a href="14_ai_products.html">منتجات الذكاء الاصطناعي</a></li><li><a href="appendix_a_checklists.html">قوائم المراجعة</a></li><li><a href="appendix_b_templates.html">النماذج</a></li><li><a href="appendix_c_resources.html">المصادر</a></li><li><a href="appendix_d_glossary.html">المصطلحات</a></li></ul></nav>
+
+    <main class="container">
+        <div class="content">
+            <hr />
+<h1><strong>الفصل الأول: أنواع الشركات - أيها تناسبك؟</strong></h1>
+<h2><strong>مقدمة: حجر الزاوية في رحلتك الريادية</strong></h2>
+<p>مرحباً بك في رحلتك لبناء كيان تقني مبتكر في قلب المملكة العربية السعودية. قد تكون قد أمضيت شهوراً، وربما سنوات، في تطوير فكرتك، وبناء نموذج أولي (Prototype)، وتجميع فريق عمل شغوف. لكن قبل أن تكتب سطراً برمجياً واحداً في منتجك التجاري، أو توقع أول عقد مع عميل، هناك قرار استراتيجي حاسم سيشكل مستقبل شركتك بالكامل: اختيار الكيان القانوني الصحيح.</p>
+<p>هذا القرار ليس مجرد إجراء روتيني أو ورقة تملؤها في وزارة التجارة. إنه الأساس الذي ستبني عليه كل شيء: قدرتك على جذب الاستثمارات، حماية أصولك الشخصية، تقديم حوافز للموظفين، مرونتك في التوسع، وحتى استراتيجيتك النهائية للتخارج (Exit Strategy).</p>
+<p>لحسن الحظ، شهدت البيئة التشريعية في المملكة نقلة نوعية مع صدور نظام الشركات الجديد، الذي دخل حيز التنفيذ في مطلع عام 2023. هذا النظام لم يأتِ كتحديث بسيط، بل كإعادة تصور شاملة تهدف إلى تمكين رواد الأعمال، وتسهيل ممارسة الأعمال، وجعل السوق السعودي أكثر جاذبية للمستثمرين المحليين والدوليين. لقد تم تصميمه بمرونة تضع في اعتبارها الطبيعة الديناميكية للشركات الناشئة، خاصة في قطاع التقنية.</p>
+<p>في هذا الفصل، سنقوم بتشريح وتحليل أبرز أشكال الشركات التي تهمك كرائد أعمال تقني، مستندين بشكل مباشر إلى نظام الشركات الجديد. لن نغوص في مصطلحات قانونية معقدة، بل سنترجمها إلى لغة عملية، معززة بأمثلة واقعية من السوق، لنمنحك البوصلة التي تحتاجها لاختيار الشكل القانوني الذي لا يناسب فكرتك اليوم فحسب، بل يدعم نموها وازدهارها في المستقبل.</p>
+<p>سنركز على ثلاثة كيانات رئيسية أصبحت محط اهتمام مجتمع الشركات الناشئة:</p>
+<ol>
+<li><strong>الشركة ذات المسؤولية المحدودة (LLC):</strong> الخيار التقليدي الذي لا يزال يحتفظ بقوته في سيناريوهات معينة.</li>
+<li><strong>الشركة المساهمة المبسطة (SJS):</strong> النجمة الصاعدة في النظام الجديد، والمصممة خصيصاً للشركات الناشئة وطموحاتها الاستثمارية.</li>
+<li><strong>شركة الشخص الواحد:</strong> الأداة المثالية للمؤسس المنفرد الذي يسعى للنمو مع حماية قانونية كاملة.</li>
+</ol>
+<p>بنهاية هذا الفصل، ستكون مجهزاً بفهم عميق لمزايا وعيوب كل نوع، وستمتلك إطاراً واضحاً لاتخاذ قرار مستنير. لنبدأ بوضع حجر الأساس الأول في صرح شركتك التقنية.</p>
+<hr />
+<h2><strong>الشركة ذات المسؤولية المحدودة (Limited Liability Company - LLC): الخيار التقليدي الموثوق</strong></h2>
+<p>تعتبر الشركة ذات المسؤولية المحدودة، أو كما تُعرف اختصاراً بـ "ذ.م.م"، الشكل الأكثر شيوعاً وانتشاراً للشركات في المملكة على مدى عقود. قبل صدور النظام الجديد، كانت هي الخيار شبه الوحيد المتاح لرواد الأعمال الذين يبدأون مشاريعهم. ورغم ظهور أشكال جديدة أكثر مرونة، لا تزال الـ LLC خياراً قوياً ومناسباً في العديد من الحالات.</p>
+<h3><strong>ما هي الشركة ذات المسؤولية المحدودة؟</strong></h3>
+<p>ببساطة، هي شركة يؤسسها شريك واحد أو أكثر (شخص طبيعي أو اعتباري)، وتكون مسؤوليتهم عن ديون والتزامات الشركة محدودة بمقدار حصصهم في رأس المال.</p>
+<blockquote>
+<p><strong>نص قانوني:</strong>
+وفقاً للمادة (151) من نظام الشركات: "الشركة ذات المسؤولية المحدودة شركة يؤسسها شريك واحد أو أكثر من الأشخاص ذوي الصفة الطبيعية أو الاعتبارية، وتعد ذمتها مستقلة عن الذمة المالية لكل شريك فيها أو المالك لها. وتكون الشركة وحدها مسؤولة عن الديون والالتزامات المترتبة عليها أو الناشئة عن نشاطها، ولا يكون المالك لها أو الشريك فيها مسؤولاً عن هذه الديون والالتزامات إلا بقدر حصته في رأس المال".</p>
+</blockquote>
+<p>هذا المبدأ، "المسؤولية المحدودة"، هو جوهر قوة هذا الكيان. يعني ذلك أن هناك جداراً قانونياً (Corporate Veil) يفصل بين أصولك الشخصية (منزلك، سيارتك، حساباتك البنكية الخاصة) وبين أصول الشركة وديونها. فإذا واجهت الشركة صعوبات مالية أو تعرضت للمطالبات، فإن الخسارة تقتصر على استثمارك في الشركة فقط، ولا تمتد إلى ممتلكاتك الخاصة.</p>
+<h3><strong>متى تكون الـ LLC الخيار الأمثل لشركتك التقنية؟</strong></h3>
+<p>قد لا تكون الـ LLC الخيار الأمثل لشركة ناشئة تخطط لجولات استثمارية متتالية، ولكنها تتألق في السيناريوهات التالية:</p>
+<ol>
+<li>
+<p><strong>الشركات الممولة ذاتياً (Bootstrapped):</strong> إذا كنت أنت وشركاؤك تمولون الشركة من مدخراتكم الخاصة أو من إيراداتها الأولية، ولا توجد خطط فورية لإدخال مستثمرين ملائكيين (Angel Investors) أو صناديق رأس المال الجريء (Venture Capitals)، فإن بساطة الـ LLC الإدارية قد تكون جذابة.</p>
+</li>
+<li>
+<p><strong>شركات الخدمات التقنية:</strong> إذا كانت شركتك تقدم خدمات مثل تطوير البرمجيات المخصصة (Custom Software Development)، أو خدمات التسويق الرقمي، أو استشارات تقنية المعلومات، حيث يكون التركيز على الإيرادات التشغيلية بدلاً من النمو المتسارع القائم على الاستثمار، فإن الـ LLC توفر الحماية اللازمة دون التعقيدات الإدارية المرتبطة بالأسهم.</p>
+</li>
+<li>
+<p><strong>المشاريع المشتركة (Joint Ventures):</strong> عند تعاون شركتين تقنيتين أو أكثر لتنفيذ مشروع معين، يمكن تأسيس شركة ذات مسؤولية محدودة ككيان قانوني للمشروع المشترك، مما يحدد مسؤولية كل طرف بوضوح.</p>
+</li>
+<li>
+<p><strong>فرق المؤسسين الصغيرة والمستقرة:</strong> إذا كان فريق المؤسسين مكوناً من شخصين أو ثلاثة لديهم رؤية متوافقة ولا يتوقعون تغييرات كبيرة في هيكل الملكية على المدى القصير، فإن الـ LLC تكون كافية ومناسبة.</p>
+</li>
+</ol>
+<p><strong>مثال عملي:</strong>
+"أحمد" و"سارة"، مطوران متخصصان في تطوير تطبيقات الجوال، قررا تأسيس وكالة برمجيات خاصة بهما باسم "حلول الكود الذكي". خطتهما هي تمويل الشركة ذاتياً من خلال المشاريع التي يحصلون عليها. لا يخططان لجذب استثمارات خارجية في العامين الأولين. في هذه الحالة، تأسيس <strong>شركة ذات مسؤولية محدودة</strong> هو الخيار المثالي. يوفر لهما حماية الأصول الشخصية، وبساطة في الإدارة، وتكاليف تأسيس معقولة، وهو كل ما يحتاجانه في هذه المرحلة.</p>
+<h3><strong>المزايا الرئيسية للـ LLC</strong></h3>
+<ul>
+<li><strong>حماية الأصول الشخصية:</strong> كما ذكرنا، هذه هي الميزة الأساسية التي تجعلها أفضل من العمل كمؤسسة فردية.</li>
+<li><strong>مرونة إدارية:</strong> يمكن أن يدير الشركة أحد الشركاء أو مدير خارجي يتم تعيينه. القرارات الرئيسية تتخذ في "جمعية الشركاء"، وهي أقل رسمية من جمعيات المساهمين في الشركات المساهمة.</li>
+<li><strong>سهولة التأسيس نسبيًا:</strong> عملية تأسيسها إلكترونية وسريعة عبر منصة المركز السعودي للأعمال، مع متطلبات أقل مقارنة بالشركات المساهمة التقليدية.</li>
+<li><strong>الخصوصية:</strong> لا تتطلب نفس مستوى الإفصاح المالي العام الذي تتطلبه الشركات المساهمة.</li>
+</ul>
+<h3><strong>التحديات والقيود التي تواجه الشركات التقنية</strong></h3>
+<p>هنا تكمن النقاط التي يجب أن تفكر فيها ملياً قبل اختيار الـ LLC لشركتك الناشئة ذات الطموحات العالية:</p>
+<ol>
+<li>
+<p><strong>صعوبة نقل الملكية:</strong> الملكية في الـ LLC مقسمة إلى "حصص" (Quotas) وليست "أسهم" (Shares). بيع أو نقل الحصص عملية معقدة. تتطلب موافقة بقية الشركاء وتعديل عقد التأسيس وتوثيقه رسمياً. هذا يجعل عملية إدخال مستثمر جديد أو خروج شريك عملية بيروقراطية وبطيئة.</p>
+</li>
+<li>
+<p><strong>قيود على جذب الاستثمارات:</strong> المستثمرون، وخاصة صناديق رأس المال الجريء، يفضلون هيكل الأسهم. لماذا؟ لأنه يسمح بإنشاء فئات مختلفة من الأسهم (Classes of Shares) بحقوق متفاوتة. على سبيل المثال، يمكن للمستثمرين الحصول على "أسهم ممتازة" (Preferred Shares) تمنحهم أولوية في استرداد أموالهم عند التخارج (Liquidation Preference) أو حماية ضد انخفاض قيمة الشركة (Anti-Dilution Rights). هذه الأدوات الاستثمارية المعقدة شبه مستحيلة التطبيق في هيكل الحصص الخاص بالـ LLC.</p>
+</li>
+<li>
+<p><strong>صعوبة تطبيق خطط حوافز الموظفين (ESOPs):</strong> تعتبر خطط ملكية الموظفين للأسهم (Employee Stock Option Plans) أداة حيوية لجذب أفضل المواهب التقنية والاحتفاظ بها. من الصعب جداً، إن لم يكن مستحيلاً، تطبيق ESOP فعال في شركة ذات مسؤولية محدودة بسبب طبيعة الحصص وقيود نقلها.</p>
+</li>
+<li>
+<p><strong>حق الاسترداد (Pre-emption Right):</strong> وفقاً للمادة (164) من نظام الشركات، إذا أراد أحد الشركاء بيع حصته لطرف خارجي، فإن لبقية الشركاء الأولوية في شراء هذه الحصة بنفس السعر والشروط. هذا الحق، المعروف بـ "حق الشفعة أو الاسترداد"، يمكن أن يعرقل دخول مستثمر استراتيجي جديد إذا قرر الشركاء الحاليون ممارسته.</p>
+</li>
+</ol>
+<h3><strong>نصيحة عملية وتحذير</strong></h3>
+<ul>
+<li><strong>نصيحة:</strong> إذا قررت أن الـ LLC هي الأنسب لك، فلا تعتمد على عقد التأسيس النموذجي (Standard Template). استثمر في استشارة محامٍ لصياغة عقد تأسيس مفصل يحدد بوضوح صلاحيات المديرين، آلية اتخاذ القرارات، شروط دخول وخروج الشركاء، وكيفية تقييم الحصص عند البيع. هذا سيجنبك الكثير من النزاعات المستقبلية.</li>
+<li><strong>تحذير:</strong> إذا كان لديك أدنى شك في أنك ستحتاج إلى تمويل خارجي خلال 18-24 شهراً القادمة، ففكر مرتين قبل اختيار الـ LLC. عملية تحويل الشركة لاحقاً إلى شركة مساهمة مبسطة ممكنة، ولكنها قد تكون مكلفة وتستغرق وقتاً قد تكون في أمس الحاجة إليه أثناء جولة استثمارية.</li>
+</ul>
+<hr />
+<h2><strong>الشركة المساهمة المبسطة (Simplified Joint Stock Company - SJS): نجمة نظام الشركات الجديد</strong></h2>
+<p>إذا كان نظام الشركات الجديد هو ثورة في عالم الأعمال السعودي، فإن الشركة المساهمة المبسطة هي جوهرة التاج في هذه الثورة. تم تصميم هذا الكيان القانوني من الألف إلى الياء لتلبية احتياجات الشركات الناشئة، رواد الأعمال، والمستثمرين في رأس المال الجريء. إنها تجمع بين أفضل ما في العالمين: الحماية والصلابة القانونية للشركات المساهمة، والمرونة الهائلة التي كانت تفتقر إليها الأشكال التقليدية.</p>
+<h3><strong>ما هي الشركة المساهمة المبسطة؟</strong></h3>
+<p>هي شركة مساهمة، لكنها "مبسطة" من حيث متطلبات الحوكمة والإدارة. يمكن تأسيسها من قبل شخص واحد أو أكثر، ورأس مالها مقسم إلى "أسهم" قابلة للتداول، وليست "حصص".</p>
+<blockquote>
+<p><strong>نص قانوني:</strong>
+تشير المادة (137) من نظام الشركات إلى أن الشركة المساهمة المبسطة هي شكل من أشكال الشركات المساهمة، ولكنها تتمتع بمرونة استثنائية حيث يمكن للمساهمين تنظيم كافة جوانبها تقريباً من خلال نظامها الأساسي، بما في ذلك هيكل رأس المال، إدارة الشركة، وحقوق المساهمين.</p>
+</blockquote>
+<p>يكمن سحر الـ SJS في هذه العبارة: <strong>"تنظيمها من خلال نظامها الأساسي"</strong>. هذا يعني أن القانون يمنحك أنت وشركاؤك (والمستثمرين لاحقاً) قلماً وصفحة بيضاء لتصميم قواعد الحوكمة التي تناسب شركتك تماماً، بدلاً من إجبارك على اتباع هيكل صارم ومحدد مسبقاً.</p>
+<h3><strong>لماذا تعتبر الـ SJS الخيار المفضل للشركات التقنية الناشئة؟</strong></h3>
+<p>الجواب بسيط: لأنها صُممت لتتحدث لغة الشركات الناشئة والاستثمار.</p>
+<ol>
+<li>
+<p><strong>جاهزة للاستثمار (Investment-Ready) من اليوم الأول:</strong></p>
+<ul>
+<li><strong>هيكل أسهم مرن:</strong> يمكنك بسهولة إصدار فئات مختلفة من الأسهم (Different Share Classes). على سبيل المثال:<ul>
+<li><strong>الأسهم العادية (Common Shares):</strong> للمؤسسين والموظفين، بحقوق تصويت أساسية.</li>
+<li><strong>الأسهم الممتازة (Preferred Shares):</strong> للمستثمرين، مع امتيازات خاصة مثل أولوية استرداد رأس المال عند التصفية أو البيع (Liquidation Preference)، أو حقوق تصويت إضافية على قرارات معينة (Veto Rights)، أو حماية من انخفاض قيمة الشركة (Anti-Dilution).</li>
+</ul>
+</li>
+<li><strong>سهولة إدخال مستثمرين جدد:</strong> عندما تحصل على تمويل في جولة استثمارية (Seed Round, Series A, etc.)، تكون العملية هي ببساطة إصدار أسهم جديدة للمستثمر وتحديث سجل المساهمين. لا حاجة لتعديل النظام الأساسي في كل مرة كما في الـ LLC.</li>
+<li><strong>لا يوجد حق استرداد تلقائي:</strong> على عكس الـ LLC، لا يوجد حق أولوية (Pre-emption Right) للمساهمين الحاليين بشكل افتراضي. هذا يسهل على المؤسسين بيع جزء من أسهمهم أو إدخال مستثمرين استراتيجيين دون عوائق. يمكن بالطبع إضافة هذا الحق في النظام الأساسي إذا رغب المساهمون في ذلك.</li>
+</ul>
+</li>
+<li>
+<p><strong>مرونة غير مسبوقة في الحوكمة:</strong></p>
+<ul>
+<li><strong>لا يوجد حد أدنى لرأس المال:</strong> يمكنك تأسيس شركة مساهمة مبسطة بأي مبلغ تراه مناسباً.</li>
+<li><strong>لا حاجة لمجلس إدارة:</strong> يمكنك إدارة الشركة من خلال رئيس أو مدير تنفيذي (CEO)، أو مجلس إدارة، أو حتى أحد المساهمين. أنت من يقرر الهيكل الأنسب لشركتك. هذا يقلل العبء الإداري بشكل كبير في المراحل المبكرة.</li>
+<li><strong>قرارات مرنة:</strong> يمكن اتخاذ قرارات المساهمين عبر التمرير (Written Consent) بدلاً من عقد جمعيات عامة رسمية، مما يسرّع عملية اتخاذ القرارات الهامة.</li>
+</ul>
+</li>
+<li>
+<p><strong>مثالية لخطط حوافز الموظفين (ESOPs):</strong></p>
+<ul>
+<li>بما أن هيكل الملكية قائم على الأسهم، يصبح من السهل جداً تخصيص "مجمع أسهم" (Option Pool) للموظفين. يمكنك منح الموظفين الرئيسيين خيارات أسهم (Stock Options) تخضع لجدول زمني للاكتساب (Vesting Schedule)، مما يربط مصالحهم بنجاح الشركة على المدى الطويل. هذه الأداة حاسمة في حرب المواهب التقنية.</li>
+</ul>
+</li>
+</ol>
+<p><strong>مثال عملي:</strong>
+"فاطمة" و"خالد" لديهما منصة تعليمية قائمة على الذكاء الاصطناعي (EdTech SaaS Platform). لقد طورا منتجاً أولياً (MVP) وحصلا على اهتمام من صندوق رأس مال جريء للاستثمار في جولة تمويل تأسيسية (Seed Round). الصندوق الاستثماري اشترط وجود هيكل قانوني مرن يسمح بإصدار أسهم ممتازة.</p>
+<p>الخيار الأمثل هنا هو <strong>الشركة المساهمة المبسطة (SJS)</strong>. قاموا بتأسيسها وصياغة نظام أساسي يحدد فئتين من الأسهم: عادية للمؤسسين، وممتازة للمستثمر مع حقوق حماية. كما خصصوا 10% من الأسهم كـ ESOP لجذب مدير تقني (CTO) خبير. كل هذا تم بسلاسة بفضل مرونة الـ SJS.</p>
+<h3><strong>نقاط يجب الانتباه إليها</strong></h3>
+<ul>
+<li><strong>أهمية النظام الأساسي:</strong> المرونة الكبيرة تعني مسؤولية كبيرة. النظام الأساسي (Articles of Association) لشركة SJS ليس مجرد وثيقة روتينية، بل هو دستور شركتك. أي خطأ أو إغفال في صياغته قد يؤدي إلى نزاعات مكلفة في المستقبل. من الضروري جداً صياغته بمساعدة محامٍ متخصص في الشركات الناشئة.</li>
+<li><strong>قد تكون أكثر تكلفة في الإعداد الأولي:</strong> بسبب الحاجة إلى صياغة نظام أساسي مخصص ومفصل، قد تكون التكاليف القانونية الأولية لتأسيس SJS أعلى قليلاً من تأسيس LLC بعقد نموذجي. ومع ذلك، هذا استثمار يمنع تكاليف أعلى بكثير في المستقبل.</li>
+</ul>
+<h3><strong>نصيحة عملية وتحذير</strong></h3>
+<ul>
+<li><strong>نصيحة:</strong> عند صياغة النظام الأساسي، فكر في المستقبل. قم بتضمين بنود مهمة مثل:<ul>
+<li><strong>حقوق السحب والإلزام (Drag-Along and Tag-Along Rights):</strong> لحماية الأقلية والأغلبية عند عروض الاستحواذ.</li>
+<li><strong>جدول اكتساب أسهم المؤسسين (Founders' Shares Vesting):</strong> لحماية الشركة في حال قرر أحد المؤسسين المغادرة مبكراً.</li>
+<li><strong>آلية واضحة لتقييم الأسهم (Valuation Mechanism).</strong></li>
+</ul>
+</li>
+<li><strong>تحذير:</strong> لا تستخدم نموذج نظام أساسي عاماً وجدته على الإنترنت. كل شركة ناشئة فريدة من نوعها. استثمر الوقت والمال في الحصول على وثيقة مصممة خصيصاً لرؤيتك، وهيكل فريقك، وخططك الاستثمارية. قوة الـ SJS تكمن في تخصيصها، واستخدام نموذج عام يضيع هذه الميزة بالكامل.</li>
+</ul>
+<hr />
+<h2><strong>شركة الشخص الواحد (Single Person Company): الانطلاقة الفردية المحمية</strong></h2>
+<p>لفترة طويلة، كان رائد الأعمال المنفرد يواجه خيارين: إما العمل كمؤسسة فردية، مما يعرض أصوله الشخصية للخطر، أو البحث عن شريك "صوري" لتأسيس شركة ذات مسؤولية محدودة. لقد وضع نظام الشركات الجديد حداً لهذه المعضلة.</p>
+<h3><strong>ما هي شركة الشخص الواحد؟</strong></h3>
+<p>هي ليست نوعاً ثالثاً مستقلاً من الشركات، بل هي إمكانية تأسيس <strong>شركة ذات مسؤولية محدودة</strong> أو <strong>شركة مساهمة مبسطة</strong> من قبل مالك واحد فقط، سواء كان شخصاً طبيعياً (فرد) أو اعتبارياً (شركة أخرى).</p>
+<blockquote>
+<p><strong>نص قانوني:</strong>
+المادة (152) من نظام الشركات تنص صراحة على أنه "استثناءً من المادة (151) من النظام، يجوز أن تؤسس الشركة ذات المسؤولية المحدودة من شخص واحد..." وبالمثل، المادة (138) تمنح نفس الإمكانية للشركة المساهمة المبسطة.</p>
+</blockquote>
+<p>هذا التحديث البسيط في ظاهره، هو تمكين هائل للمؤسس المنفرد (Solo Founder).</p>
+<h3><strong>لمن تناسب شركة الشخص الواحد؟</strong></h3>
+<ol>
+<li><strong>المطورون والمستشارون المستقلون (Freelancers):</strong> إذا كنت مطوراً مستقلاً تعمل على مشاريع كبيرة، أو مستشاراً تقنياً تقدم خدمات لشركات كبرى، فإن تأسيس شركة شخص واحد (غالباً LLC) يحمي أصولك الشخصية من أي مطالبات قد تنشأ عن عملك.</li>
+<li><strong>المؤسس المنفرد في المرحلة الأولية:</strong> لديك فكرة عظيمة وبدأت في بناء المنتج بنفسك، ولكنك لم تجد الشريك المؤسس المناسب بعد. يمكنك تأسيس شركة مساهمة مبسطة لشخص واحد (Single-Founder SJS) لتكون جاهزاً قانونياً، وعندما ينضم إليك شركاء أو مستثمرون، يمكنك بسهولة إصدار أسهم جديدة لهم.</li>
+<li><strong>الشركات التابعة (Subsidiaries):</strong> شركة تقنية أجنبية ترغب في فتح فرع لها في السعودية، أو شركة سعودية قائمة ترغب في إطلاق منتج جديد تحت كيان قانوني منفصل. يمكنها تأسيس شركة تابعة مملوكة بالكامل لها (100%) كشركة شخص واحد.</li>
+</ol>
+<p><strong>مثال عملي:</strong>
+"نورة" مصممة واجهات مستخدم (UI/UX) موهوبة. تعمل كمستقلة مع شركات ناشئة كبيرة. لحماية نفسها من أي مسؤولية قانونية محتملة ولإضفاء طابع احترافي على عملها، قررت تأسيس <strong>شركة شخص واحد ذات مسؤولية محدودة</strong>. الآن، جميع عقودها وفواتيرها تصدر باسم الشركة، وأصولها الشخصية في أمان تام.</p>
+<h3><strong>المزايا والعيوب</strong></h3>
+<ul>
+<li><strong>المزايا:</strong><ul>
+<li><strong>تحكم كامل:</strong> جميع القرارات بيدك.</li>
+<li><strong>حماية قانونية:</strong> فصل تام بين الذمة المالية للشركة وذمتك الشخصية.</li>
+<li><strong>بساطة إدارية:</strong> لا يوجد شركاء للتنسيق معهم، مما يجعل الإدارة سريعة وفعالة.</li>
+</ul>
+</li>
+<li><strong>العيوب:</strong><ul>
+<li><strong>نظرة المستثمرين:</strong> بعض المستثمرين يترددون في الاستثمار في شركات المؤسس المنفرد، حيث يفضلون وجود فريق مؤسس متكامل لتقليل المخاطر.</li>
+<li><strong>عبء العمل:</strong> كل المسؤوليات الإدارية والقانونية والتشغيلية تقع على عاتقك.</li>
+</ul>
+</li>
+</ul>
+<h3><strong>نصيحة عملية</strong></h3>
+<p>كرائد أعمال منفرد، من السهل أن تختلط الأمور المالية. <strong>الخطأ الأكثر شيوعاً هو استخدام حساب الشركة البنكي للمصروفات الشخصية والعكس.</strong> هذا التصرف يمكن أن يؤدي إلى ما يسمى قانونياً بـ "اختراق حجاب الشركة" (Piercing the Corporate Veil)، والذي قد يسمح للمحاكم في حالات النزاع بتجاهل الفصل بين الذمتين وتحميلك المسؤولية شخصياً.</p>
+<p><strong>نصيحة ذهبية:</strong> منذ اليوم الأول، افتح حساباً بنكياً منفصلاً باسم الشركة. تعامل مع الشركة ككيان مستقل تماماً. ادفع لنفسك راتباً شهرياً منتظماً بدلاً من سحب الأموال عشوائياً. هذا الانضباط المالي هو أفضل حماية لك.</p>
+<hr />
+<h2><strong>جدول مقارنة شامل: LLC أم SJS؟ القرار بين يديك</strong></h2>
+<p>لوضع كل ما سبق في منظور واضح ومباشر، إليك هذا الجدول الذي يلخص الفروقات الجوهرية بين الخيارين الأكثر أهمية للشركات التقنية الناشئة.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">الخاصية / المعيار</th>
+<th style="text-align: left;">الشركة ذات المسؤولية المحدودة (LLC)</th>
+<th style="text-align: left;">الشركة المساهمة المبسطة (SJS)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>الهيكل القانوني</strong></td>
+<td style="text-align: left;">كيان هجين يجمع بين خصائص شركات الأشخاص وشركات الأموال.</td>
+<td style="text-align: left;">شكل مرن ومبسط من شركات الأموال (المساهمة).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>وحدة الملكية</strong></td>
+<td style="text-align: left;"><strong>حصص (Quotas)</strong>.</td>
+<td style="text-align: left;"><strong>أسهم (Shares)</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>المسؤولية</strong></td>
+<td style="text-align: left;">محدودة بمقدار الحصص في رأس المال (حماية كاملة للأصول الشخصية).</td>
+<td style="text-align: left;">محدودة بمقدار قيمة الأسهم (حماية كاملة للأصول الشخصية).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الحد الأدنى لرأس المال</strong></td>
+<td style="text-align: left;">لا يوجد حد أدنى (وفقاً للنظام الجديد).</td>
+<td style="text-align: left;">لا يوجد حد أدنى.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>سهولة نقل الملكية</strong></td>
+<td style="text-align: left;"><strong>صعبة</strong>. تتطلب موافقة الشركاء، تعديل عقد التأسيس، وتوثيقه.</td>
+<td style="text-align: left;"><strong>سهلة جداً</strong>. تتم عبر تعديل سجل المساهمين، ولا تتطلب تعديل النظام الأساسي.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>جذب الاستثمارات</strong></td>
+<td style="text-align: left;"><strong>صعبة</strong>. هيكل الحصص لا يناسب أدوات رأس المال الجريء (VC).</td>
+<td style="text-align: left;"><strong>ممتازة</strong>. مصممة لجذب الاستثمارات عبر إصدار فئات أسهم مختلفة (ممتازة وعادية).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>خطط حوافز الموظفين (ESOPs)</strong></td>
+<td style="text-align: left;"><strong>صعبة جداً وغير عملية</strong>.</td>
+<td style="text-align: left;"><strong>مثالية</strong>. يمكن بسهولة تخصيص مجمع أسهم ومنح خيارات للموظفين.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الحوكمة والإدارة</strong></td>
+<td style="text-align: left;">مرنة، تدار بواسطة مدير أو أكثر. قرارات الشركاء أقل رسمية.</td>
+<td style="text-align: left;"><strong>مرونة فائقة</strong>. يمكن إدارتها برئيس، مدير، أو مجلس إدارة. يمكن تخصيص كل شيء في النظام الأساسي.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>حق الشفعة/الاسترداد</strong></td>
+<td style="text-align: left;"><strong>موجود بقوة النظام</strong> (حق الشركاء في الأولوية للشراء).</td>
+<td style="text-align: left;"><strong>غير موجود افتراضياً</strong>، مما يسهل دخول المستثمرين. (يمكن إضافته اختيارياً في النظام الأساسي).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مناسبة لـ:</strong></td>
+<td style="text-align: left;">شركات الخدمات، المشاريع الممولة ذاتياً، فرق المؤسسين الصغيرة المستقرة.</td>
+<td style="text-align: left;"><strong>الشركات الناشئة الطموحة</strong>، الشركات التي تخطط لجولات استثمارية، الشركات التي تعتمد على جذب المواهب عبر الأسهم.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مثال تقني</strong></td>
+<td style="text-align: left;">وكالة تطوير برمجيات، شركة استشارات تسويق رقمي.</td>
+<td style="text-align: left;">منصة SaaS، تطبيق FinTech، شركة ناشئة في مجال الذكاء الاصطناعي.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2><strong>خلاصة الفصل: كيف تختار المسار الصحيح؟</strong></h2>
+<p>لقد استعرضنا الخيارات المتاحة أمامك. القرار الآن يعتمد على إجابتك الصريحة على بعض الأسئلة الحاسمة حول مستقبل شركتك:</p>
+<ol>
+<li>
+<p><strong>هل تخطط لجذب استثمارات من صناديق رأس المال الجريء أو مستثمرين ملائكيين خلال العامين القادمين؟</strong></p>
+<ul>
+<li><strong>نعم:</strong> توجه مباشرة إلى <strong>الشركة المساهمة المبسطة (SJS)</strong>. لا تتردد. إنها اللغة التي يفهمها المستثمرون وستوفر عليك الوقت والمال على المدى الطويل.</li>
+<li><strong>لا:</strong> إذا كانت خطتك هي التمويل الذاتي والنمو العضوي، فإن <strong>الشركة ذات المسؤولية المحدودة (LLC)</strong> قد تكون خياراً أبسط وأقل تكلفة في البداية.</li>
+</ul>
+</li>
+<li>
+<p><strong>هل تعتبر خطط حوافز الموظفين (ESOPs) جزءاً أساسياً من استراتيجيتك لجذب أفضل العقول التقنية؟</strong></p>
+<ul>
+<li><strong>نعم:</strong> <strong>الشركة المساهمة المبسطة (SJS)</strong> هي الخيار الوحيد العملي والفعال لتطبيق ذلك.</li>
+<li><strong>لا:</strong> قد تكون <strong>الـ LLC</strong> كافية إذا كانت استراتيجية التوظيف لديك لا تعتمد على الملكية.</li>
+</ul>
+</li>
+<li>
+<p><strong>هل أنت المؤسس الوحيد للشركة؟</strong></p>
+<ul>
+<li>إذا كانت إجابتك على السؤالين الأولين هي "نعم"، فاختر <strong>شركة مساهمة مبسطة لشخص واحد</strong>.</li>
+<li>إذا كانت إجابتك "لا"، فاختر <strong>شركة ذات مسؤولية محدودة لشخص واحد</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>ما مدى حاجتك للمرونة في تصميم هيكل حوكمة مخصص بالكامل لشركتك؟</strong></p>
+<ul>
+<li>إذا كنت تحتاج إلى تصميم حقوق تصويت مختلفة، وفئات أسهم متعددة، وقواعد خاصة لاتخاذ القرار، فإن مرونة <strong>الـ SJS</strong> لا تضاهى.</li>
+<li>إذا كانت احتياجاتك بسيطة ومباشرة، فإن هيكل <strong>الـ LLC</strong> القياسي يفي بالغرض.</li>
+</ul>
+</li>
+</ol>
+<p><strong>القرار النهائي:</strong></p>
+<p>بالنسبة للغالبية العظمى من الشركات التقنية الناشئة في المملكة اليوم، والتي تطمح إلى النمو السريع وجذب الاستثمارات، فإن <strong>الشركة المساهمة المبسطة (SJS) هي الخيار الأوضح والأكثر قوة.</strong> لقد صممها المشرّع السعودي لتكون المحرك القانوني لقطاع الشركات الناشئة المزدهر.</p>
+<p>أما <strong>الشركة ذات المسؤولية المحدودة (LLC)</strong>، فتظل خياراً ممتازاً للمشاريع الخدمية، والشركات العائلية، والشركات التي تتبع نموذج نمو أبطأ وأكثر استدامة يعتمد على الإيرادات التشغيلية.</p>
+<p>تذكر دائماً، هذا الفصل هو بوصلتك الإرشادية. الخطوة التالية الحاسمة هي الجلوس مع محامٍ متخصص في الشركات الناشئة لمناقشة حالتك الفريدة وصياغة الوثائق القانونية التي تحول رؤيتك إلى كيان قانوني صلب ومستعد للمستقبل.</p>
+<p>في الفصل التالي، سننتقل من النظرية إلى التطبيق، حيث سنستعرض خطوة بخطوة عملية تأسيس شركتك، بدءاً من حجز الاسم التجاري وصولاً إلى الحصول على سجلك التجاري.</p>
+        </div>
+
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-03</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

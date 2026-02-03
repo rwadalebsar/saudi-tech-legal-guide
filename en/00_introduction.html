@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Tech Legal Guide</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&family=JetBrains+Mono&display=swap');
+
+:root {
+    --primary: #0F766E;
+    --primary-dark: #134E4A;
+    --primary-light: #14B8A6;
+    --secondary: #0EA5E9;
+    --accent: #F59E0B;
+    --text: #1E293B;
+    --text-light: #64748B;
+    --text-muted: #94A3B8;
+    --bg: #FFFFFF;
+    --bg-alt: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --border: #E2E8F0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg-alt);
+    -webkit-font-smoothing: antialiased;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    position: relative;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.25rem;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--bg-alt);
+    color: var(--primary);
+}
+
+nav a.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 1px solid #F59E0B;
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+.disclaimer h3 {
+    color: #B45309;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.25rem;
+    color: #92400E;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.25rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.disclaimer a:hover {
+    color: var(--primary-dark);
+}
+
+/* Content Card */
+.content {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+}
+
+.content h1 {
+    color: var(--primary-dark);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-light);
+    letter-spacing: -0.02em;
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.content h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+}
+
+.content p {
+    margin-bottom: 1.25rem;
+    color: var(--text);
+}
+
+.content ul, .content ol {
+    margin: 1.25rem 0 1.25rem 1.5rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1.25rem 1.5rem 1.25rem 0;
+}
+
+.content li {
+    margin-bottom: 0.625rem;
+    color: var(--text);
+}
+
+.content li::marker {
+    color: var(--primary);
+}
+
+/* Tables */
+.content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.content th {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.content tr:last-child td {
+    border-bottom: none;
+}
+
+.content tr:nth-child(even) td {
+    background: var(--bg-alt);
+}
+
+.content tr:hover td {
+    background: #F0FDFA;
+}
+
+/* Blockquotes */
+.content blockquote {
+    background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    color: var(--primary-dark);
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--primary);
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/* Code */
+.content code {
+    background: #F1F5F9;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary-dark);
+}
+
+.content pre {
+    background: #1E293B;
+    color: #E2E8F0;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.content a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: all 0.2s;
+}
+
+.content a:hover {
+    color: var(--primary-dark);
+    text-decoration-thickness: 2px;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.lang-switch a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    margin: 0 0.375rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.lang-switch a:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    color: #CBD5E1;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.375rem 0.625rem;
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 1.25rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .content h1 {
+        font-size: 1.75rem;
+    }
+
+    .content h2 {
+        font-size: 1.25rem;
+    }
+
+    .disclaimer {
+        padding: 1.25rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav, .lang-switch, .disclaimer {
+        display: none;
+    }
+
+    .content {
+        box-shadow: none;
+        border: none;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Saudi Tech Legal Guide</h1>
+        <p>A practical guide to regulations for tech companies</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../ar/00_introduction.html">العربية</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html" class="active">Introduction</a></li><li><a href="01_company_types.html">Company Types</a></li><li><a href="02_foreign_investors.html">Foreign Investors</a></li><li><a href="03_founding_steps.html">Founding Steps</a></li><li><a href="04_pdpl_basics.html">PDPL Basics</a></li><li><a href="05_consent.html">Consent</a></li><li><a href="06_cross_border.html">Cross-Border Transfer</a></li><li><a href="07_pdpl_compliance.html">PDPL Compliance</a></li><li><a href="08_pdpl_penalties.html">Penalties</a></li><li><a href="09_cybersecurity_ecosystem.html">Cybersecurity</a></li><li><a href="10_ecc_controls.html">ECC Controls</a></li><li><a href="11_government_contracts.html">Government Contracts</a></li><li><a href="12_compliance_advantage.html">Compliance Advantage</a></li><li><a href="13_ai_landscape.html">AI Regulations</a></li><li><a href="14_ai_products.html">AI Products</a></li><li><a href="appendix_a_checklists.html">Checklists</a></li><li><a href="appendix_b_templates.html">Templates</a></li><li><a href="appendix_c_resources.html">Resources</a></li><li><a href="appendix_d_glossary.html">Glossary</a></li></ul></nav>
+
+    <main class="container">
+        <div class="content">
+            <h1>Chapter 1: Introduction</h1>
+<p>Welcome to the most exciting—and perhaps the most complex—digital frontier in the world today. If you are reading this book, you have recognized that Saudi Arabia is no longer just a market; it is a global tech laboratory. From the neon-lit skyscrapers of Riyadh to the ambitious digital infrastructure of NEOM, the Kingdom is rewriting its DNA through <strong>Vision 2030</strong>.</p>
+<p>However, for a tech company, "moving fast and breaking things" can be a dangerous philosophy in the Saudi market. Here, the regulatory landscape is evolving as quickly as the technology itself. This book, <strong>The Legal Compass for Tech Companies in Saudi Arabia</strong>, is designed to be your GPS through the shifting sands of compliance, licensing, and digital governance.</p>
+<hr />
+<h2>Why This Book Now?</h2>
+<p>Ten years ago, a tech startup in Saudi Arabia operated in a relatively quiet regulatory environment. Today, the Kingdom is one of the most regulated—and incentivized—tech ecosystems globally. There are three primary reasons why understanding these regulations is now a survival requirement rather than a luxury:</p>
+<h3>1. The End of the "Grey Zone"</h3>
+<p>In the past, many tech activities (like ride-sharing or digital payments) existed in a legal grey zone. Today, agencies like the <strong>Communications, Space and Technology Commission (CST)</strong> and the <strong>Saudi Central Bank (SAMA)</strong> have established clear, rigorous frameworks. Operating without a license is no longer an "oversight"; it is a high-risk liability that can lead to immediate shutdowns and heavy fines.</p>
+<h3>2. The Data Revolution</h3>
+<p>With the implementation of the <strong>Personal Data Protection Law (PDPL)</strong>, Saudi Arabia has joined the ranks of jurisdictions with strict data sovereignty. For developers and SaaS providers, how you handle a Saudi citizen's data is now a matter of national security and individual rights.</p>
+<h3>3. The "Giga-Project" Opportunity</h3>
+<p>The Saudi government is the largest spender on technology in the region. Whether it is through the <strong>National Industrial Development and Logistics Program (NIDLP)</strong> or the various <strong>Public Investment Fund (PIF)</strong> projects, the money is on the table. However, to touch a single Riyal of government spending, your company must meet strict compliance standards, from <strong>Saudization (Nitaqat)</strong> to <strong>Local Content</strong> requirements.</p>
+<blockquote>
+<p><strong>Practical Tip:</strong> Compliance is not a "cost center" in Saudi Arabia; it is your strongest marketing tool. A "SAMA-regulated" or "CST-licensed" badge is often the only thing standing between you and a multi-million dollar contract.</p>
+</blockquote>
+<hr />
+<h2>How to Read This Book</h2>
+<p>This book is not a legal textbook to be memorized; it is a manual to be used. We have structured it to follow the lifecycle of a tech company:</p>
+<ol>
+<li><strong>Foundations:</strong> Setting up your legal entity through the <strong>Ministry of Investment (MISA)</strong> and the <strong>Ministry of Commerce (MC).</strong></li>
+<li><strong>Operations:</strong> Navigating the <strong>Labor Law</strong>, <strong>Saudization</strong>, and the <strong>Qiwa</strong> platform.</li>
+<li><strong>The Digital Product:</strong> Compliance with the <strong>E-Commerce Law</strong>, <strong>PDPL</strong>, and <strong>Cybersecurity standards (NCA).</strong></li>
+<li><strong>Growth &amp; Funding:</strong> Understanding <strong>SAMA</strong> and <strong>CMA</strong> (Capital Market Authority) regulations for scaling and IPOs.</li>
+</ol>
+<h3>For Different Readers:</h3>
+<ul>
+<li><strong>Foreign Investors:</strong> Focus on the chapters regarding <strong>MISA</strong> licenses and the <strong>Regional Headquarters (RHQ)</strong> program.</li>
+<li><strong>CTOs &amp; Developers:</strong> Pay close attention to the sections on <strong>Data Residency</strong>, <strong>Cloud Computing Regulatory Framework (CCRF)</strong>, and <strong>Cybersecurity (NCA)</strong>.</li>
+<li><strong>Founders:</strong> Read the sections on <strong>Zakat (ZATCA)</strong> and <strong>E-invoicing (Fatoora)</strong> to ensure your cash flow isn't interrupted by penalties.</li>
+</ul>
+<hr />
+<h2>Map of Saudi Tech-Related Regulations</h2>
+<p>Navigating the Saudi bureaucracy can feel like an alphabet soup. To help you orient yourself, refer to the table below, which maps the primary regulators to their specific domains.</p>
+<h3>Table 1: The Regulatory Landscape at a Glance</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Regulator</th>
+<th style="text-align: left;">Full Name</th>
+<th style="text-align: left;">Domain for Tech Companies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CST</strong></td>
+<td style="text-align: left;">Communications, Space and Technology Commission</td>
+<td style="text-align: left;">Cloud computing, IoT, Telecom, and Postal (Delivery) services.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SDAIA</strong></td>
+<td style="text-align: left;">Saudi Data and AI Authority</td>
+<td style="text-align: left;">Data protection (PDPL), AI ethics, and the <strong>Nafath</strong> (National SSO) system.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SAMA</strong></td>
+<td style="text-align: left;">Saudi Central Bank</td>
+<td style="text-align: left;">Fintech, Payments, Digital Banking, and InsurTech.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ZATCA</strong></td>
+<td style="text-align: left;">Zakat, Tax and Customs Authority</td>
+<td style="text-align: left;">VAT, Zakat, and the <strong>Fatoora</strong> (E-invoicing) mandate.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MOC</strong></td>
+<td style="text-align: left;">Ministry of Commerce</td>
+<td style="text-align: left;">E-commerce licenses, Company registration, and Consumer protection.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>NCA</strong></td>
+<td style="text-align: left;">National Cybersecurity Authority</td>
+<td style="text-align: left;">Essential Cybersecurity Controls (ECC) for government-facing entities.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>MISA</strong></td>
+<td style="text-align: left;">Ministry of Investment</td>
+<td style="text-align: left;">Foreign ownership licenses and investor incentives.</td>
+</tr>
+</tbody>
+</table>
+<h3>The "Big Three" Laws Every Tech Founder Must Know:</h3>
+<ol>
+<li><strong>The Personal Data Protection Law (PDPL):</strong> Governs how you collect, process, and store data. (Reference: <em>Royal Decree No. M/19 dated 1443/02/09H</em>).</li>
+<li><strong>The E-Commerce Law:</strong> Governs online contracts, consumer rights, and digital advertising. (Reference: <em>Royal Decree No. M/126 dated 1440/11/07H</em>).</li>
+<li><strong>The Anti-Cybercrime Law:</strong> Essential for understanding the penalties for data breaches and unauthorized access. (Reference: <em>Royal Decree No. M/17 dated 1428/03/08H</em>).</li>
+</ol>
+<hr />
+<h2>Real Story: The Cost of Regulatory Ignorance</h2>
+<p>To illustrate why this book is vital, let’s look at a real-world scenario (anonymized for legal reasons) involving a promising European SaaS startup we will call <strong>"CloudScale."</strong></p>
+<h3>The Context</h3>
+<p>CloudScale offered an innovative AI-driven HR management platform. In 2022, they were invited to bid on a massive contract with a major Saudi government ministry. The contract was worth approximately <strong>SAR 15 million ($4 million)</strong>.</p>
+<h3>The Mistake</h3>
+<p>CloudScale had a superior product and the lowest bid. However, they assumed that because they were a "cloud" company, they could host all Saudi employee data on their existing servers in Frankfurt. They also didn't have a local commercial registration (CR) yet, planning to "sort it out" after winning the bid.</p>
+<h3>The Fallout</h3>
+<p>During the final due diligence phase on the <strong>Etimad</strong> (the government’s unified procurement portal), the ministry’s compliance officer asked for two things:
+1.  <strong>Certificate of Registration in the Cloud Computing Framework</strong> from the CST.
+2.  Proof of <strong>Data Residency</strong> (Confirmation that sensitive HR data would not leave the Kingdom).</p>
+<p>CloudScale could provide neither. Because they hadn't registered with the CST as a Class B or C cloud provider, and because their architecture didn't allow for local data hosting, they were <strong>disqualified instantly.</strong> </p>
+<p>The contract went to a local competitor whose tech was arguably inferior but who was fully compliant with the <strong>Cloud Computing Regulatory Framework (CCRF)</strong>.</p>
+<h3>The Lesson</h3>
+<p>In Saudi Arabia, <strong>compliance is a prerequisite for entry, not a post-launch task.</strong> CloudScale lost millions in revenue and months of business development effort because they didn't understand the "Data Residency" requirements of the PDPL and CST regulations.</p>
+<hr />
+<h2>Practical Checklist: Your First 30 Days</h2>
+<p>If you are just starting your journey or reviewing your current operations, use this checklist to ensure you aren't missing the basics.</p>
+<ul>
+<li>[ ] <strong>Determine your Regulator:</strong> Are you Fintech (SAMA)? General Tech (CST)? E-commerce (MOC)?</li>
+<li>[ ] <strong>Check Data Residency:</strong> Does your app store user data? If yes, have you looked into local hosting options (e.g., STC Cloud, Oracle Riyadh Region, or Google Cloud Dammam)?</li>
+<li>[ ] <strong>Verify "Saudization" (Nitaqat):</strong> If you are hiring locally, do you meet the minimum ratio of Saudi employees for your size and industry?</li>
+<li>[ ] <strong>Register for E-Invoicing:</strong> Is your billing system integrated with <strong>ZATCA’s Fatoora</strong> system?</li>
+<li>[ ] <strong>Secure Your IP:</strong> Have you registered your trademark with the <strong>Saudi Authority for Intellectual Property (SAIP)</strong>?</li>
+</ul>
+<blockquote>
+<p><strong>Warning: The "Freelancer" Trap</strong>
+Many foreign companies try to "test the market" by hiring local Saudi developers as freelancers without a legal entity. This is a violation of the <strong>Anti-Concealment Law (Tasattur)</strong>. Always ensure you have a legal framework (like a MISA license or a professional employer organization - PEO) before hiring on the ground.</p>
+</blockquote>
+<hr />
+<h2>Moving Forward</h2>
+<p>The chapters that follow will dive deep into each of these areas. We will move from the high-level "Map" to the specific "Coordinates"—the exact articles of the law you need to cite and the specific portals you need to log into.</p>
+<p>Saudi Arabia is a land of immense opportunity for those who respect its rules. By reading this book, you are taking the first step toward building a business that is not only innovative but also <strong>compliant and sustainable.</strong></p>
+<p>Let’s begin.</p>
+        </div>
+
+        
+<div class="disclaimer">
+    <h3>⚠️ Important Legal Disclaimer</h3>
+    <p><strong>This guide is for informational and educational purposes only.</strong></p>
+    <ul>
+        <li>This content does <strong>NOT</strong> constitute legal advice.</li>
+        <li>Laws and regulations change frequently. Always verify current requirements with official government sources.</li>
+        <li>Consult a qualified legal professional before making business decisions.</li>
+        <li>The authors assume no liability for actions taken based on this information.</li>
+        <li>Last updated: 2026-02-03</li>
+    </ul>
+    <p><strong>Official Sources:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">Bureau of Experts (هيئة الخبراء)</a> - Official law texts</li>
+        <li><a href="https://misa.gov.sa" target="_blank">Ministry of Investment (MISA)</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">Ministry of Commerce</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">SDAIA</a> - Data Protection</li>
+        <li><a href="https://nca.gov.sa" target="_blank">NCA</a> - Cybersecurity</li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

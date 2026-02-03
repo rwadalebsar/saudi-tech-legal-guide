@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ar" class="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل القانوني للتقنية في السعودية</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&family=JetBrains+Mono&display=swap');
+
+:root {
+    --primary: #0F766E;
+    --primary-dark: #134E4A;
+    --primary-light: #14B8A6;
+    --secondary: #0EA5E9;
+    --accent: #F59E0B;
+    --text: #1E293B;
+    --text-light: #64748B;
+    --text-muted: #94A3B8;
+    --bg: #FFFFFF;
+    --bg-alt: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --border: #E2E8F0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg-alt);
+    -webkit-font-smoothing: antialiased;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    position: relative;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.25rem;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--bg-alt);
+    color: var(--primary);
+}
+
+nav a.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 1px solid #F59E0B;
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+.disclaimer h3 {
+    color: #B45309;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.25rem;
+    color: #92400E;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.25rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.disclaimer a:hover {
+    color: var(--primary-dark);
+}
+
+/* Content Card */
+.content {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+}
+
+.content h1 {
+    color: var(--primary-dark);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-light);
+    letter-spacing: -0.02em;
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.content h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+}
+
+.content p {
+    margin-bottom: 1.25rem;
+    color: var(--text);
+}
+
+.content ul, .content ol {
+    margin: 1.25rem 0 1.25rem 1.5rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1.25rem 1.5rem 1.25rem 0;
+}
+
+.content li {
+    margin-bottom: 0.625rem;
+    color: var(--text);
+}
+
+.content li::marker {
+    color: var(--primary);
+}
+
+/* Tables */
+.content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.content th {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.content tr:last-child td {
+    border-bottom: none;
+}
+
+.content tr:nth-child(even) td {
+    background: var(--bg-alt);
+}
+
+.content tr:hover td {
+    background: #F0FDFA;
+}
+
+/* Blockquotes */
+.content blockquote {
+    background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    color: var(--primary-dark);
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--primary);
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/* Code */
+.content code {
+    background: #F1F5F9;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary-dark);
+}
+
+.content pre {
+    background: #1E293B;
+    color: #E2E8F0;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.content a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: all 0.2s;
+}
+
+.content a:hover {
+    color: var(--primary-dark);
+    text-decoration-thickness: 2px;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.lang-switch a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    margin: 0 0.375rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.lang-switch a:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    color: #CBD5E1;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.375rem 0.625rem;
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 1.25rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .content h1 {
+        font-size: 1.75rem;
+    }
+
+    .content h2 {
+        font-size: 1.25rem;
+    }
+
+    .disclaimer {
+        padding: 1.25rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav, .lang-switch, .disclaimer {
+        display: none;
+    }
+
+    .content {
+        box-shadow: none;
+        border: none;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>الدليل القانوني للتقنية في السعودية</h1>
+        <p>دليل عملي للأنظمة لشركات التقنية</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../en/appendix_d_glossary.html">English</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">المقدمة</a></li><li><a href="01_company_types.html">أنواع الشركات</a></li><li><a href="02_foreign_investors.html">المستثمرون الأجانب</a></li><li><a href="03_founding_steps.html">خطوات التأسيس</a></li><li><a href="04_pdpl_basics.html">أساسيات حماية البيانات</a></li><li><a href="05_consent.html">الموافقة</a></li><li><a href="06_cross_border.html">النقل عبر الحدود</a></li><li><a href="07_pdpl_compliance.html">الامتثال</a></li><li><a href="08_pdpl_penalties.html">العقوبات</a></li><li><a href="09_cybersecurity_ecosystem.html">الأمن السيبراني</a></li><li><a href="10_ecc_controls.html">الضوابط الأساسية</a></li><li><a href="11_government_contracts.html">العقود الحكومية</a></li><li><a href="12_compliance_advantage.html">ميزة الامتثال</a></li><li><a href="13_ai_landscape.html">تنظيم الذكاء الاصطناعي</a></li><li><a href="14_ai_products.html">منتجات الذكاء الاصطناعي</a></li><li><a href="appendix_a_checklists.html">قوائم المراجعة</a></li><li><a href="appendix_b_templates.html">النماذج</a></li><li><a href="appendix_c_resources.html">المصادر</a></li><li><a href="appendix_d_glossary.html" class="active">المصطلحات</a></li></ul></nav>
+
+    <main class="container">
+        <div class="content">
+            <h1>ملحق د: المصطلحات - قاموسك التقني والقانوني في السوق السعودي</h1>
+<p>تعد اللغة هي العائق الأول أو الجسر الأهم في رحلة رائد الأعمال التقني. في هذا الملحق، نضع بين يديك "حجر رشيد" الأنظمة السعودية؛ لضمان أنك، وفريقك القانوني، والمستثمرين، تتحدثون لغة واحدة متوافقة مع متطلبات الجهات التنظيمية مثل (SDAIA)، و(CST)، ووزارة الاستثمار.</p>
+<p>لا يقتصر هذا الفصل على سرد التعريفات، بل يربطها بالواقع العملي والأنظمة الصادرة حديثاً مثل <strong>نظام الشركات الجديد (1444هـ)</strong> و<strong>نظام حماية البيانات الشخصية (PDPL)</strong>.</p>
+<hr />
+<h2>أولاً: قاموس المصطلحات القانونية والتقنية (عربي - إنجليزي)</h2>
+<p>تم تقسيم المصطلحات إلى فئات لتسهيل الوصول إليها حسب احتياجك التشغيلي.</p>
+<h3>1. فئة الشركات والاستثمار (Corporate &amp; Investment)</h3>
+<p>تعتبر هذه المصطلحات حجر الزاوية عند تأسيس شركتك أو التفاوض على جولة استثمارية.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المصطلح بالعربية</th>
+<th style="text-align: left;">المصطلح بالإنجليزية</th>
+<th style="text-align: left;">التعريف العملي والسياق السعودي</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>شركة المساهمة المبسطة</strong></td>
+<td style="text-align: left;"><strong>Simplified Joint Stock Company</strong></td>
+<td style="text-align: left;">نوع جديد من الشركات استحدثه نظام الشركات السعودي الجديد (المادة 138)، يناسب الشركات الناشئة لمرونته في الإدارة وعدم اشتراط حد أدنى لرأس المال.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ميثاق العائلة</strong></td>
+<td style="text-align: left;"><strong>Family Charter</strong></td>
+<td style="text-align: left;">وثيقة تنظم ملكية وإدارة الشركات العائلية التقنية، معترف بها قانوناً لتجنب النزاعات المستقبلية.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>اتفاقية المساهمين</strong></td>
+<td style="text-align: left;"><strong>Shareholders' Agreement (SHA)</strong></td>
+<td style="text-align: left;">عقد ينظم العلاقة بين الشركاء، يتضمن تفاصيل التصويت، الخروج، وحقوق الأولوية، وهو مكمل للنظام الأساسي.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>المستفيد النهائي</strong></td>
+<td style="text-align: left;"><strong>Ultimate Beneficial Owner (UBO)</strong></td>
+<td style="text-align: left;">الشخص الطبيعي الذي يمتلك أو يسيطر على الشركة فعلياً (بنسبة 25% فأكثر غالباً)، وهو متطلب إلزامي في "منصة تراضي" و"وزارة التجارة".</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>المحتوى المحلي</strong></td>
+<td style="text-align: left;"><strong>Local Content</strong></td>
+<td style="text-align: left;">إجمالي الإنفاق في السعودية من خلال الأصول والخدمات والكوادر الوطنية، وهو معيار حاسم للفوز بالعقود الحكومية.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الرخصة الاستثمارية</strong></td>
+<td style="text-align: left;"><strong>MISA License</strong></td>
+<td style="text-align: left;">الترخيص الصادر من وزارة الاستثمار للأجانب لممارسة النشاط التجاري داخل المملكة.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>نصيحة عملية:</strong> عند تأسيس شركة تقنية ناشئة، اختر "شركة المساهمة المبسطة" بدلاً من "ذات المسؤولية المحدودة" إذا كنت تخطط لجذب مستثمرين مغامرين (VCs)، لأنها تمنحك مرونة هائلة في إصدار فئات مختلفة من الأسهم.</p>
+</blockquote>
+<hr />
+<h3>2. فئة البيانات والخصوصية (Data &amp; Privacy)</h3>
+<p>هذه المصطلحات هي صلب الامتثال لنظام حماية البيانات الشخصية (PDPL) ولائحته التنفيذية.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المصطلح بالعربية</th>
+<th style="text-align: left;">المصطلح بالإنجليزية</th>
+<th style="text-align: left;">التعريف العملي والسياق السعودي</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>جهة التحكم</strong></td>
+<td style="text-align: left;"><strong>Data Controller</strong></td>
+<td style="text-align: left;">الكيان الذي يقرر "لماذا" و"كيف" تُعالج البيانات (مثل تطبيقك التقني). المادة (1) من نظام حماية البيانات.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>جهة المعالجة</strong></td>
+<td style="text-align: left;"><strong>Data Processor</strong></td>
+<td style="text-align: left;">الكيان الذي يعالج البيانات نيابة عن جهة التحكم (مثل مزود خدمة السحابية "AWS" أو "Google Cloud").</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>البيانات الشخصية الحساسة</strong></td>
+<td style="text-align: left;"><strong>Sensitive Personal Data</strong></td>
+<td style="text-align: left;">تشمل البيانات الصحية، الائتمانية، الجنائية، والبيانات التي تدل على أصل سلالي أو عرقي. تتطلب إجراءات حماية مشددة.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الإتلاف</strong></td>
+<td style="text-align: left;"><strong>Destruction/Erasure</strong></td>
+<td style="text-align: left;">أي إجراء يؤدي إلى إنهاء وجود البيانات الشخصية، مما يجعل من المستحيل قراءتها أو استعادتها مرة أخرى.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الأساس النظامي</strong></td>
+<td style="text-align: left;"><strong>Lawful Basis</strong></td>
+<td style="text-align: left;">المبرر القانوني الذي تعتمد عليه لمعالجة البيانات (مثل: الموافقة، التنفيذ العقدي، أو المصلحة المشروعة).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الترميز / التجهيل</strong></td>
+<td style="text-align: left;"><strong>Pseudonymization / Anonymization</strong></td>
+<td style="text-align: left;">معالجة البيانات بحيث لا يمكن نسبتها لصاحبها. التجهيل الكامل يخرج البيانات من نطاق تطبيق النظام.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>تحذير:</strong> يخلط الكثيرون بين "الترميز" و"التجهيل". في النظام السعودي، إذا كان بإمكانك إعادة تحديد هوية الشخص باستخدام بيانات إضافية، فأنت لا تزال تحت طائلة نظام حماية البيانات.</p>
+</blockquote>
+<hr />
+<h3>3. فئة الأمن السيبراني والتقني (Cybersecurity &amp; Tech)</h3>
+<p>مصطلحات أساسية للتعامل مع الهيئة الوطنية للأمن السيبراني (NCA) وهيئة الاتصالات والفضاء والتقنية (CST).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المصطلح بالعربية</th>
+<th style="text-align: left;">المصطلح بالإنجليزية</th>
+<th style="text-align: left;">التعريف العملي والسياق السعودي</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>الضوابط الأساسية للأمن السيبراني</strong></td>
+<td style="text-align: left;"><strong>Essential Cybersecurity Controls (ECC)</strong></td>
+<td style="text-align: left;">الحد الأدنى من المعايير التي يجب على الجهات (والشركات التي تتعاقد معها) الالتزام بها لحماية أصولها المعلوماتية.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الحوسبة السحابية</strong></td>
+<td style="text-align: left;"><strong>Cloud Computing</strong></td>
+<td style="text-align: left;">تقديم خدمات تقنية عبر الإنترنت. تتطلب تقديم تسجيل لدى (CST) تحت فئة "مقدم خدمة حوسبة سحابية".</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>توطين البيانات</strong></td>
+<td style="text-align: left;"><strong>Data Residency / Localization</strong></td>
+<td style="text-align: left;">إلزامية تخزين ومعالجة أنواع معينة من البيانات داخل الحدود الجغرافية للمملكة (خاصة البيانات الحكومية والسيادية).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الاختراق الأخلاقي</strong></td>
+<td style="text-align: left;"><strong>Ethical Hacking / Pentesting</strong></td>
+<td style="text-align: left;">اختبار أنظمة الشركة للبحث عن ثغرات قبل أن يستغلها المهاجمون، وهو متطلب لبعض تراخيص (SAMA).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>التوقيع الرقمي</strong></td>
+<td style="text-align: left;"><strong>Digital Signature</strong></td>
+<td style="text-align: left;">توقيع إلكتروني معتمد من "المركز الوطني للتصديق الرقمي" (نفاذ)، له حجية قانونية كاملة في المحاكم السعودية.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>ثانياً: الاختصارات الشائعة (Common Abbreviations)</h2>
+<p>في السوق السعودي، ستواجه "غابة" من الاختصارات. إليك أهمها مرتبة حسب الجهة والوظيفة:</p>
+<h3>1. الجهات التنظيمية (Regulatory Bodies)</h3>
+<ul>
+<li><strong>SDAIA (سدايا):</strong> الهيئة السعودية للبيانات والذكاء الاصطناعي. هي المرجع الوطني للبيانات والذكاء الاصطناعي والجهة المسؤولة عن نظام حماية البيانات الشخصية.</li>
+<li><strong>NCA:</strong> الهيئة الوطنية للأمن السيبراني. المسؤولة عن وضع السياسات والضوابط الأمنية (مثل ECC-1:2018).</li>
+<li><strong>CST:</strong> هيئة الاتصالات والفضاء والتقنية. تنظم خدمات الاتصالات، الحوسبة السحابية، وأسماء النطاقات (.sa).</li>
+<li><strong>SAMA:</strong> البنك المركزي السعودي (مؤسسة النقد سابقاً). الجهة التشريعية لشركات التقنية المالية (Fintech).</li>
+<li><strong>CMA:</strong> هيئة السوق المالية. تنظم منصات التمويل الجماعي وتداول الأوراق المالية التقنية.</li>
+<li><strong>MISA:</strong> وزارة الاستثمار. الجهة المعنية بإصدار تراخيص الاستثمار الأجنبي.</li>
+<li><strong>SAIP:</strong> الهيئة السعودية للملكية الفكرية. المكان الذي تسجل فيه برمجياتك وعلامتك التجارية.</li>
+</ul>
+<h3>2. الأنظمة واللوائح (Laws &amp; Regulations)</h3>
+<ul>
+<li><strong>PDPL:</strong> نظام حماية البيانات الشخصية (Personal Data Protection Law).</li>
+<li><strong>CITL:</strong> نظام التعاملات الإلكترونية.</li>
+<li><strong>ECC:</strong> الضوابط الأساسية للأمن السيبراني (Essential Cybersecurity Controls).</li>
+<li><strong>CSCC:</strong> ضوابط الأمن السيبراني للحوسبة السحابية.</li>
+</ul>
+<hr />
+<h2>ثالثاً: أمثلة عملية من واقع السوق السعودي</h2>
+<h3>المثال الأول: تأسيس تطبيق "SaaS" لإدارة الموارد البشرية</h3>
+<p>عندما تقوم ببناء نظام (SaaS) يستهدف الشركات السعودية، ستصادف المصطلحات التالية في عقودك:
+*   <strong>Data Processor:</strong> أنت (صاحب التطبيق) تعتبر "معالج بيانات" لأنك تعالج بيانات موظفي عملائك.
+*   <strong>Data Controller:</strong> عميلك (الشركة التي اشتركت في تطبيقك) هو "جهة التحكم".
+*   <strong>Cloud Service Provider (CSP) Registration:</strong> يجب أن تتأكد أن السحابة التي تستخدمها (مثل Oracle أو Alibaba Cloud في السعودية) مسجلة لدى <strong>CST</strong>.</p>
+<h3>المثال الثاني: الحصول على تمويل من مستثمر جريء (VC)</h3>
+<p>في "مذكرة الشروط" (Term Sheet)، ستجد مصطلح:
+*   <strong>Drag-Along Rights (حقوق السحب):</strong> وهي مادة قانونية تسمح للمساهمين الأغلبية بإجبار الأقلية على بيع حصصهم إذا جاء عرض استحواذ كامل على الشركة. هذا المصطلح حيوي جداً في نظام الشركات الجديد لضمان سلاسة "الخروج" (Exit).</p>
+<hr />
+<h2>رابعاً: نصائح عملية لتجنب الأخطاء الشائعة</h2>
+<ol>
+<li>
+<p><strong>لا تخلط بين "البيانات الشخصية" و"البيانات التجارية":</strong>
+    نظام حماية البيانات الشخصية (PDPL) يحمي بيانات الأفراد الطبيعيين فقط. بيانات الشركات (مثل رقم السجل التجاري للشركة أو ميزانيتها) لا تخضع لهذا النظام، بل تخضع لاتفاقيات السرية (NDA) ونظام التجارة الإلكترونية.</p>
+</li>
+<li>
+<p><strong>التفريق بين "المقر" و"توطين البيانات":</strong>
+    وجود مكتب لشركتك في الرياض لا يعني بالضرورة أن بياناتك "موطنة". توطين البيانات يعني أن الخوادم (Servers) التي تحتوي على قواعد البيانات موجودة فعلياً داخل السعودية.</p>
+</li>
+<li>
+<p><strong>احذر من مصطلح "الموافقة الضمنية":</strong>
+    في نظام حماية البيانات السعودي، الأصل هو "الموافقة الصريحة" (Explicit Consent) خاصة في البيانات الحساسة. لا تفترض أن مجرد استخدام العميل للتطبيق يعني موافقته على بيع بياناته لأطراف ثالثة.</p>
+</li>
+<li>
+<p><strong>استخدام "النماذج الاسترشادية":</strong>
+    عند كتابة "سياسة الخصوصية" (Privacy Policy)، لا تقم بنسخ سياسة شركة أمريكية وترجمتها. استخدم المصطلحات المعتمدة من <strong>سدايا</strong> مثل "حق الوصول"، "حق التصحيح"، و"حق الإتلاف".</p>
+</li>
+</ol>
+<hr />
+<h2>خامساً: المراجع النظامية المحددة</h2>
+<p>لتعميق فهمك، ننصح بالرجوع للمواد التالية في الأنظمة السعودية:</p>
+<ul>
+<li><strong>نظام الشركات (مرسوم ملكي رقم م/132 وتاريخ 1/12/1443هـ):</strong><ul>
+<li><em>المادة 138-155:</em> حول شركة المساهمة المبسطة.</li>
+<li><em>المادة 12:</em> حول اتفاقيات الشركاء وميثاق العائلة.</li>
+</ul>
+</li>
+<li><strong>نظام حماية البيانات الشخصية (مرسوم ملكي رقم م/14 وتاريخ 2/2/1443هـ المعدل بموجب المرسوم رقم م/148 وتاريخ 5/9/1444هـ):</strong><ul>
+<li><em>المادة 1:</em> للتعريفات الشاملة (جهة التحكم، المعالجة، البيانات الحساسة).</li>
+<li><em>المادة 29:</em> حول نقل البيانات خارج المملكة.</li>
+</ul>
+</li>
+<li><strong>نظام التعاملات الإلكترونية:</strong><ul>
+<li><em>المادة 14:</em> حول حجية التوقيع الإلكتروني.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>سادساً: جدول المقارنة السريع (المفاهيم المتقاربة)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المفهوم</th>
+<th style="text-align: left;">التركيز الأساسي</th>
+<th style="text-align: left;">الجهة المشرفة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>الأمن السيبراني (Cybersecurity)</strong></td>
+<td style="text-align: left;">حماية الأنظمة والشبكات من الاختراق.</td>
+<td style="text-align: left;">NCA</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>خصوصية البيانات (Data Privacy)</strong></td>
+<td style="text-align: left;">حماية حق الفرد في التحكم ببياناته.</td>
+<td style="text-align: left;">SDAIA</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>الذكاء الاصطناعي (AI Governance)</strong></td>
+<td style="text-align: left;">الاستخدام الأخلاقي والمسؤول للخوارزميات.</td>
+<td style="text-align: left;">SDAIA</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>التقنية المالية (Fintech)</strong></td>
+<td style="text-align: left;">تنظيم العمليات المالية الرقمية.</td>
+<td style="text-align: left;">SAMA / CMA</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>خاتمة الملحق:</strong>
+إن إتقان هذه المصطلحات ليس ترفاً أكاديمياً، بل هو أداة لحماية شركتك من العقوبات التي قد تصل في نظام حماية البيانات الشخصية إلى 5 ملايين ريال، وفي نظام جرائم المعلوماتية إلى السجن. استخدم هذا الملحق كمرجع دائم عند صياغة عقودك أو التحدث مع الجهات الرسمية.</p>
+<blockquote>
+<p>"في عالم التقنية السعودي، المصطلحات الدقيقة هي التي ترسم الحدود بين الابتكار والمخالفة."</p>
+</blockquote>
+<hr />
+<p><em>تم تحديث هذا الملحق ليتوافق مع أحدث اللوائح الصادرة حتى عام 2024م.</em></p>
+        </div>
+
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-03</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>

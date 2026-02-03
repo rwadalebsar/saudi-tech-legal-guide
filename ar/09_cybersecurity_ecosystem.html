@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ar" class="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل القانوني للتقنية في السعودية</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&family=JetBrains+Mono&display=swap');
+
+:root {
+    --primary: #0F766E;
+    --primary-dark: #134E4A;
+    --primary-light: #14B8A6;
+    --secondary: #0EA5E9;
+    --accent: #F59E0B;
+    --text: #1E293B;
+    --text-light: #64748B;
+    --text-muted: #94A3B8;
+    --bg: #FFFFFF;
+    --bg-alt: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --border: #E2E8F0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg-alt);
+    -webkit-font-smoothing: antialiased;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    position: relative;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.25rem;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--bg-alt);
+    color: var(--primary);
+}
+
+nav a.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 1px solid #F59E0B;
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+.disclaimer h3 {
+    color: #B45309;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.disclaimer ul {
+    margin: 1rem 0 1rem 1.25rem;
+    color: #92400E;
+}
+
+.disclaimer.rtl ul {
+    margin: 1rem 1.25rem 1rem 0;
+}
+
+.disclaimer li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.disclaimer a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.disclaimer a:hover {
+    color: var(--primary-dark);
+}
+
+/* Content Card */
+.content {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+}
+
+.content h1 {
+    color: var(--primary-dark);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-light);
+    letter-spacing: -0.02em;
+}
+
+.content h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.content h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+}
+
+.content p {
+    margin-bottom: 1.25rem;
+    color: var(--text);
+}
+
+.content ul, .content ol {
+    margin: 1.25rem 0 1.25rem 1.5rem;
+}
+
+.rtl .content ul, .rtl .content ol {
+    margin: 1.25rem 1.5rem 1.25rem 0;
+}
+
+.content li {
+    margin-bottom: 0.625rem;
+    color: var(--text);
+}
+
+.content li::marker {
+    color: var(--primary);
+}
+
+/* Tables */
+.content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.content th {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rtl .content th {
+    text-align: right;
+}
+
+.content td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.content tr:last-child td {
+    border-bottom: none;
+}
+
+.content tr:nth-child(even) td {
+    background: var(--bg-alt);
+}
+
+.content tr:hover td {
+    background: #F0FDFA;
+}
+
+/* Blockquotes */
+.content blockquote {
+    background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-style: italic;
+    color: var(--primary-dark);
+}
+
+.rtl .content blockquote {
+    border-left: none;
+    border-right: 4px solid var(--primary);
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/* Code */
+.content code {
+    background: #F1F5F9;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary-dark);
+}
+
+.content pre {
+    background: #1E293B;
+    color: #E2E8F0;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.content strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.content a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: all 0.2s;
+}
+
+.content a:hover {
+    color: var(--primary-dark);
+    text-decoration-thickness: 2px;
+}
+
+/* Language switcher */
+.lang-switch {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+
+.lang-switch a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    margin: 0 0.375rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.lang-switch a:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    color: #CBD5E1;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.375rem 0.625rem;
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 1.25rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .content h1 {
+        font-size: 1.75rem;
+    }
+
+    .content h2 {
+        font-size: 1.25rem;
+    }
+
+    .disclaimer {
+        padding: 1.25rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav, .lang-switch, .disclaimer {
+        display: none;
+    }
+
+    .content {
+        box-shadow: none;
+        border: none;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>الدليل القانوني للتقنية في السعودية</h1>
+        <p>دليل عملي للأنظمة لشركات التقنية</p>
+    </header>
+
+    <div class="lang-switch">
+        <a href="../en/09_cybersecurity_ecosystem.html">English</a>
+    </div>
+
+    <nav><ul><li><a href="00_introduction.html">المقدمة</a></li><li><a href="01_company_types.html">أنواع الشركات</a></li><li><a href="02_foreign_investors.html">المستثمرون الأجانب</a></li><li><a href="03_founding_steps.html">خطوات التأسيس</a></li><li><a href="04_pdpl_basics.html">أساسيات حماية البيانات</a></li><li><a href="05_consent.html">الموافقة</a></li><li><a href="06_cross_border.html">النقل عبر الحدود</a></li><li><a href="07_pdpl_compliance.html">الامتثال</a></li><li><a href="08_pdpl_penalties.html">العقوبات</a></li><li><a href="09_cybersecurity_ecosystem.html" class="active">الأمن السيبراني</a></li><li><a href="10_ecc_controls.html">الضوابط الأساسية</a></li><li><a href="11_government_contracts.html">العقود الحكومية</a></li><li><a href="12_compliance_advantage.html">ميزة الامتثال</a></li><li><a href="13_ai_landscape.html">تنظيم الذكاء الاصطناعي</a></li><li><a href="14_ai_products.html">منتجات الذكاء الاصطناعي</a></li><li><a href="appendix_a_checklists.html">قوائم المراجعة</a></li><li><a href="appendix_b_templates.html">النماذج</a></li><li><a href="appendix_c_resources.html">المصادر</a></li><li><a href="appendix_d_glossary.html">المصطلحات</a></li></ul></nav>
+
+    <main class="container">
+        <div class="content">
+            <h1>الفصل التاسع: فهم منظومة الأمن السيبراني السعودية</h1>
+<p>أهلاً بك في الفصل التاسع من "البوصلة القانونية لشركات التقنية في السعودية". بعد أن استعرضنا في الفصول السابقة أسس تأسيس الشركات، وتعمقنا في تفاصيل نظام حماية البيانات الشخصية (PDPL) من حيث الموافقة، ونقل البيانات، والامتثال العملي، والعقوبات، حان الوقت الآن لنتناول ركيزة أساسية لا غنى عنها لأي شركة تقنية: <strong>الأمن السيبراني</strong>.</p>
+<p>إذا كان نظام حماية البيانات الشخصية هو "ماذا يجب أن تحمي"، فإن منظومة الأمن السيبراني السعودية هي "كيف تحمي" هذه البيانات والأصول الرقمية الأخرى. لا يمكن فصل الأمرين؛ فالحماية القانونية للبيانات لا تكتمل دون حماية تقنية قوية، والالتزام بالضوابط السيبرانية هو مفتاح بناء الثقة والموثوقية في بيئة الأعمال الرقمية.</p>
+<p>في هذا الفصل، سنأخذك في رحلة عملية لفهم المنظومة السعودية للأمن السيبراني، والتي تقودها الهيئة الوطنية للأمن السيبراني (NCA). سنبسط لك المفاهيم، ونوضح من يجب عليه الالتزام، وكيف تتكامل هذه الضوابط مع متطلبات حماية البيانات الشخصية، كل ذلك بأسلوب عملي يراعي واقع شركات التقنية الناشئة والكبيرة في المملكة.</p>
+<h2>الهيئة الوطنية للأمن السيبراني (NCA) - من هي؟</h2>
+<p>تُعد الهيئة الوطنية للأمن السيبراني (NCA) الجهة المختصة في المملكة العربية السعودية بالأمن السيبراني، والمرجع الوطني في كل ما يتعلق به. تأسست الهيئة بأمر ملكي في عام 2017، لتكون الذراع الاستراتيجي للمملكة في بناء وتطوير منظومة وطنية للأمن السيبراني قادرة على مواجهة التحديات المتزايدة في الفضاء السيبراني.</p>
+<p><strong>لماذا تأسست الـ NCA؟</strong>
+في ظل التحول الرقمي المتسارع الذي تشهده المملكة ضمن رؤية 2030، تزداد الحاجة إلى حماية البنى التحتية الحيوية، والبيانات الوطنية، والمصالح الحيوية للدولة والمواطنين والقطاع الخاص من التهديدات السيبرانية. جاء تأسيس الهيئة لتحقيق رؤية طموحة تتمثل في "فضاء سيبراني سعودي آمن وموثوق يمكن النمو والازدهار فيه".</p>
+<p><strong>دور ومسؤوليات الـ NCA:</strong>
+تتمتع الهيئة بصلاحيات واسعة تمكنها من الاضطلاع بدورها القيادي، وتشمل:</p>
+<ol>
+<li><strong>وضع السياسات والاستراتيجيات:</strong> تطوير وتحديث السياسات الوطنية والإطارات التنظيمية للأمن السيبراني.</li>
+<li><strong>بناء القدرات الوطنية:</strong> تنمية الكفاءات الوطنية المتخصصة في الأمن السيبراني من خلال البرامج التدريبية والتأهيلية.</li>
+<li><strong>تطوير الضوابط والمعايير:</strong> إصدار وتحديث الضوابط والمعايير الإلزامية التي يجب على الجهات المختلفة الالتزام بها (وهو محور هذا الفصل).</li>
+<li><strong>المراقبة والامتثال:</strong> الإشراف على مدى التزام الجهات بالضوابط والمعايير الصادرة عنها، واتخاذ الإجراءات اللازمة لضمان الامتثال.</li>
+<li><strong>الاستجابة للحوادث:</strong> التنسيق والاستجابة للحوادث السيبرانية على المستوى الوطني، وتبادل المعلومات والتحذيرات.</li>
+<li><strong>التعاون الدولي:</strong> تمثيل المملكة في المحافل الدولية المتعلقة بالأمن السيبراني وتعزيز التعاون مع الدول والمنظمات الأخرى.</li>
+<li><strong>التوعية والتثقيف:</strong> رفع مستوى الوعي بالأمن السيبراني لدى الأفراد والجهات.</li>
+</ol>
+<p><strong>لماذا يجب أن تهتم بشركتك التقنية بالـ NCA؟</strong>
+بالنسبة لشركتك التقنية، سواء كنت ناشئًا أو شركة قائمة، فإن الهيئة الوطنية للأمن السيبراني ليست مجرد جهة تنظيمية بعيدة، بل هي الجهة التي تحدد القواعد الأساسية للعب في الفضاء الرقمي السعودي. الالتزام بتوجيهاتها وضوابطها ليس خيارًا، بل هو ضرورة قانونية وتشغيلية لضمان استمرارية أعمالك وحماية أصولك وسمعتك.</p>
+<p><strong>نصيحة عملية:</strong>
+لا تنظر إلى الهيئة الوطنية للأمن السيبراني كجهة رقابية فقط، بل كشريك في بناء بيئة رقمية آمنة. فهمك لمتطلباتها والتزامك بها سيمنح شركتك ميزة تنافسية، ويعزز ثقة العملاء والشركاء والمستثمرين في خدماتك ومنتجاتك. ابدأ بزيارة الموقع الإلكتروني للهيئة (NCA.gov.sa) للاطلاع على أحدث الضوابط والإرشادات.</p>
+<h2>خريطة الضوابط والمعايير (ECC, CCC, CSCC)</h2>
+<p>لتحقيق أهدافها، أصدرت الهيئة الوطنية للأمن السيبراني مجموعة من الضوابط والمعايير المتكاملة التي تغطي جوانب مختلفة من الأمن السيبراني. هذه الضوابط مصممة لتكون قابلة للتطبيق على نطاق واسع، مع تخصيصات لأنواع معينة من الجهات والخدمات. الضوابط الرئيسية التي ستصادفك كشركة تقنية هي:</p>
+<ol>
+<li><strong>الضوابط الأساسية للأمن السيبراني (Essential Cybersecurity Controls - ECC)</strong></li>
+<li><strong>ضوابط الأمن السيبراني للأنظمة السحابية (Cloud Cybersecurity Controls - CCC)</strong></li>
+<li><strong>ضوابط الأمن السيبراني للأنظمة الحساسة (Critical Systems Cybersecurity Controls - CSCC)</strong></li>
+</ol>
+<p>دعنا نتعمق في كل منها:</p>
+<h3>1. الضوابط الأساسية للأمن السيبراني (ECC)</h3>
+<p>تُعد الضوابط الأساسية للأمن السيبراني (ECC) بمثابة حجر الزاوية في المنظومة السعودية للأمن السيبراني. وهي مجموعة من المتطلبات الفنية والإدارية التي تهدف إلى توفير الحد الأدنى من الحماية للأصول السيبرانية للجهات المستهدفة. بعبارة أخرى، هي الأساس الذي يجب على كل شركة تقنية أن تبني عليه دفاعاتها السيبرانية.</p>
+<p><strong>ما هي الـ ECC؟</strong>
+هي إطار عمل شامل يتكون من مجموعة من الضوابط المنظمة في عدة مجالات (أو "مرتكزات")، تغطي جوانب مختلفة من الأمن السيبراني. الهدف منها هو مساعدة الجهات على إدارة مخاطر الأمن السيبراني بشكل فعال، وتعزيز قدرتها على حماية أنظمتها وبياناتها.</p>
+<p><strong>مرتكزات الـ ECC الرئيسية (أمثلة):</strong>
+تتكون ECC من خمسة مرتكزات رئيسية، يندرج تحت كل منها مجموعة من الضوابط التفصيلية. لفهم أفضل، دعنا نلقي نظرة على بعض المرتكزات وما تعنيه لشركتك التقنية:</p>
+<ul>
+<li>
+<p><strong>1. الأمن السيبراني للحوكمة والمخاطر والامتثال (Cybersecurity Governance, Risk, and Compliance - GRC):</strong></p>
+<ul>
+<li><strong>ماذا يعني؟</strong> يتعلق هذا المرتكز بوضع السياسات والإجراءات، وتحديد المسؤوليات، وإدارة المخاطر، وضمان الامتثال للضوابط.</li>
+<li><strong>مثال عملي لشركة تقنية:</strong> يجب على شركتك أن يكون لديها سياسة أمن سيبراني واضحة، وخطة للاستجابة للحوادث، وتحديد مسؤوليات فريق العمل تجاه الأمن. على سبيل المثال، تعيين مسؤول أمن سيبراني (أو تكليف شخص بهذا الدور)، وإجراء تقييمات دورية للمخاطر السيبرانية لتحديد نقاط الضعف في منتجاتك أو بنيتك التحتية.</li>
+</ul>
+</li>
+<li>
+<p><strong>2. الأمن السيبراني للدفاع السيبراني (Cybersecurity Defense):</strong></p>
+<ul>
+<li><strong>ماذا يعني؟</strong> يركز على الإجراءات الفنية لحماية الأنظمة والشبكات والبيانات من الهجمات والاختراقات.</li>
+<li><strong>مثال عملي لشركة تقنية:</strong><ul>
+<li><strong>إدارة الوصول (Access Management):</strong> تطبيق مبدأ "أقل امتياز" (least privilege)؛ فالمطورون يجب أن يحصلوا على صلاحيات الوصول الضرورية فقط للمهام الموكلة إليهم. استخدام المصادقة متعددة العوامل (Multi-Factor Authentication - MFA) لجميع الأنظمة الحساسة.</li>
+<li><strong>حماية الشبكة (Network Security):</strong> استخدام جدران الحماية (Firewalls)، وأنظمة كشف ومنع الاختراق (Intrusion Detection/Prevention Systems - IDS/IPS). عزل بيئات التطوير والاختبار عن بيئة الإنتاج.</li>
+<li><strong>إدارة الثغرات الأمنية (Vulnerability Management):</strong> إجراء فحوصات دورية للثغرات الأمنية (Vulnerability Scans) واختبارات الاختراق (Penetration Tests) لتطبيقاتك ومنصاتك، وتحديث البرمجيات والخوادم بانتظام.</li>
+<li><strong>التشفير (Encryption):</strong> تشفير البيانات الحساسة سواء كانت في حالة سكون (Data at Rest) أو أثناء النقل (Data in Transit). هذا ضروري لحماية بيانات العملاء.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>3. الأمن السيبراني للصمود السيبراني (Cybersecurity Resilience):</strong></p>
+<ul>
+<li><strong>ماذا يعني؟</strong> يتعلق بالقدرة على التعافي من الحوادث السيبرانية بسرعة وفعالية، واستمرارية الأعمال.</li>
+<li><strong>مثال عملي لشركة تقنية:</strong><ul>
+<li><strong>النسخ الاحتياطي والاستعادة (Backup and Recovery):</strong> وضع خطة قوية للنسخ الاحتياطي الدوري لجميع البيانات الحيوية، واختبار خطط الاستعادة بانتظام لضمان إمكانية استعادة الخدمات بسرعة بعد أي حادث (مثلاً، بعد هجوم ببرمجيات الفدية - Ransomware).</li>
+<li><strong>إدارة استمرارية الأعمال (Business Continuity Management - BCM):</strong> وجود خطة لاستمرارية الأعمال تضمن استمرار تقديم الخدمات الأساسية حتى في حالة وقوع حادث سيبراني كبير.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>4. الأمن السيبراني للأطراف الخارجية (Third-Party Cybersecurity):</strong></p>
+<ul>
+<li><strong>ماذا يعني؟</strong> إدارة مخاطر الأمن السيبراني المرتبطة بالجهات الخارجية التي تتعامل معها شركتك (مثل مزودي الخدمات السحابية، الموردين، الشركاء).</li>
+<li><strong>مثال عملي لشركة تقنية:</strong> إذا كنت تستخدم مزود خدمة سحابية (مثل AWS, Azure, Google Cloud)، يجب عليك تقييم مدى التزامه بضوابط الأمن السيبراني، وتضمين متطلبات أمنية واضحة في العقود معهم. هذا يشمل أيضًا أي مكتبة برمجية مفتوحة المصدر تستخدمها، أو APIs لجهات خارجية.</li>
+</ul>
+</li>
+<li>
+<p><strong>5. الأمن السيبراني للموارد البشرية (Human Resources Cybersecurity):</strong></p>
+<ul>
+<li><strong>ماذا يعني؟</strong> يتعلق بالجانب البشري للأمن السيبراني، من التوعية والتدريب إلى إدارة الوصول للموظفين.</li>
+<li><strong>مثال عملي لشركة تقنية:</strong> تدريب الموظفين الجدد على سياسات الأمن السيبراني فور انضمامهم، وإجراء حملات توعية دورية حول مخاطر التصيد الاحتيالي (Phishing) والهندسة الاجتماعية. التأكد من إزالة صلاحيات الوصول للموظفين المغادرين فورًا.</li>
+</ul>
+</li>
+</ul>
+<p><strong>تحذير:</strong>
+الـ ECC ليست مجرد "قائمة مراجعة" يتم تلبية بنودها مرة واحدة. إنها عملية مستمرة تتطلب التقييم الدوري والتحديث المستمر لمواكبة التهديدات المتطورة. الفشل في تطبيق هذه الضوابط يعرض شركتك لمخاطر أمنية وقانونية كبيرة.</p>
+<h3>2. ضوابط الأمن السيبراني للأنظمة السحابية (CCC)</h3>
+<p>مع تزايد اعتماد شركات التقنية على الخدمات السحابية (Cloud Computing)، سواء كبنية تحتية (IaaS)، أو منصات (PaaS)، أو برمجيات (SaaS)، أصبحت هناك حاجة ماسة لضوابط أمنية متخصصة. هنا يأتي دور ضوابط الأمن السيبراني للأنظمة السحابية (CCC).</p>
+<p><strong>ما هي الـ CCC؟</strong>
+هي مجموعة من الضوابط الإضافية التي تستهدف التحديات والمخاطر الأمنية الفريدة المرتبطة بالبيئات السحابية. وهي مصممة لحماية البيانات والأنظمة والخدمات المستضافة في السحابة، وتوضح مسؤوليات كل من مزود الخدمة السحابية (Cloud Service Provider - CSP) ومستهلك الخدمة السحابية (Cloud Service Consumer - CSC).</p>
+<p><strong>من يجب عليه الالتزام بالـ CCC؟</strong></p>
+<ul>
+<li><strong>مزودو الخدمات السحابية (CSPs):</strong> الشركات التي تقدم خدمات سحابية للغير (مثل شركات استضافة السحابة، أو شركات SaaS التي تستضيف خدماتها وتقدمها لعملائها).</li>
+<li><strong>مستهلكو الخدمات السحابية (CSCs):</strong> الشركات التي تستخدم الخدمات السحابية من مزودين خارجيين (مثل شركة ناشئة تستخدم AWS أو Azure لاستضافة تطبيقاتها).</li>
+</ul>
+<p><strong>نموذج المسؤولية المشتركة (Shared Responsibility Model):</strong>
+هذا المفهوم أساسي لفهم الـ CCC. في البيئة السحابية، لا تقع مسؤولية الأمن بالكامل على عاتق المزود أو المستهلك، بل هي مسؤولية مشتركة.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">الجانب الأمني</th>
+<th style="text-align: left;">مسؤولية مزود الخدمة السحابية (CSP)</th>
+<th style="text-align: left;">مسؤولية مستهلك الخدمة السحابية (CSC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>"الأمن في السحابة"</strong></td>
+<td style="text-align: left;">تأمين البنية التحتية المادية، الشبكات، الخوادم، بيئة المحاكاة، التخزين.</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>"الأمن من خلال السحابة"</strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">تأمين بياناتك، تطبيقاتك، نظام التشغيل، إعدادات الشبكة، إدارة الوصول.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>مثال عملي لشركة تقنية (كمستهلك خدمة سحابية):</strong>
+لنفترض أن شركتك الناشئة تقدم تطبيق SaaS لعملائها وتستضيفه على AWS.
+*   <strong>مسؤولية AWS (كمزود):</strong> تأمين البنية التحتية الأساسية (الخوادم الفعلية، مراكز البيانات، الشبكات الأساسية).
+*   <strong>مسؤولية شركتك (كمستهلك):</strong>
+    *   <strong>تكوين آمن:</strong> التأكد من أن جميع موارد AWS التي تستخدمها (مثل S3 Buckets, EC2 Instances, VPCs) مُكوّنة بشكل آمن وفقًا لأفضل الممارسات وضوابط CCC.
+    *   <strong>إدارة الهوية والوصول (IAM):</strong> إدارة صلاحيات الوصول إلى حساب AWS الخاص بك بشكل صارم، واستخدام MFA، وتطبيق مبدأ "أقل امتياز" للموظفين والخدمات.
+    *   <strong>تشفير البيانات:</strong> التأكد من تشفير جميع بيانات العملاء المخزنة في S3 أو قواعد البيانات (مثل RDS) أو المنقولة عبر الشبكة (باستخدام HTTPS/TLS).
+    *   <strong>حماية التطبيقات:</strong> تأمين الكود البرمجي لتطبيقك، وإجراء اختبارات أمنية له، وتحديثه بانتظام.
+    *   <strong>مراقبة السجلات (Logging and Monitoring):</strong> تفعيل مراقبة السجلات في AWS (مثل CloudTrail, CloudWatch) للتعرف على أي نشاط مشبوه.</p>
+<p><strong>مرتكزات الـ CCC الرئيسية (أمثلة):</strong>
+تضيف CCC ضوابط محددة تتكامل مع ECC وتغطي جوانب مثل:</p>
+<ul>
+<li><strong>أمن البيانات السحابية:</strong> كيفية حماية البيانات في مختلف حالاتها (في السكون، في النقل، قيد المعالجة) ضمن البيئة السحابية.</li>
+<li><strong>إدارة الهوية والوصول السحابية:</strong> ضوابط محددة لإدارة المستخدمين والصلاحيات في المنصات السحابية.</li>
+<li><strong>إدارة التكوين السحابي:</strong> التأكد من أن جميع الموارد السحابية مُكوّنة بشكل آمن وتتوافق مع السياسات.</li>
+<li><strong>إدارة التشفير السحابي:</strong> متطلبات تشفير البيانات ومفاتيح التشفير في السحابة.</li>
+<li><strong>التعاقد مع مزودي الخدمات السحابية:</strong> بنود أمنية يجب تضمينها في العقود مع المزودين لضمان الامتثال.</li>
+</ul>
+<p><strong>نصيحة عملية:</strong>
+إذا كانت شركتك تستخدم أي خدمات سحابية، فعليك أن تفهم بوضوح مسؤولياتك كـ "مستهلك خدمة سحابية". لا تفترض أن مزود الخدمة السحابية مسؤول عن كل شيء. اقرأ وثائق نموذج المسؤولية المشتركة لمزودك السحابي بعناية، وتأكد من تطبيق الضوابط اللازمة من جانبك.</p>
+<h3>3. ضوابط الأمن السيبراني للأنظمة الحساسة (CSCC)</h3>
+<p>ضوابط الأمن السيبراني للأنظمة الحساسة (CSCC) هي الإطار الأكثر صرامة وتخصصًا من بين ضوابط الـ NCA. وهي مصممة لحماية الأنظمة التي تُعد حيوية لاستمرارية الخدمات الأساسية للدولة والمجتمع.</p>
+<p><strong>ما هي الـ CSCC؟</strong>
+هي مجموعة من الضوابط الأمنية المتقدمة التي تستهدف الجهات التي تشغل أو تدعم البنى التحتية الوطنية الحساسة (Critical National Infrastructure - CNI) مثل قطاعات الطاقة، المياه، الاتصالات، النقل، الخدمات المالية، الصحة، وغيرها. هذه الأنظمة، إذا تعرضت للاختراق أو التعطيل، يمكن أن تسبب تأثيرات سلبية واسعة النطاق على الأمن والاقتصاد والخدمات العامة.</p>
+<p><strong>من يجب عليه الالتزام بالـ CSCC؟</strong>
+عادةً ما تكون هذه الضوابط موجهة للجهات الحكومية الكبيرة والشركات المملوكة للدولة أو الشركات الخاصة التي تُعتبر جزءًا لا يتجزأ من البنية التحتية الحساسة.</p>
+<p><strong>هل تنطبق على شركتك التقنية؟</strong>
+بالنسبة لمعظم الشركات التقنية الناشئة والصغيرة والمتوسطة، قد لا تنطبق عليها CSCC بشكل مباشر في البداية. ومع ذلك، هناك سيناريوهات قد تجعل شركتك تخضع لبعض متطلبات CSCC أو تتأثر بها:</p>
+<ul>
+<li><strong>إذا أصبح منتجك أو خدمتك جزءًا لا يتجزأ من نظام حساس:</strong> على سبيل المثال، إذا طورت شركتك نظامًا لإدارة شبكات الطاقة، أو منصة حيوية للخدمات الصحية الوطنية، فقد تصبح ضمن نطاق CSCC.</li>
+<li><strong>إذا كنت موردًا أو شريكًا لجهة تخضع لـ CSCC:</strong> قد تطلب منك هذه الجهة الالتزام ببعض المتطلبات الأمنية المشددة لضمان أمن سلسلة التوريد (Supply Chain Security).</li>
+</ul>
+<p><strong>العلاقة بين الضوابط (ECC, CCC, CSCC):</strong>
+هذه الضوابط ليست مستقلة، بل هي متكاملة وتتدرج في مستوى الصرامة:</p>
+<ul>
+<li><strong>ECC هي الأساس:</strong> توفر الحد الأدنى من المتطلبات الأمنية لجميع الجهات المستهدفة.</li>
+<li><strong>CCC تضيف طبقة للسحابة:</strong> تبني على ECC وتضيف متطلبات خاصة للبيئات والخدمات السحابية.</li>
+<li><strong>CSCC هي المستوى الأعلى:</strong> تبني على ECC (وربما CCC إذا كانت الأنظمة الحساسة سحابية) وتضيف متطلبات أكثر صرامة للأنظمة الحساسة للغاية.</li>
+</ul>
+<p><strong>جدول توضيحي للعلاقة بين الضوابط:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">الضابط</th>
+<th style="text-align: left;">النطاق</th>
+<th style="text-align: left;">مستوى الحماية</th>
+<th style="text-align: left;">لمن يطبق بشكل أساسي</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ECC</strong></td>
+<td style="text-align: left;">جميع الأصول السيبرانية للجهات المستهدفة.</td>
+<td style="text-align: left;">أساسي</td>
+<td style="text-align: left;">جميع الجهات الحكومية والخاصة المستهدفة (يشمل شركات التقنية).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CCC</strong></td>
+<td style="text-align: left;">الأصول والخدمات المستضافة في البيئات السحابية.</td>
+<td style="text-align: left;">متوسط</td>
+<td style="text-align: left;">مزودو ومستهلكو الخدمات السحابية.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CSCC</strong></td>
+<td style="text-align: left;">الأنظمة التي تُعد جزءًا من البنى التحتية الوطنية الحساسة.</td>
+<td style="text-align: left;">متقدم</td>
+<td style="text-align: left;">مشغلو ومقدمو الخدمات الحيوية للبنى التحتية الحساسة.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>نصيحة عملية:</strong>
+ابدأ بضوابط ECC، فهي الأساس. إذا كنت تستخدم السحابة، فستحتاج إلى دمج CCC أيضًا. أما CSCC، فراجعها إذا كانت طبيعة عملك أو عملائك تتطلب ذلك، أو إذا كان منتجك يخدم قطاعًا حيويًا.</p>
+<h2>من يجب عليه الالتزام؟</h2>
+<p>هذا سؤال جوهري لكل رائد أعمال ومطور في قطاع التقنية. تهدف الهيئة الوطنية للأمن السيبراني إلى رفع مستوى الأمن السيبراني على المستوى الوطني، وهذا يشمل قطاعًا واسعًا من الجهات.</p>
+<p>بشكل عام، تُلزم الهيئة الوطنية للأمن السيبراني الجهات التالية بالامتثال لضوابطها:</p>
+<ol>
+<li><strong>الجهات الحكومية:</strong> جميع الوزارات، الهيئات، المؤسسات الحكومية، وغيرها. الالتزام هنا إلزامي ومباشر.</li>
+<li><strong>الجهات التابعة للقطاع الخاص التي تشغل بنى تحتية وطنية حساسة:</strong> وتشمل الشركات العاملة في قطاعات الطاقة، المياه، الاتصالات، النقل، الخدمات المالية، الصحة، وغيرها التي تُعتبر أنظمتها حيوية للمصالح الوطنية. هذه الجهات تلتزم بـ CSCC بشكل أساسي، بالإضافة إلى ECC.</li>
+<li><strong>الجهات التابعة للقطاع الخاص التي تقدم خدمات للجهات الحكومية أو تتعامل مع بياناتها:</strong> إذا كانت شركتك التقنية تقدم حلولًا أو خدمات لجهة حكومية سعودية، أو تتعامل مع بيانات حكومية، فستكون ملزمًا بتطبيق ضوابط NCA، على الأقل ECC، وقد يطلب منك تطبيق CCC إذا كانت خدماتك سحابية.</li>
+<li><strong>الجهات التابعة للقطاع الخاص التي تُعد خدماتها أو منتجاتها جزءًا من البنية التحتية الرقمية للمملكة:</strong> هذا يشمل شركات الاتصالات، مزودي خدمات الإنترنت، ومراكز البيانات الكبرى.</li>
+<li><strong>مزودو الخدمات السحابية (CSPs) ومستهلكو الخدمات السحابية (CSCs):</strong> كما ذكرنا سابقًا، هؤلاء يلتزمون بـ CCC بالإضافة إلى ECC.</li>
+</ol>
+<p><strong>ماذا عن الشركات التقنية الناشئة والصغيرة والمتوسطة؟</strong></p>
+<p>هنا تكمن النقطة الأهم لجمهور هذا الكتاب. حتى لو لم تكن جهة حكومية أو مشغل بنية تحتية حساسة، فليس معنى ذلك أنك خارج نطاق الالتزام.</p>
+<ul>
+<li><strong>إذا كنت تتعامل مع بيانات شخصية:</strong> (وهو أمر شبه مؤكد لأي شركة تقنية) فإن نظام حماية البيانات الشخصية (PDPL) يلزمك باتخاذ تدابير أمنية وتقنية وتنظيمية مناسبة لحماية هذه البيانات. هذه التدابير، في جوهرها، تستند إلى مبادئ وضوابط الأمن السيبراني التي تحددها NCA. بمعنى آخر، الالتزام بـ ECC هو أفضل طريقة (وربما الطريقة الوحيدة) لتلبية متطلبات PDPL الأمنية.</li>
+<li><strong>إذا كنت تقدم خدمات سحابية (SaaS, PaaS, IaaS):</strong> فأنت مزود خدمة سحابية (CSP)، وبالتالي تلتزم بـ CCC و ECC.</li>
+<li><strong>إذا كنت تستخدم خدمات سحابية:</strong> فأنت مستهلك خدمة سحابية (CSC)، وتلتزم أيضًا بـ CCC و ECC (ضمن نموذج المسؤولية المشتركة).</li>
+<li><strong>إذا كنت تتعامل مع شركات أكبر أو جهات حكومية كشريك أو مورد:</strong> فغالبًا ما ستطلب منك هذه الجهات تقديم دليل على التزامك بضوابط الأمن السيبراني (مثل ECC) كشرط للتعاقد. هذا يضمن أمن سلسلة التوريد الخاصة بهم.</li>
+<li><strong>بناء الثقة والسمعة:</strong> حتى لو لم تكن ملزمًا بشكل مباشر في الوقت الحالي، فإن تبني ضوابط الأمن السيبراني يعزز ثقة عملائك، شركائك، ومستثمريك. في سوق تنافسي، الأمان لم يعد ميزة إضافية، بل هو توقع أساسي.</li>
+</ul>
+<p><strong>كيف تعرف إذا كنت ملزمًا بشكل مباشر؟</strong>
+أفضل طريقة لتحديد مدى التزامك هي:</p>
+<ol>
+<li><strong>تقييم طبيعة عملك:</strong> هل تتعامل مع بيانات حساسة؟ هل تقدم خدمات حيوية؟</li>
+<li><strong>تقييم علاقاتك مع الجهات الأخرى:</strong> هل تعمل مع جهات حكومية؟ هل أنت جزء من سلسلة توريد لشركة كبرى؟</li>
+<li><strong>مراجع وثائق NCA:</strong> الهيئة تنشر وثائق تحدد نطاق التطبيق. ابحث عن "وثيقة نطاق تطبيق الضوابط الأساسية للأمن السيبراني" أو ما شابهها على موقع NCA.</li>
+</ol>
+<p><strong>نصيحة عملية:</strong>
+لا تنتظر حتى يتم إلزامك رسميًا. في عالم التقنية، الأمن السيبراني هو مسؤولية ذاتية. تبني ضوابط ECC و CCC (إذا كنت تستخدم السحابة) من اليوم الأول هو استثمار في مستقبل شركتك. اعتبر الامتثال لهذه الضوابط جزءًا لا يتجزأ من جودة منتجك وخدمتك.</p>
+<h2>العلاقة بين ECC و PDPL</h2>
+<p>بعد استعراضنا المكثف لنظام حماية البيانات الشخصية (PDPL) في الفصول السابقة، وفهمنا الآن لمنظومة الأمن السيبراني السعودية ممثلة بـ NCA وضوابطها (ECC و CCC)، حان الوقت لربط الخيوط بين هذين النظامين المهمين.</p>
+<p><strong>تكامل لا تنافس: الأمن السيبراني وحماية البيانات الشخصية</strong></p>
+<p>نظام حماية البيانات الشخصية (PDPL) يضع الإطار القانوني لجمع ومعالجة وتخزين البيانات الشخصية، ويهدف إلى حماية حقوق الأفراد فيما يتعلق ببياناتهم. في المقابل، ضوابط الأمن السيبراني (ECC) توفر الإطار الفني والإداري لضمان أمن الأصول الرقمية بشكل عام، بما في ذلك البيانات الشخصية.</p>
+<p>هما ليسا نظامين منفصلين أو متنافسين، بل هما <strong>متكاملان وضروريان</strong> لبعضهما البعض. لا يمكن تحقيق الامتثال الكامل لـ PDPL دون تطبيق ضوابط أمن سيبراني قوية، ولا يمكن بناء منظومة أمن سيبراني فعالة في شركة تتعامل مع بيانات شخصية دون مراعاة متطلبات PDPL.</p>
+<p><strong>نقاط الالتقاء والتعاون بين ECC و PDPL:</strong></p>
+<p>دعنا نوضح كيف تتداخل متطلبات النظامين وتدعم إحداهما الأخرى من خلال أمثلة عملية:</p>
+<ol>
+<li>
+<p><strong>حماية البيانات الشخصية (PDPL المادة 18):</strong></p>
+<ul>
+<li><strong>متطلب PDPL:</strong> "يجب على المتحكم اتخاذ التدابير الفنية والتنظيمية والإدارية المناسبة لحماية البيانات الشخصية من الاختراق أو التلف أو الفقدان أو الوصول غير المصرح به أو الكشف عنها أو إساءة استخدامها."</li>
+<li><strong>دور ECC:</strong> ضوابط ECC تقدم الإطار العملي لتطبيق هذه "التدابير الفنية والتنظيمية والإدارية". على سبيل المثال:<ul>
+<li><strong>التشفير (ECC Defense):</strong> تشفير البيانات الشخصية سواء كانت مخزنة أو منقولة يفي بمتطلب PDPL لحمايتها من الوصول غير المصرح به.</li>
+<li><strong>إدارة الوصول (ECC Defense):</strong> تطبيق مبدأ أقل امتياز، والمصادقة متعددة العوامل، وإدارة حسابات المستخدمين لضمان أن فقط الأشخاص المصرح لهم يمكنهم الوصول إلى البيانات الشخصية.</li>
+<li><strong>النسخ الاحتياطي والاستعادة (ECC Resilience):</strong> خطة قوية للنسخ الاحتياطي والاستعادة تحمي البيانات الشخصية من الفقدان أو التلف.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>الإبلاغ عن حوادث اختراق البيانات (PDPL المادة 26):</strong></p>
+<ul>
+<li><strong>متطلب PDPL:</strong> "يجب على المتحكم إبلاغ الهيئة فور علمه بحدوث أي اختراق أو تسرب للبيانات الشخصية قد يلحق ضرراً بالبيانات الشخصية للمالك."</li>
+<li><strong>دور ECC:</strong> ضوابط ECC في مرتكز "الأمن السيبراني للصمود السيبراني" و"الأمن السيبراني للدفاع السيبراني" توفر الآليات اللازمة للكشف عن هذه الحوادث والاستجابة لها:<ul>
+<li><strong>مراقبة السجلات واكتشاف التهديدات (ECC Defense):</strong> وجود أنظمة لمراقبة الأنشطة المشبوهة واكتشاف الاختراقات في وقت مبكر.</li>
+<li><strong>خطة الاستجابة للحوادث (ECC Resilience):</strong> وجود خطة واضحة ومُختبرة للتعامل مع الحوادث السيبرانية، والتي تتضمن خطوات الإبلاغ عن الاختراقات للجهات المختصة ومالكي البيانات.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>تقييم المخاطر (PDPL المادة 19):</strong></p>
+<ul>
+<li><strong>متطلب PDPL:</strong> يتطلب تقييم تأثير حماية البيانات (DPIA) عند معالجة البيانات الشخصية التي قد تنطوي على مخاطر عالية.</li>
+<li><strong>دور ECC:</strong> تقييم المخاطر السيبرانية (Cybersecurity Risk Assessment) هو جزء أساسي من مرتكز "حوكمة ومخاطر وامتثال الأمن السيبراني" في ECC. هذا التقييم يغذي بشكل مباشر تقييم تأثير حماية البيانات، حيث يحدد الثغرات الأمنية والتهديدات التي يمكن أن تؤثر على البيانات الشخصية.</li>
+</ul>
+</li>
+<li>
+<p><strong>إدارة الأطراف الخارجية (PDPL المادة 20):</strong></p>
+<ul>
+<li><strong>متطلب PDPL:</strong> إذا كنت تشارك البيانات الشخصية مع طرف ثالث، فيجب عليك التأكد من أن هذا الطرف يلتزم بمتطلبات حماية البيانات.</li>
+<li><strong>دور ECC:</strong> مرتكز "الأمن السيبراني للأطراف الخارجية" في ECC يفرض عليك إجراء تقييمات أمنية للموردين والشركاء، وتضمين بنود أمن سيبراني واضحة في العقود معهم. هذا يضمن أن أي طرف ثالث يتعامل مع بياناتك الشخصية يلتزم بالحد الأدنى من الضوابط الأمنية.</li>
+</ul>
+</li>
+<li>
+<p><strong>حقوق مالك البيانات (PDPL الفصل الثالث):</strong></p>
+<ul>
+<li><strong>متطلب PDPL:</strong> حقوق مثل حق الوصول، حق التصحيح، وحق الإتلاف تتطلب أن تكون البيانات الشخصية متاحة، دقيقة، وقابلة للإدارة بشكل آمن.</li>
+<li><strong>دور ECC:</strong> ضوابط ECC في إدارة الوصول، وسلامة البيانات (Data Integrity)، والنسخ الاحتياطي تضمن أن البيانات يمكن الوصول إليها بشكل آمن من قبل مالكها، ويمكن تعديلها أو حذفها بطريقة موثوقة.</li>
+</ul>
+</li>
+</ol>
+<p><strong>جدول مقارنة وتكامل مبسط:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">متطلب PDPL الأساسي</th>
+<th style="text-align: left;">كيف تدعمه ضوابط ECC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">حماية البيانات الشخصية</td>
+<td style="text-align: left;">التشفير، إدارة الوصول، أمن الشبكة، إدارة الثغرات</td>
+</tr>
+<tr>
+<td style="text-align: left;">الإبلاغ عن الاختراقات</td>
+<td style="text-align: left;">أنظمة المراقبة والكشف، خطة الاستجابة للحوادث</td>
+</tr>
+<tr>
+<td style="text-align: left;">تقييم المخاطر</td>
+<td style="text-align: left;">تقييم المخاطر السيبرانية، إدارة الثغرات</td>
+</tr>
+<tr>
+<td style="text-align: left;">التعامل مع الأطراف الثالثة</td>
+<td style="text-align: left;">تقييم موردي الأمن السيبراني، بنود العقود الأمنية</td>
+</tr>
+<tr>
+<td style="text-align: left;">حقوق مالك البيانات</td>
+<td style="text-align: left;">إدارة الوصول الآمن، النسخ الاحتياطي، سلامة البيانات</td>
+</tr>
+</tbody>
+</table>
+<p><strong>تحذير:</strong>
+الامتثال لـ ECC لا يعني تلقائيًا الامتثال لـ PDPL بالكامل، والعكس صحيح. قد تطبق ECC بشكل ممتاز ولكن تفشل في الحصول على الموافقات الصحيحة لجمع البيانات (وهو متطلب PDPL). وبالمثل، قد تحصل على الموافقات، ولكن تفشل في تأمين البيانات تقنيًا، مما يعرضك لمخاطر PDPL. يجب أن تكون جهود الامتثال لكلا النظامين متكاملة ومترابطة.</p>
+<p><strong>نصيحة عملية:</strong>
+عند وضع استراتيجية الامتثال لشركتك التقنية، قم بدمج جهود الأمن السيبراني وحماية البيانات الشخصية. قم بإجراء تقييم شامل للمخاطر يغطي كلا الجانبين. تأكد من أن فريقك التقني وفريقك القانوني (أو مستشاريك) يعملون معًا لضمان أن التدابير الفنية التي تطبقها تدعم المتطلبات القانونية لحماية البيانات.</p>
+<h2>الخاتمة</h2>
+<p>لقد قطعنا شوطًا طويلاً في فهم منظومة الأمن السيبراني السعودية. من الهيئة الوطنية للأمن السيبراني كمرجع وطني، مرورًا بخريطة الضوابط والمعايير (ECC, CCC, CSCC) التي تحدد كيفية حماية أصولك الرقمية، وصولًا إلى تحديد من يجب عليه الالتزام، وكيف تتكامل هذه المنظومة مع نظام حماية البيانات الشخصية (PDPL).</p>
+<p>إن الأمن السيبراني ليس مجرد "إضافة" لشركتك التقنية، بل هو جزء لا يتجزأ من هويتها التشغيلية والقانونية. في سوق رقمي يتطور باستمرار، لم يعد الأمان ميزة تنافسية فحسب، بل هو توقع أساسي من العملاء، والمستثمرين، والجهات التنظيمية.</p>
+<p>تبني ثقافة أمن سيبراني قوية، والالتزام بضوابط الهيئة الوطنية للأمن السيبراني، ليس فقط وسيلة لتجنب العقوبات، بل هو استثمار حقيقي في سمعة شركتك، واستمرارية أعمالها، وثقة عملائها. ابدأ اليوم بتقييم وضعك الأمني، وتطبيق الضوابط الأساسية، وتأكد من أن الأمن السيبراني هو جزء من كل قرار تتخذه في رحلتك التقنية بالمملكة العربية السعودية.</p>
+        </div>
+
+        
+<div class="disclaimer rtl">
+    <h3>⚠️ إخلاء مسؤولية قانونية مهم</h3>
+    <p><strong>هذا الدليل لأغراض المعلومات والتعليم فقط.</strong></p>
+    <ul>
+        <li>هذا المحتوى <strong>لا يُشكّل</strong> استشارة قانونية.</li>
+        <li>الأنظمة واللوائح تتغير باستمرار. تحقق دائماً من المتطلبات الحالية من المصادر الحكومية الرسمية.</li>
+        <li>استشر محامياً مؤهلاً قبل اتخاذ قرارات تجارية.</li>
+        <li>المؤلفون لا يتحملون أي مسؤولية عن الإجراءات المتخذة بناءً على هذه المعلومات.</li>
+        <li>آخر تحديث: 2026-02-03</li>
+    </ul>
+    <p><strong>المصادر الرسمية:</strong></p>
+    <ul>
+        <li><a href="https://laws.boe.gov.sa" target="_blank">هيئة الخبراء بمجلس الوزراء</a> - نصوص الأنظمة الرسمية</li>
+        <li><a href="https://misa.gov.sa" target="_blank">وزارة الاستثمار</a></li>
+        <li><a href="https://mc.gov.sa" target="_blank">وزارة التجارة</a></li>
+        <li><a href="https://sdaia.gov.sa" target="_blank">سدايا</a> - حماية البيانات</li>
+        <li><a href="https://nca.gov.sa" target="_blank">الهيئة الوطنية للأمن السيبراني</a></li>
+    </ul>
+</div>
+
+    </main>
+
+    <footer>
+        <p>⚠️ This is an informational guide, not legal advice. Always consult official sources.</p>
+        <p>هذا دليل معلوماتي وليس استشارة قانونية. راجع دائماً المصادر الرسمية.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://laws.boe.gov.sa">هيئة الخبراء</a> |
+            <a href="https://misa.gov.sa">MISA</a> |
+            <a href="https://sdaia.gov.sa">SDAIA</a> |
+            <a href="https://nca.gov.sa">NCA</a>
+        </p>
+    </footer>
+</body>
+</html>
